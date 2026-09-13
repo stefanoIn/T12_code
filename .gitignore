@@ -33,3 +33,5 @@ datasets/
 # OS
 .DS_Store
 Thumbs.db
+
+CROMA/
