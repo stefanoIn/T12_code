@@ -1,0 +1,18 @@
+% Separate table for dataset/benchmark suites.
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{2.6cm} p{1.1cm} p{3.2cm} p{2.6cm} p{4.0cm} p{3.7cm} p{1.7cm}}
+\toprule
+\textbf{Suite} & \textbf{Year} & \textbf{Type} & \textbf{Scale} & \textbf{Tasks} & \textbf{Modalities} & \textbf{Resolution}\\
+\midrule
+\href{\detokenize{https://earthnets.github.io/}}{EarthNets benchmark} & 2022 & Evaluation benchmark / platform & 5 selected large-scale datasets & Classification, detection, segmentation, change detection & Multiple EO modalities & Varies \\
+\href{\detokenize{https://github.com/ServiceNow/geo-bench}}{GEO-Bench} & 2023 & GFM evaluation suite & 12 subdatasets & 6 classification + 6 semantic segmentation & RGB, SAR, multispectral, hyperspectral & 0.5--30 m \\
+\href{\detokenize{https://satinbenchmark.github.io/}}{SATIN} & 2023 & Remote-sensing evaluation suite & 27 datasets & Classification (6 task groups, >250 labels) & Primarily RGB & Varies \\
+\href{\detokenize{https://sustainlab-group.github.io/sustainbench/}}{SustainBench} & 2021 & Sustainable-development benchmark suite & 15 tasks & Regression, classification, time-series and related tasks & EO imagery + auxiliary socioeconomic/environmental data & Varies \\
+\bottomrule
+\end{tabular}
+\caption{Dataset and benchmark suites identified in the reviewed literature up to 2023. Suite names link to their project pages.}
+\label{tab:dataset_suites}
+\end{table}
