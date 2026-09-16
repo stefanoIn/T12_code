@@ -1,0 +1,59 @@
+\begin{center}
+{\Large\bfseries Fast Screening of EO Benchmark Datasets for GeoFM Evaluation\\[0.2em]}
+{\small Confirmed benchmark datasets only; benchmark suites excluded. Fast triage, not a final source-level audit.}
+\end{center}
+\vspace{0.35em}
+\begingroup
+\setlength{\tabcolsep}{1.7pt}
+\renewcommand{\arraystretch}{1.10}
+\fontsize{5.45}{6.3}\selectfont
+\begin{longtable}{>{\centering\arraybackslash}p{0.42cm} >{\RaggedRight\arraybackslash}p{3.45cm} >{\centering\arraybackslash}p{0.65cm} >{\RaggedRight\arraybackslash}p{2.15cm} >{\RaggedLeft\arraybackslash}p{1.0cm} >{\centering\arraybackslash}p{0.95cm} >{\centering\arraybackslash}p{0.85cm} >{\centering\arraybackslash}p{0.85cm} >{\centering\arraybackslash}p{0.95cm} >{\centering\arraybackslash}p{1.1cm} >{\centering\arraybackslash}p{1.15cm} >{\centering\arraybackslash}p{1.10cm}}
+\toprule
+\textbf{\#} & \textbf{Dataset} & \textbf{Task} & \textbf{Modality} & \textbf{GB} & \textbf{Geo} & \textbf{Splits} & \textbf{FM} & \textbf{Use} & \textbf{License} & \textbf{Storage} & \textbf{Decision}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{\#} & \textbf{Dataset} & \textbf{Task} & \textbf{Modality} & \textbf{GB} & \textbf{Geo} & \textbf{Splits} & \textbf{FM} & \textbf{Use} & \textbf{License} & \textbf{Storage} & \textbf{Decision}\\
+\midrule
+\endhead
+\bottomrule\endfoot
+\bottomrule\endlastfoot
+1 & \href{https://arxiv.org/abs/1912.12171}{So2Sat LCZ42} & C & S1+S2 & 51.8 & Yes & Yes & High & High & CC-BY-4.0 & Moderate & SHORTLIST  \\
+2 & \href{https://scholar.google.com/scholar?q=\\%22Gabriel+Tseng\\%2C+Ivan+Zvonkov\\%2C+Catherine+Lilian+Nakalembe\\%2C+and+Hannah+Kerner.+Cropharvest\\%3A+A+global+dataset+for+crop-type+classification.+In+NeurIPS+Datasets+and+Benchmarks+Track\\%2C+2021.+4\\%22}{CropHarvest} & C & Multi & 22.7 & Likely & Likely & High & Medium & Verify & Yes & SHORTLIST  \\
+3 & \href{https://github.com/sustainlab-group/SatMAE}{fMoW-Sentinel} & C & S2 MS & -- & Partial & Yes & High & High & Verify & Subset/verify & SHORTLIST  \\
+4 & \href{https://bigearth.net/}{BigEarthNet v2.0 (S1+S2)} & C,S & S1/S2 & 110 & Yes & Yes & High & High & CDLA-Permissive-1.0 & Moderate & SHORTLIST  \\
+5 & \href{https://github.com/fajwel/Open-Canopy}{Open-Canopy} & R,CD & SPOT-6/7+LiDAR & -- & Yes & Yes & Partial & High & Verify & Subset/verify & SHORTLIST  \\
+6 & \href{https://ieee-dataport.org/competitions/2020-ieee-grss-data-fusion-contest-global-land-cover-mapping-weak-supervision}{DFC2020} & S & S1/S2 & -- & Yes & Yes & High & High & Verify & ? & SHORTLIST  \\
+7 & \href{https://scholar.google.com/scholar?q=\\%22Derrick+Bonafilia\\%2C+Beth+Tellman\\%2C+Tyler+Anderson\\%2C+and+Erica+Issenberg.+Sen1floods11\\%3A+A+georeferenced+dataset+to+train+and+test+deep+learning+flood+algorithms+for+sentinel-1.+In+CVPRW\\%2C+pages+210\\%E2\\%80\\%93211\\%2C+2020.+3\\%2C+4\\%22}{Sen1Floods11} & S & S1/S2 & 14.3 & Yes & Yes & High & High & Verify & Yes & SHORTLIST  \\
+8 & \href{https://scholar.google.com/scholar?q=\\%22Adam+Van+Etten\\%2C+Daniel+Hogan\\%2C+Jesus+Martinez+Manso\\%2C+Jacob+Shermeyer\\%2C+Nicholas+Weir\\%2C+and+Ryan+Lewis.+The+multi-temporal+urban+development+spacenet+dataset.+In+CVPR\\%2C+pages+6398\\%E2\\%80\\%936407\\%2C+2021.+7\\%22}{SpaceNet-7} & CD,S & MS+MT & 20.6 & Yes & Yes & High & High & Verify & Yes & SHORTLIST  \\
+9 & \href{https://scholar.google.com/scholar?q=\\%22Giulio+Weikmann\\%2C+Claudia+Paris\\%2C+and+Lorenzo+Bruzzone.+Timesen2crop\\%3A+A+million+labeled+samples+dataset+of+sentinel+2+image+time+series+for+crop-type+classification.+IEEE+J.+Sel.+Top.+Appl.+Earth+Obs.+Remote+Sens.\\%2C+14\\%3A4699\\%E2\\%80\\%934708\\%2C+2021.+5\\%2C+7\\%22}{TimeSen2Crop} & S & S2 & 1.1 & Likely & Likely & High & High & Verify & Yes & SHORTLIST  \\
+10 & \href{https://github.com/VSainteuf/pastis-benchmark}{PASTIS-R} & S & Multiple (Satellite) & 54 & Yes & Yes & High & High & Verify & Moderate & SHORTLIST  \\
+11 & \href{https://scholar.google.com/scholar?q=\\%22Aysim+Toker\\%2C+Lukas+Kondmann\\%2C+Mark+Weber\\%2C+Marvin+Eisenberger\\%2C+Andr\\%C3\\%A9s+Camero\\%2C+Jingliang+Hu\\%2C+Ariadna+Pregel+Hoderlein\\%2C+Caglar+Senaras\\%2C+Timothy+Davis\\%2C+Daniel+Cremers\\%2C+Giovanni+Marchisio\\%2C+Xiao+Xiang+Zhu\\%2C+and+Laura+Leal-Tai\\%C3\\%A9.+DynamicEarthNet\\%3A+Daily+Multi-Spectral+Satellite+Dataset+for+Semantic+Change+Segmentation.+In+CVPR\\%2C+2022.+8\\%22}{DynamicEarthNet} & CD,S & PlanetFusion & 524 & Yes & Yes & Medium & High & Verify & Large & SHORTLIST  \\
+12 & \href{https://huggingface.co/datasets/ibm-nasa-geospatial/hls\_burn\_scars}{HLS Burn Scars} & S & HLS & -- & Partial & Yes & High & High & Verify & ? & SHORTLIST  \\
+13 & \href{https://docs.torchgeo.org/en/stable/api/datasets/fields-of-the-world.html\#fields-of-the-world}{Fields Of The World} & S,I & S2 MSI & -- & Likely & Likely & High & High & Verify & Subset/verify & SHORTLIST  \\
+14 & \href{https://arxiv.org/abs/2311.12056}{Kuro Siwo} & S & S1 SAR+DEM & -- & Yes & Yes & High & High & CC-BY & Subset/verify & SHORTLIST  \\
+15 & \href{https://zenodo.org/records/10664073}{MADOS} & S & S2 MS & 5.35 & Yes & Yes & High & High & Verify & Yes & SHORTLIST  \\
+16 & \href{https://patricktum.github.io/cloud_removal/sen12mscr/}{SEN12MS-CR} & SR & S1/S2 & -- & Yes & Yes & High & High & Verify & Subset/verify & SHORTLIST  \\
+17 & \href{https://arxiv.org/abs/1906.07789}{SEN12MS} & S,C & MS+SAR & 510 & ? & ? & High & High & Verify & Large & VERIFY  \\
+18 & \href{https://www.google.com/search?q=\\%22South+Africa+Crop+Type\\%22+dataset+remote+sensing}{South Africa Crop Type} & C & S1+S2 & 82.8 & Likely & Likely & High & Medium & Verify & Moderate & VERIFY  \\
+19 & \href{https://scholar.google.com/scholar?q=\\%22Etienne+Lord+Amanda+A.+Boatswain+Jacques\\%2C+Abdoulaye+Banir\\%C3\\%A9+Diallo.+Towards+the+creation+of+a+canadian+land-use+dataset+for+agricultural+land+classification.+In+Canadian+Symposium+on+Remote+Sensing\\%2C+2021.+3\\%2C+4\\%22}{Canadian Cropland} & C & S2 & 26 & ? & ? & High & High & Verify & Yes & VERIFY  \\
+20 & \href{https://scholar.google.com/scholar?q=\\%22Steve+Ahlswede\\%2C+Christian+Schulz\\%2C+Christiano+Gava\\%2C+Patrick+Helber\\%2C+Benjamin+Bischke\\%2C+Michael+F\\%C3\\%B6rster\\%2C+Florencia+Arias\\%2C+J\\%C3\\%B6rn+Hees\\%2C+Beg\\%C3\\%BCm+Demir\\%2C+and+Birgit+Kleinschmit.+Treesatai+benchmark+archive\\%3A+A+multisensor\\%2C+multi-label+dataset+for+tree+species+classification+in+remote+sensing.+Earth+System+Science+Data+Discussions\\%2C+pages+1\\%E2\\%80\\%9322\\%2C+2022.+4\\%22}{TreeSatAI} & C & Multi & 16.3 & ? & ? & High & High & Verify & Yes & VERIFY  \\
+21 & \href{https://zenodo.org/records/8276815}{m-Brick-Kiln (GEO-Bench)} & C & S2 MS & 1.6 & ? & Yes & High & High & Verify & Yes & VERIFY  \\
+22 & \href{https://zenodo.org/records/8008717}{m-ForestNet (GEO-Bench)} & C & Landsat-8 MS & 1.2 & ? & Yes & High & High & Verify & Yes & VERIFY  \\
+23 & \href{https://openaccess.thecvf.com/content/WACV2024/html/Sani\_SICKLE\_A\_Multi-Sensor\_Satellite\_Imagery\_Dataset\_Annotated\_With\_Multiple\_Key\_WACV\_2024\_paper.html}{SICKLE} & S,C & S1/S2+L8 TS & -- & ? & ? & High & High & Verify & Subset/verify & VERIFY  \\
+24 & \href{https://nascetti-a.github.io/BioMasster/}{BioMassters} & R & S1/S2 & 201 & Yes & Yes & High & High & Verify & Large & VERIFY  \\
+25 & \href{https://scholar.google.com/scholar?q=\\%22Caleb+Robinson\\%2C+Le+Hou\\%2C+Kolya+Malkin\\%2C+Bistra+Dilkina\\%2C+and+Nebojsa+Jojic.+Large+scale+high-resolution+land+cover+mapping+with+multiresolution+data.+In+CVPR\\%2C+pages+12726\\%E2\\%80\\%9312735\\%2C+2019.+7\\%22}{Chesapeake Land Cover} & S & RGB+MS & 140 & ? & ? & High & Medium & Verify & Moderate & VERIFY  \\
+26 & \href{https://www.google.com/search?q=\\%22South+Sudan+Crop+Type\\%22+dataset+remote+sensing}{South Sudan Crop Type} & S & S1/S2+Planet & 977 & Yes & Yes & High & High & Verify & Large & VERIFY  \\
+27 & \href{https://marine-debris.github.io/}{MARIDA} & S & MS (Satellite) & 1.2 & ? & ? & High & High & Verify & Yes & VERIFY  \\
+28 & \href{https://www.nature.com/articles/s41597-022-01878-2}{CloudSEN12} & S & S2/S1+DEM & $\sim$1K & Yes & Yes & High & High & Verify & ? & VERIFY  \\
+29 & \href{https://arxiv.org/abs/2209.00727}{Five-Billion-Pixels} & S & RGB+MS & 104 & Yes & Yes & High & High & Verify & Moderate & VERIFY  \\
+30 & \href{https://doi.org/10.17026/dans-xy6-ngg6}{AI4SmallFarms} & S & S2 MS & -- & Yes & Yes & High & High & Verify & ? & VERIFY  \\
+31 & \href{https://github.com/ecovision-uzh/BraDD-S1TS}{BraDD-S1TS} & CD,S & S1 TS & 17.7 & ? & ? & High & High & Verify & Yes & VERIFY  \\
+32 & \href{https://proceedings.neurips.cc/paper_files/paper/2023/file/11822e84689e631615199db3b75cd0e4-Paper-Conference.pdf}{DW-Expert} & S & S1/S2 & -- & Partial & Partial & High & High & Verify & ? & VERIFY  \\
+33 & \href{https://shileicao.github.io/papers/a2mae.pdf}{CropSeg} & S & HLS MS & -- & Partial & ? & High & High & Verify & Subset/verify & VERIFY  \\
+34 & \href{https://arxiv.org/abs/1911.09296}{xView2} & CD & RGB & 51 & Yes & Yes & Partial & High & Verify & Moderate & VERIFY  \\
+35 & \href{https://scholar.google.com/scholar?q=\\%22Julien+Cornebise\\%2C+Ivan+Or\\%C5\\%A1olic\\%2C+and+Freddie+Kalaitzis.+The+WorldStrat+\\%C2\\%B4+Dataset\\%3A+Open+High-Resolution+Satellite+Imagery+With+Paired+MultiTemporal+Low-+Resolution\\%2C+July+2022.+16\\%2C+17\\%22}{WorldStrat} & SR & Multi & 110 & ? & ? & High & Medium & Verify & Moderate & VERIFY  \\
+\end{longtable}
+\vspace{0.2em}
+{\fontsize{5.5}{6.4}\selectfont\noindent \textit{Interpretation:} SHORTLIST = no obvious blocker in the fast screen; VERIFY = promising but one or more key fields require source-level confirmation. ``Geo refers to retained/usable geolocation, not merely a known country of origin. Large datasets are retained only when they appear realistically subsettable. License = Verify means no negative finding was established here, but the exact redistribution/use terms still need checking before final selection.}
+\endgroup
