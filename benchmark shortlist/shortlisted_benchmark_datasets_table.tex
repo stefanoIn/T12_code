@@ -1,0 +1,244 @@
+% Shortlisted EO benchmark datasets -- metadata table
+% Verified against primary / official sources where available, 2026-09-19.
+%
+% Required packages in the preamble:
+% \usepackage{booktabs}
+% \usepackage{array}
+% \usepackage{ragged2e}
+% \usepackage{pdflscape}
+% \usepackage{longtable}
+% \usepackage[table]{xcolor}
+% \usepackage{hyperref}
+%
+% The definitions below are local helpers for this table.
+
+\newcolumntype{Q}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\definecolor{coregreen}{RGB}{229,243,232}
+\definecolor{secondaryyellow}{RGB}{255,248,220}
+
+\begin{landscape}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+
+\begin{longtable}{
+    Q{1.8cm}
+    Q{2.5cm}
+    Q{3.0cm}
+    Q{2.5cm}
+    Q{2.1cm}
+    Q{3.0cm}
+    Q{3.4cm}
+    Q{3.4cm}
+}
+\caption{Shortlisted Earth-observation benchmark datasets and metadata relevant to GeoFM evaluation. ``Core'' denotes datasets currently prioritized for the thesis experiments; ``secondary'' denotes useful reserve datasets. Storage values refer to currently available packaged releases when a reliable value is published.}
+\label{tab:shortlisted_eo_benchmarks}\\
+\toprule
+\textbf{Dataset / priority} &
+\textbf{Task and target} &
+\textbf{EO input / bands} &
+\textbf{Spatial--temporal structure} &
+\textbf{Scale} &
+\textbf{Geographic coverage / domain} &
+\textbf{Splits, geolocation and shift structure} &
+\textbf{Access, storage, licence and benchmark notes} \\
+\midrule
+\endfirsthead
+
+\multicolumn{8}{c}{\tablename\ \thetable\ -- continued from previous page}\\
+\toprule
+\textbf{Dataset / priority} &
+\textbf{Task and target} &
+\textbf{EO input / bands} &
+\textbf{Spatial--temporal structure} &
+\textbf{Scale} &
+\textbf{Geographic coverage / domain} &
+\textbf{Splits, geolocation and shift structure} &
+\textbf{Access, storage, licence and benchmark notes} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{8}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+
+\rowcolor{coregreen}
+\href{https://github.com/zhu-xlab/So2Sat-LCZ42}{\textbf{So2Sat LCZ42}}\newline
+\textbf{CORE}
+&
+17-class Local Climate Zone (LCZ) image classification: 10 built classes + 7 natural land-cover classes.
+&
+Paired, co-registered Sentinel-1 + Sentinel-2. S1: 8 real-valued channels derived from complex VV/VH data and filtered intensities. S2: 10 bands (B02, B03, B04, B05, B06, B07, B08, B8A, B11, B12).
+&
+All channels provided at 10\,m GSD; 32$\times$32 pixels per modality ($\approx$320\,m $\times$ 320\,m). Paired acquisition rather than a time series.
+&
+400,673 paired S1--S2 patches in the original benchmark. Original paper reports $\sim$56\,GB for the full uncompressed dataset.
+&
+42 main urban agglomerations + 10 additional areas, spanning inhabited continents and multiple cultural regions.
+&
+Version 3 provides: random 80/20 per-city split; geospatial block 80/20 per-city split; Cultural-10 held-out-city split. Version 4 adds per-patch geolocation to the Version-2 Cultural-10 release (EPSG, affine transform, city); corrected geolocation/EPSG files were released in 2026. Excellent for random-vs-spatial-vs-unseen-city evaluation.
+&
+Public. Current Hugging Face v4 package is $\sim$18.2\,GB compressed. Hugging Face card lists CC-BY-4.0. HDF5 format. Established benchmark; TorchGeo loader available. \textbf{FM caveat:} S1 is 8-channel rather than the simple VV/VH pair expected by models such as CROMA, so a fair input-adaptation rule must be defined.
+\\
+\addlinespace
+
+\rowcolor{coregreen}
+\href{https://github.com/cloudtostreet/Sen1Floods11}{\textbf{Sen1Floods11}}\newline
+\textbf{CORE}
+&
+Semantic segmentation of surface water / flood water. High-quality hand labels encode water vs non-water with invalid/no-data pixels; additional weak labels are supplied for large-scale training.
+&
+Sentinel-1 IW GRD: 2 channels (VV, VH, dB). Sentinel-2 MSI Level-1C: 13 bands (B1--B12 including B8A), TOA reflectance. Additional permanent-water / weak-label products are included.
+&
+512$\times$512 chips at 10\,m ($\approx$5.12\,km $\times$ 5.12\,km). S1 and S2 observations for an event are selected close in time (typically same day or within about two days); not a dense time series.
+&
+4,831 total chips over 120,406\,km$^2$; 4,370 chips have automatically generated weak labels and 446 chips have expert hand labels.
+&
+11 flood events across 6 continents; dataset paper reports all 14 terrestrial biomes and 357 ecoregions. Event locations include Bolivia, Ghana, India, Mekong, Nigeria, Pakistan, Paraguay, Somalia, Spain, Sri Lanka and the USA.
+&
+GeoTIFF imagery with geographic referencing (WGS84 / EPSG:4326) plus event GeoJSON metadata: country, acquisition dates, orbit and relative orbit. Official train/val/test information is provided. Event identity makes leave-one-event / cross-event OOD evaluation possible; Bolivia was used as a separately held-out generalization event in published experiments.
+&
+Public. A current Hugging Face mirror is $\sim$35.5\,GB for the full package and marks the data CC-BY-4.0. GeoTIFF format. Strong S1/S2 multimodal benchmark and particularly compatible with CROMA's native VV/VH S1 input. Full weak-label archive can be avoided if only the 446 expert-labelled chips are needed.
+\\
+\addlinespace
+
+\rowcolor{coregreen}
+\href{https://source.coop/kerner-lab/fields-of-the-world}{\textbf{Fields of the World (FTW)}}\newline
+\textbf{CORE}
+&
+Agricultural field delineation: instance segmentation plus semantic masks. Official products include binary field-extent masks, 3-class masks (background / field interior / field boundary), and instance masks.
+&
+Bi-temporal Sentinel-2 Level-2A RGBN: B04 (R), B03 (G), B02 (B), B08 (NIR) for each of two seasonal windows. Thus 4 bands $\times$ 2 dates for the standard benchmark input.
+&
+Source sampling grids are tiled into 1,536\,m $\times$ 1,536\,m AOIs, then imagery is resized/stored as 256$\times$256 GeoTIFF chips. Native source bands are 10\,m; two contrasting seasonal windows (A/B) are chosen.
+&
+About 1.63 million parcel polygons and about 70k samples. The paper abstract / TorchGeo documentation report 70,462 samples, while the paper table and some release parsings report 70,484; use the downloaded release index as the experiment's authoritative count.
+&
+24 countries across Europe, Africa, Asia and South America (Corsica is sometimes represented as a separate region in loaders, yielding 25 parsed regions). Very broad agricultural-domain variability.
+&
+Per-country train/val/test splits are provided and were designed with blocked spatial splitting to reduce spatial autocorrelation leakage. GeoParquet chip indices preserve geometry and split information; imagery is georeferenced. Country structure naturally supports held-out-country and cross-country generalization experiments beyond the standard within-country split.
+&
+Public and country-subsettable from Source Cooperative; complete benchmark size is not presented as one canonical archive size. \textbf{Licensing is source-country dependent}: examples include CC-BY, CC0, national open-data licences, NC licences and others. Therefore academic use is feasible, but redistribution / commercial reuse must follow per-source licences. Official benchmark with baselines; also exposed by TorchGeo and GEO-Bench-2.
+\\
+\addlinespace
+
+\rowcolor{coregreen}
+\href{https://github.com/VSainteuf/pastis-benchmark}{\textbf{PASTIS-R}}\newline
+\textbf{CORE}
+&
+Agricultural parcel classification, semantic segmentation and panoptic segmentation. 18 crop types, with background/void handling for dense prediction; instance IDs are available.
+&
+Sentinel-2: 10 multispectral bands. Sentinel-1: separate ascending and descending time series; each S1 observation has VV, VH and VV/VH ratio (3 channels).
+&
+128$\times$128 pixels at 10\,m ($\approx$1.28\,km $\times$ 1.28\,km). S2 has 38--61 acquisitions per patch; PASTIS-R adds roughly 70 S1 ascending + 70 S1 descending observations per patch.
+&
+2,433 patches / time series, 124,422 individual agricultural parcels, covering roughly 4,000\,km$^2$.
+&
+Metropolitan France; spatially distributed agricultural parcels and crop regimes. Less geographically global than FTW, but rich in modality and temporal variation.
+&
+Official 5-fold split is stored in metadata; patch geometry and acquisition dates are retained in GeoJSON metadata. The folds permit standardized cross-validation; custom spatial holdouts are possible from geometry, although the dataset is single-country and therefore weaker for international geographic OOD.
+&
+Public via Zenodo. PASTIS-R archive is 53.7\,GB (about 54\,GB zipped); original S2-only PASTIS is about 28.8--29\,GB. Benchmark code is MIT-licensed; imagery/annotations originate from Copernicus/THEIA and the French LPIS/IGN, so dataset-source terms should be respected separately. Included in PANGAEA and GEO-Bench-2 style evaluations. Excellent multimodal / temporal stress test, but computationally heavier.
+\\
+\addlinespace
+
+\rowcolor{coregreen}
+\href{https://wilds.stanford.edu/datasets/}{\textbf{PovertyMap-WILDS}}\newline
+\textbf{CORE}
+&
+Regression: predict a real-valued household asset-wealth index derived from DHS survey responses. WILDS also evaluates worst-group performance across urban/rural subpopulations.
+&
+224$\times$224$\times$8 input: 7 Landsat 5/7/8 channels (Blue, Green, Red, SWIR1, SWIR2, thermal, NIR) + 1 nighttime-lights channel from DMSP/VIIRS. Inputs are distributed pre-normalized in WILDS.
+&
+30\,m Landsat resolution; each 224$\times$224 patch covers a large local context around the survey location. Single image per labelled survey example rather than an EO time series.
+&
+19,669 labelled images. WILDS extension also provides 261,396 unlabeled images from the same 23 countries. Current WILDS compressed package size is $\sim$13.09\,GB.
+&
+23 African countries; survey imagery mainly from 2009--2016/17. Domains combine country and urban/rural status (23$\times$2 groups).
+&
+Five official country folds. In a typical fold, training uses about 13--14 countries and OOD validation/test use disjoint sets of about 4--5 countries each; ID validation/test are also supplied. Coordinates, survey year, urban/rural label and country are metadata. \textbf{Important:} DHS coordinates are privacy-noised (urban up to about 2\,km; rural up to about 10\,km), so they are unsuitable for fine-scale leakage-distance analysis.
+&
+Public through WILDS. Landsat/DMSP/VIIRS imagery is U.S. public-domain data; DHS-derived metadata should still be handled under the relevant WILDS/DHS terms. Strong explicit cross-country OOD regression benchmark. Sensor mismatch is substantial for S1/S2-specific FMs, so FM compatibility must be checked before making it a mandatory cross-model benchmark.
+\\
+\addlinespace
+
+\rowcolor{secondaryyellow}
+\href{https://wilds.stanford.edu/datasets/}{\textbf{FMoW-WILDS}}\newline
+\textbf{SECONDARY}
+&
+62-class building / land-use classification.
+&
+RGB satellite imagery resized to 224$\times$224. WILDS uses the processed RGB version of Functional Map of the World; rich metadata includes timestamp, country code, location and derived geographic region.
+&
+Variable original image scale, standardized to 224$\times$224 RGB for WILDS. Multi-year collection rather than a per-sample time series.
+&
+141,696 labelled examples in the WILDS formulation; WILDS extensions also expose large unlabeled splits. Compressed WILDS package is $\sim$53.9\,GB.
+&
+Global imagery across Africa, Americas, Oceania, Asia and Europe, spanning multiple years (roughly 2002--2017 in the processed benchmark metadata).
+&
+Official WILDS OOD split is primarily \textbf{temporal} (e.g. train on earlier years, evaluate on later years), while geographic region is used for worst-region / subpopulation evaluation. Location and timestamp metadata are retained. Therefore it is valuable for robustness, but it is \emph{not} as clean an explicit held-out-geography benchmark as PovertyMap or So2Sat Cultural-10.
+&
+Public through WILDS; FMoW Challenge Public License. RGB-only input makes it broadly model-compatible but does not exploit multispectral/SAR strengths of EO FMs. Established WILDS distribution-shift benchmark.
+\\
+\addlinespace
+
+\rowcolor{secondaryyellow}
+\href{https://www.spacenet.ai/sn7-challenge/}{\textbf{SpaceNet 7}}\newline
+\textbf{SECONDARY}
+&
+Building-footprint extraction plus multi-temporal building tracking / urban-development change. GeoJSON building polygons carry persistent IDs across months.
+&
+Planet Labs Dove monthly mosaics (medium-resolution optical imagery). Standard challenge imagery is distributed as GeoTIFF mosaics with building-vector annotations.
+&
+Mean GSD $\sim$4\,m. About 24 consecutive monthly mosaics per AOI; TorchGeo represents imagery as approximately 1024$\times$1024 chips / observations.
+&
+101 AOIs, 2,389 observations, approximately 11.08 million building annotations and 41,000\,km$^2$ total observed area.
+&
+About 100 geographically distributed AOIs over 6 continents, with substantial urban morphology and temporal-development diversity.
+&
+Official challenge train/test AOIs are provided; imagery and labels are georeferenced. AOI identity makes geographic holdout straightforward, while monthly sequences support temporal/change evaluation. It is a substantially different sensor/resolution regime from Sentinel-pretrained models.
+&
+Public AWS Open Data. CC BY-SA 4.0. The official challenge page does not state one canonical total archive size; the dataset is large and is best subset by AOI for local experiments. Historical SpaceNet benchmark/challenge; TorchGeo loader available. Useful reserve dataset for temporal change but less sensor-compatible with several S1/S2-specific FMs.
+\\
+\addlinespace
+
+\rowcolor{secondaryyellow}
+\href{https://zenodo.org/records/10664073}{\textbf{MADOS}}\newline
+\textbf{SECONDARY}
+&
+Sparse semantic segmentation of 15 marine-pollution / sea-surface classes, including marine debris, oil spill, Sargassum, ships, multiple water types, foam, waves/wakes, platforms, jellyfish and sea snot.
+&
+Sentinel-2-derived Rayleigh-corrected reflectance. 11 spectral bands are supplied: B02/B03/B04/B08 at 10\,m; B05/B06/B07/B8A/B11/B12 at 20\,m; B01 at 60\,m. B09 is absent after the ACOLITE processing chain.
+&
+Each crop covers 2.4$\times$2.4\,km: 240$\times$240 at 10\,m, 120$\times$120 at 20\,m, 40$\times$40 at 60\,m. Individual scenes span 2015--2022; this is a multi-scene collection, not a dense time series per sample.
+&
+2,803 image patches from 174 Sentinel-2 scenes / 47 tiles, with 1,481,155 annotated pixels. Highly sparse and class-imbalanced labels.
+&
+22 countries with globally distributed marine/coastal scenes and diverse sea/weather conditions.
+&
+Official train/validation/test split files are supplied; patches from the same scene / unique date are kept in the same split, reducing direct scene leakage. Published split sizes: 1,433 train, 642 validation, 728 test. Scene/tile identity enables custom scene-level or region-level robustness studies; precise geolocation availability should be verified from the TIFF metadata before using coordinate-distance metrics.
+&
+Open access via Zenodo. 4.0\,GB compressed, 5.35\,GB uncompressed. Repository code is MIT-licensed; the Zenodo record does not expose a single explicit data licence in the metadata surfaced here, so data-reuse terms should be checked before redistribution. Included in PANGAEA. Very manageable storage and a strong specialist segmentation stress test.
+\\
+
+\end{longtable}
+
+\vspace{0.5em}
+\footnotesize
+\noindent\textbf{Interpretation for the thesis.}
+The strongest datasets for the planned \emph{label-efficiency $\times$ geographic-shift} study are So2Sat LCZ42, Fields of the World, PovertyMap-WILDS and event-level Sen1Floods11. PASTIS-R is especially valuable for S1/S2 multimodal and temporal evaluation, but its single-country coverage and larger storage/computational cost make it less direct as a geographic-OOD benchmark. FMoW-WILDS, SpaceNet 7 and MADOS are retained as secondary datasets because they add respectively temporal distribution shift, multi-temporal urban change, and a specialised sparse-label marine segmentation domain.
+
+\vspace{0.5em}
+\noindent\textbf{Primary verification sources:}
+\href{https://github.com/zhu-xlab/So2Sat-LCZ42}{So2Sat official repository};
+\href{https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Bonafilia_Sen1Floods11_A_Georeferenced_Dataset_to_Train_and_Test_Deep_Learning_CVPRW_2020_paper.html}{Sen1Floods11 paper};
+\href{https://source.coop/kerner-lab/fields-of-the-world}{FTW Source Cooperative release};
+\href{https://ojs.aaai.org/index.php/AAAI/article/view/35034}{FTW paper};
+\href{https://github.com/VSainteuf/pastis-benchmark}{PASTIS official repository};
+\href{https://github.com/p-lambda/wilds}{WILDS implementation};
+\href{https://www.spacenet.ai/sn7-challenge/}{SpaceNet 7 challenge};
+\href{https://zenodo.org/records/10664073}{MADOS Zenodo release}.
+
+\end{landscape}
