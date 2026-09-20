@@ -1,3 +1,41 @@
+\documentclass[11pt,a4paper]{article}
+
+% -------------------------------------------------
+% Encoding and typography
+% -------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+
+% -------------------------------------------------
+% Page layout and tables
+% -------------------------------------------------
+\usepackage[
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.7cm,
+    right=2.7cm
+]{geometry}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage[table]{xcolor}
+
+% -------------------------------------------------
+% Links
+% -------------------------------------------------
+\usepackage[hidelinks]{hyperref}
+
+% -------------------------------------------------
+% Paragraph formatting
+% -------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+\begin{document}
+
 % Shortlisted EO benchmark datasets -- metadata table
 % Verified against primary / official sources where available, 2026-09-19.
 %
@@ -16,7 +54,41 @@
 \definecolor{coregreen}{RGB}{229,243,232}
 \definecolor{secondaryyellow}{RGB}{255,248,220}
 
+% =================================================
+% Header
+% =================================================
+\begin{flushleft}
+
+    {\LARGE\textbf{Geospatial Foundation Models Benchmarking}}\\[0.3em]
+
+    {\large\color{black!65}
+    Datasets and Evaluation Challenges
+    }\\[1.1em]
+
+    \textbf{Stefano Infusini}
+    \hfill
+    University of Genoa -- DIBRIS\\[-0.1em]
+
+    {\small\color{black!65}
+    MSc Computer Science -- Artificial Intelligence
+    }
+    \hfill
+    {\small September 2026}
+
+\end{flushleft}
+
+\vspace{-0.6em}
+\rule{\textwidth}{0.4pt}
+\vspace{1.1em}
+
+\vfill
+\begin{center}
+    {\large\color{black!65}Shortlisted Benchmark Datasets}
+\end{center}
+\vfill
+\newpage
 \begin{landscape}
+
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.22}
@@ -227,7 +299,7 @@ Open access via Zenodo. 4.0\,GB compressed, 5.35\,GB uncompressed. Repository co
 
 \vspace{0.5em}
 \footnotesize
-\noindent\textbf{Interpretation for the thesis.}
+\noindent\textbf{Interpretation.}
 The strongest datasets for the planned \emph{label-efficiency $\times$ geographic-shift} study are So2Sat LCZ42, Fields of the World, PovertyMap-WILDS and event-level Sen1Floods11. PASTIS-R is especially valuable for S1/S2 multimodal and temporal evaluation, but its single-country coverage and larger storage/computational cost make it less direct as a geographic-OOD benchmark. FMoW-WILDS, SpaceNet 7 and MADOS are retained as secondary datasets because they add respectively temporal distribution shift, multi-temporal urban change, and a specialised sparse-label marine segmentation domain.
 
 \vspace{0.5em}
@@ -242,3 +314,5 @@ The strongest datasets for the planned \emph{label-efficiency $\times$ geographi
 \href{https://zenodo.org/records/10664073}{MADOS Zenodo release}.
 
 \end{landscape}
+
+\end{document}
