@@ -1,0 +1,266 @@
+\newgeometry{top=1.35cm,bottom=1.55cm,left=0.22cm,right=0.22cm}
+\begingroup
+\fontsize{6.0}{7.05}\selectfont
+\setlength{\tabcolsep}{1.25pt}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\LTleft}{\fill}\setlength{\LTright}{\fill}
+\begin{longtable}{
+ >{\centering\arraybackslash}p{0.70cm}
+ >{\RaggedRight\arraybackslash}p{3.60cm}
+ >{\centering\arraybackslash}p{0.70cm}
+ >{\centering\arraybackslash}p{0.82cm}
+ >{\centering\arraybackslash}p{0.88cm}
+ >{\RaggedRight\arraybackslash}p{2.60cm}
+ >{\RaggedLeft\arraybackslash}p{1.35cm}
+ >{\centering\arraybackslash}p{1.25cm}
+ >{\centering\arraybackslash}p{1.55cm}
+ >{\RaggedLeft\arraybackslash}p{0.68cm}
+ >{\centering\arraybackslash}p{1.35cm}
+ >{\centering\arraybackslash}p{0.95cm}
+ >{\RaggedRight\arraybackslash}p{2.00cm}
+}
+\toprule
+\mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Index}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Dataset}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Year}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Task}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{\# Cls.}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Sensor / modality}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{\# Samples}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Size (px)}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Resolution (m)}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{GB}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Benchmark}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{FM Eval}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Evidence}}\\
+\midrule\endfirsthead
+\multicolumn{13}{l}{\itshape Table \thetable\ continued}\\
+\toprule
+\mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Index}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Dataset}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Year}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Task}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{\# Cls.}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Sensor / modality}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{\# Samples}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Size (px)}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Resolution (m)}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{GB}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Benchmark}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{FM Eval}} & \mbox{\fontsize{5.15}{5.8}\selectfont\textbf{Evidence}}\\
+\midrule\endhead
+\midrule\multicolumn{13}{r}{\itshape Continued on next page}\\\endfoot
+\bottomrule\endlastfoot
+1 & \href{http://weegee.vision.ucmerced.edu/datasets/landuse.html}{UC Merced} & 2010 & C & 21 & RGB & 2.1K & 256 & 0.3m & 0.317 & Yes & ? & TG \\
+2 & \href{https://scholar.google.com/scholar?q=\%22Sebastien+Razakarivony+and+Frederic+Jurie.+Vehicle+detection+in+aerial+imagery\%3A+A+small+target+detection+benchmark.+Journal+of+Visual+Communication+and+Image+Representation\%2C+34\%3A187\%E2\%80\%93203\%2C+2016.+5\%2C+6\%22}{VEDAI} & 2015 & C & 9 & IRGB & 1.2K & 1024 & 0.125m & 3.99 & Yes & ? & Paper \\
+3 & \href{https://scholar.google.com/scholar?q=\%22Gong+Cheng\%2C+Junwei+Han\%2C+and+Xiaoqiang+Lu.+Remote+sensing+image+scene+classification\%3A+Benchmark+and+state+of+the+art.+Proceedings+of+the+IEEE\%2C+105\%2810\%29\%3A1865\%E2\%80\%931883\%2C+2017.+3\%2C+4\%22}{NWPU-RESISC45} & 2016 & C & 45 & RGB & 31.5K & 256 & 0.2$\sim$30m & 0.405 & Yes & ? & Paper+TG \\
+4 & \href{https://scholar.google.com/scholar?q=\%22Gui-Song+Xia\%2C+Jingwen+Hu\%2C+Fan+Hu\%2C+Baoguang+Shi\%2C+Xiang+Bai\%2C+Yanfei+Zhong\%2C+Liangpei+Zhang\%2C+and+Xiaoqiang+Lu.+Aid\%3A+A+benchmark+data+set+for+performance+evaluation+of+aerial+scene+classification.+IEEE+TGRS\%2C+55\%287\%29\%3A3965\%E2\%80\%933981\%2C+2017.+4\%22}{AID} & 2017 & C & 30 & RGB & 10K & 600 & 3m & 2.44 & Yes & Yes & Paper+REO \\
+5 & \href{https://scholar.google.com/scholar?q=\%22Haifeng+Li\%2C+Xin+Dou\%2C+Chao+Tao\%2C+Zhixiang+Wu\%2C+Jie+Chen\%2C+Jian+Peng\%2C+Min+Deng\%2C+and+Ling+Zhao.+Rsi-cb\%3A+A+large-scale+remote+sensing+image+classification+benchmark+using+crowdsourced+data.+Sensors\%2C+20\%286\%29\%3A1594\%2C+2020.+3\%2C+4\%22}{RSI-CB128} & 2017 & C & 45 & RGB & 36K & 128 & 0.3$\sim$3m & 0.879 & Yes & ? & Paper \\
+6 & \href{https://scholar.google.com/scholar?q=\%22Haifeng+Li\%2C+Xin+Dou\%2C+Chao+Tao\%2C+Zhixiang+Wu\%2C+Jie+Chen\%2C+Jian+Peng\%2C+Min+Deng\%2C+and+Ling+Zhao.+Rsi-cb\%3A+A+large-scale+remote+sensing+image+classification+benchmark+using+crowdsourced+data.+Sensors\%2C+20\%286\%29\%3A1594\%2C+2020.+3\%2C+4\%22}{RSI-CB256} & 2017 & C & 35 & RGB & 24K & 256 & 0.3$\sim$3m & 2.24 & Yes & ? & Paper \\
+7 & \href{https://scholar.google.com/scholar?q=\%22Efren+L\%C3\%B3pez-Jim\%C3\%A9nez\%2C+Juan+Irving+Vasquez-Gomez\%2C+Miguel+Angel+Sanchez-Acevedo\%2C+Juan+Carlos+Herrera-Lozada\%2C+and+Abril+Valeria+Uriarte-Arcia.+Columnar+cactus+recognition+in+aerial+images+using+a+deep+learning+approach.+Ecological+Informatics\%2C+52\%3A131\%E2\%80\%93138\%2C+2019.+16\%2C+17\%22}{Cactus Aerial Photos} & 2018 & C & 2 & RGB & 24K & 32 & -- & 0.053 & Yes & Yes & FOMO \\
+\addlinespace[0.22em]
+8 & \href{https://scholar.google.com/scholar?q=\%22Ilke+Demir\%2C+Krzysztof+Koperski\%2C+David+Lindenbaum\%2C+Guan+Pang\%2C+Jing+Huang\%2C+Saikat+Basu\%2C+Forest+Hughes\%2C+Devis+Tuia\%2C+and+Ramesh+Raskar.+Deepglobe+2018\%3A+A+challenge+to+parse+the+earth+through+satellite+images.+In+CVPRW\%2C+June+2018.+5\%2C+6\%22}{DeepGlobe-Bldng} & 2018 & S,C & 1 & OPT (Satellite) & 24.6K & 650 & -- & -- & Yes & ? & Paper \\
+\addlinespace[0.22em]
+9 & \href{https://scholar.google.com/scholar?q=\%22Patrick+Helber\%2C+Benjamin+Bischke\%2C+Andreas+Dengel\%2C+and+Damian+Borth.+Eurosat\%3A+A+novel+dataset+and+deep+learning+benchmark+for+land+use+and+land+cover+classification.+IEEE+J.+Sel.+Top.+Appl.+Earth+Obs.+Remote+Sens.\%2C+12\%287\%29\%3A2217\%E2\%80\%932226\%2C+2019.+3\%2C+4\%22}{EuroSAT} & 2018 & C & 10 & S2 MS & 27K & 64 & 10$\sim$60m & 1.92 & Yes & Yes & GFM+Paper+TG \\
+10 & \href{https://arxiv.org/abs/1711.07846}{FMoW} & 2018 & C & 63 & RGB+MS & 523.8K & -- & 0.3m & 3.5K & Yes & Yes & Paper+GFM \\
+11 & \href{https://scholar.google.com/scholar?q=\%22Weixun+Zhou\%2C+Shawn+Newsam\%2C+Congmin+Li\%2C+and+Zhenfeng+Shao.+Patternnet\%3A+A+benchmark+dataset+for+performance+evaluation+of+remote+sensing+image+retrieval.+ISPRS+J.+Photogramm.+Remote+Sens.\%2C+145\%3A197\%E2\%80\%93209\%2C+2018.+4\%22}{PatternNet} & 2018 & C & 38 & RGB & 30.4K & 256 & 0.062$\sim$4.693m & 1.3 & Yes & ? & Paper+TG \\
+12 & \href{https://scholar.google.com/scholar?q=\%22xView.+xview+2018+object+detection+challenge\%2C+2019.+5\%2C+6\%2C+12\%22}{xView} & 2018 & C & 60 & RGB+MS & 1.4K & 3000 & 0.3m & 20 & Yes & ? & Paper \\
+13 & \href{https://scholar.google.com/scholar?q=\%22Gencer+Sumbul\%2C+Marcela+Charfuelan\%2C+Begum+Demir\%2C+and+Volker+Markl.+Bigearthnet\%3A+A+large-scale+benchmark+archive+for+remote+sensing+image+understanding.+In+IGARSS\%2C+pages+5901\%E2\%80\%935904.+IEEE\%2C+2019.+3\%2C+4\%2C+12\%2C+13\%2C+21\%22}{BigEarthNet-MM} & 2019 & C & 19 & S1/S2 & 590.3K & 20$\sim$120 & 10$\sim$60m & 121 & Yes & Yes & FOMO+GFM+Paper \\
+\addlinespace[0.22em]
+14 & \href{https://arxiv.org/abs/1906.07789}{SEN12MS} & 2019 & S,C & -- & MS+SAR & 180.7K & 256 & 10m & 510 & Yes & Yes & FOMO+TG \\
+\addlinespace[0.22em]
+15 & \href{https://arxiv.org/abs/1912.12171}{So2Sat LCZ42} & 2019 & C & -- & S1+S2 & 400.7K & 32 & 10m & 51.8 & Yes & Yes & CB+GB2+GFM+Paper+TG \\
+16 & \href{https://scholar.google.com/scholar?q=\%22Edemir+Ferreira\%2C+Matheus+Brito\%2C+Remis+Balaniuk\%2C+M\%C3\%A1rio+S+Alvim\%2C+and+Jefersson+A+dos+Santos.+Brazildam\%3A+A+benchmark+dataset+for+tailings+dam+detection.+In+LAGIRS\%2C+pages+339\%E2\%80\%93344.+IEEE\%2C+2020.+4\%22}{BrazilDAM} & 2020 & C & 2 & RGB & 769 & 384 & 10$\sim$60m & 57 & Yes & ? & Paper \\
+17 & \href{https://scholar.google.com/scholar?q=\%22Haifeng+Li\%2C+Hao+Jiang\%2C+Xin+Gu\%2C+Jian+Peng\%2C+Wenbo+Li\%2C+Liang+Hong\%2C+and+Chao+Tao.+Clrs\%3A+Continual+learning+benchmark+for+remote+sensing+image+scene+classification.+Sensors\%2C+20\%284\%29\%3A1226\%2C+2020.+4\%22}{CLRS} & 2020 & C & 25 & RGB & 15K & 256 & 0.26$\sim$8.85m & 1.74 & Yes & ? & Paper \\
+\addlinespace[0.22em]
+18 & \href{https://www.google.com/search?q=\%22IDTReeS\%22+dataset+remote+sensing}{IDTReeS} & 2020 & OD,C & 33 & Multiple (Multiple) & 591$\times$369 & 20 & -- & 0.28 & Yes & ? & TG \\
+\addlinespace[0.22em]
+19 & \href{https://www.google.com/search?q=\%22MAFAT+Challenge\%22+dataset+remote+sensing}{MAFAT Challenge} & 2020 & C & -- & SAR & -- & -- & -- & -- & Yes & ? & Name \\
+20 & \href{https://arxiv.org/abs/2102.04266}{OVERHEAD MNIST} & 2020 & C & 9 & Grayscale & 1K & 28 & -- & 0.018 & Yes & ? & Paper \\
+21 & \href{https://scholar.google.com/scholar?q=\%22Gabriel+Tseng\%2C+Ivan+Zvonkov\%2C+Catherine+Lilian+Nakalembe\%2C+and+Hannah+Kerner.+Cropharvest\%3A+A+global+dataset+for+crop-type+classification.+In+NeurIPS+Datasets+and+Benchmarks+Track\%2C+2021.+4\%22}{CropHarvest} & 2021 & C & -- & Multi & 95.2K & -- & 10$\sim$60m & 22.7 & Yes & ? & TG \\
+22 & \href{https://scholar.google.com/scholar?q=\%22Yang+Long\%2C+Gui-Song+Xia\%2C+Shengyang+Li\%2C+Wen+Yang\%2C+Michael+Ying+Yang\%2C+Xiao+Xiang+Zhu\%2C+Liangpei+Zhang\%2C+and+Deren+Li.+On+creating+benchmark+dataset+for+aerial+image+interpretation\%3A+Reviews\%2C+guidances\%2C+and+million-aid.+IEEE+J.+Sel.+Top.+Appl.+Earth+Obs.+Remote+Sens.\%2C+14\%3A4205\%E2\%80\%934230\%2C+2021.+1\%2C+2\%2C+4\%2C+11\%2C+12\%22}{Million AID} & 2021 & C & 28 & RGB & 1M & 150$\sim$550 & 0.5$\sim$153m & 134 & Yes & ? & Paper \\
+23 & \href{https://scholar.google.com/scholar?q=\%22Yuansheng+Hua\%2C+Lichao+Mou\%2C+Pu+Jin\%2C+and+Xiao+Xiang+Zhu.+Multiscene\%3A+A+large-scale+dataset+and+benchmark+for+multiscene+recognition+in+single+aerial+images.+IEEE+TGRS\%2C+60\%3A1\%E2\%80\%9313\%2C+2021.+4\%22}{MultiScene} & 2021 & C & 36 & RGB & 100K & 512 & 0.3$\sim$0.6m & 6 & Yes & ? & Paper \\
+24 & \href{https://www.google.com/search?q=\%22South+Africa+Crop+Type\%22+dataset+remote+sensing}{South Africa Crop Type} & 2021 & C & 9 & S1+S2 & 122.7K & -- & -- & 82.8 & Yes & ? & TG \\
+25 & \href{https://scholar.google.com/scholar?q=\%22Mehmet+Ozgur+Turkoglu\%2C+Stefano+D\%E2\%80\%99Aronco\%2C+Gregor+Perich\%2C+Frank+Liebisch\%2C+Constantin+Streit\%2C+Konrad+Schindler\%2C+and+Jan+Dirk+Wegner.+Crop+mapping+from+image+time+series\%3A+Deep+learning+with+multi-scale+label+hierarchies.+Remote+Sens.+Environ.\%2C+264\%3A112603\%2C+2021.+7\%22}{ZueriCrop} & 2021 & C & 48 & S2 & 28K$\times$71 & 24 & 10m & 38.5 & Yes & ? & TG \\
+26 & \href{https://wilds.stanford.edu/datasets/}{FMoW-WILDS} & 2021 & C & 62 & RGB & 141.7K & 224 & var. & 55 & Yes & ? & WILDS \\
+27 & \href{https://www.google.com/search?q=\%22ADVANCE\%22+dataset+remote+sensing}{ADVANCE} & 2022 & C & 13 & OPT (Satellite) & 5.1K & 256 & -- & 4.4 & Yes & ? & TG \\
+28 & \href{https://www.google.com/search?q=\%22AgriFieldNet\%22+dataset+remote+sensing}{AgriFieldNet} & 2022 & C & 13 & MS (Satellite) & 1.2K$\times$12 & 256 & -- & 0.32 & Yes & ? & TG \\
+29 & \href{https://proceedings.neurips.cc/paper_files/paper/2022/hash/b01153e7112b347d8ed54f317840d8af-Abstract-Datasets_and_Benchmarks.html}{CaiRoad} & 2022 & C & -- & Satellite MT & -- & -- & -- & 10.7 & Yes & Yes & GFM+Paper \\
+30 & \href{https://proceedings.neurips.cc/paper_files/paper/2022/hash/b01153e7112b347d8ed54f317840d8af-Abstract-Datasets_and_Benchmarks.html}{CalFire} & 2022 & C & -- & Satellite MT & -- & -- & -- & 7.2 & Yes & Yes & GFM+Paper \\
+31 & \href{https://scholar.google.com/scholar?q=\%22Etienne+Lord+Amanda+A.+Boatswain+Jacques\%2C+Abdoulaye+Banir\%C3\%A9+Diallo.+Towards+the+creation+of+a+canadian+land-use+dataset+for+agricultural+land+classification.+In+Canadian+Symposium+on+Remote+Sensing\%2C+2021.+3\%2C+4\%22}{Canadian Cropland} & 2022 & C & 10 & S2 & 78.5K & 64 & 10m & 26 & Yes & Yes & GFM \\
+32 & \href{https://github.com/sustainlab-group/SatMAE}{fMoW-Sentinel} & 2022 & C & 62 & S2 MS & 882.8K & 96 & 10$\sim$60m & -- & Yes & Yes & GFM \\
+\addlinespace[0.22em]
+33 & \href{https://arxiv.org/abs/2201.11192}{ReforesTree} & 2022 & OD,C & 6 & OPT (Drone) & 100 & 4000 & -- & 7.5 & Yes & Yes & FOMO+TG \\
+\addlinespace[0.22em]
+34 & \href{https://scholar.google.com/scholar?q=\%22Sara+Beery\%2C+Guanhang+Wu\%2C+Trevor+Edwards\%2C+Filip+Pavetic\%2C+Bo+Majewski\%2C+Shreyasee+Mukherjee\%2C+Stanley+Chan\%2C+John+Morgan\%2C+Vivek+Rathod\%2C+and+Jonathan+Huang.+The+auto+arborist+dataset\%3A+A+large-scale+benchmark+for+multiview+urban+forest+monitoring+under+domain+shift.+In+CVPR\%2C+pages+21294\%E2\%80\%9321307\%2C+2022.+4\%22}{The Auto Arborist Dataset} & 2022 & C & 344 & RGB+MS & 2.6M & 1$\sim$24 & -- & 24 & Yes & ? & Paper \\
+35 & \href{https://scholar.google.com/scholar?q=\%22Steve+Ahlswede\%2C+Christian+Schulz\%2C+Christiano+Gava\%2C+Patrick+Helber\%2C+Benjamin+Bischke\%2C+Michael+F\%C3\%B6rster\%2C+Florencia+Arias\%2C+J\%C3\%B6rn+Hees\%2C+Beg\%C3\%BCm+Demir\%2C+and+Birgit+Kleinschmit.+Treesatai+benchmark+archive\%3A+A+multisensor\%2C+multi-label+dataset+for+tree+species+classification+in+remote+sensing.+Earth+System+Science+Data+Discussions\%2C+pages+1\%E2\%80\%9322\%2C+2022.+4\%22}{TreeSatAI} & 2022 & C & 47 & Multi & 50.4K & 304 & 0$\sim$1 & 16.3 & Yes & Yes & FOMO+GB2+GFM+Paper+TG \\
+36 & \href{https://docs.torchgeo.org/en/stable/api/datasets/digital-typhoon.html\#digital-typhoon}{Digital Typhoon} & 2023 & C,R & 8 & IR & 189.4K & 512 & 5000m & -- & Yes & ? & TG \\
+37 & \href{https://www.google.com/search?q=\%22FireRisk\%22+dataset+remote+sensing}{FireRisk} & 2023 & C & 7 & OPT (Satellite) & 91.9K & -- & -- & 14 & Yes & ? & TG \\
+38 & \href{https://scholar.google.com/scholar?q=\%22YU+Wenqi\%2C+CHENG+Gong\%2C+WANG+Meijun\%2C+YAO+Yanqing\%2C+XIE+Xingxing\%2C+YAO+Xiwen\%2C+and+HAN+Junwei.+Mar20\%3A+A+benchmark+for+military+aircraft+recognition+in+remote+sensing+images.+National+Remote+Sensing+Bulletin\%2C+27\%2812\%29\%3A2688\%E2\%80\%932696\%2C+2024.+4\%2C+6\%22}{MAR20} & 2023 & C & 20 & RGB & 3.8K & 800$\times$800 & 1m & 1.1 & Yes & ? & Paper \\
+39 & \href{https://arxiv.org/abs/2306.03831}{m-BigEarthNet (GEO-Bench)} & 2023 & C & 43 & S2 MS & 22K & 120 & 10m & -- & Yes & Yes & GB1 \\
+40 & \href{https://zenodo.org/records/8276815}{m-Brick-Kiln (GEO-Bench)} & 2023 & C & 2 & S2 MS & 17,061 & 64 & 10m & 1.6 & Yes & Yes & GB1 \\
+41 & \href{https://zenodo.org/records/8276933}{m-EuroSAT (GEO-Bench)} & 2023 & C & 10 & S2 MS & 4K & 64 & 10m & 1.2 & Yes & Yes & GB1 \\
+42 & \href{https://zenodo.org/records/8008717}{m-ForestNet (GEO-Bench)} & 2023 & C & 12 & Landsat-8 MS & 8,446 & 332 & 15m & 1.2 & Yes & Yes & GB1 \\
+43 & \href{https://zenodo.org/records/8008748}{m-PV4GER (GEO-Bench)} & 2023 & C & 2 & RGB & 13,812 & 320 & 0.1m & 0.68 & Yes & Yes & GB1 \\
+44 & \href{https://arxiv.org/abs/2306.03831}{m-So2Sat (GEO-Bench)} & 2023 & C & 17 & S1/S2 & 21,964 & 32 & 10m & -- & Yes & Yes & GB1 \\
+45 & \href{https://bigearth.net/}{BigEarthNet v2.0 (S1+S2)} & 2024 & C,S & 19 & S1/S2 & 549.5K pairs & 120 & 10$\sim$60m & 110 & Yes & Yes & GB2+Paper \\
+\addlinespace[0.22em]
+46 & \href{https://www.google.com/search?q=\%22PASTIS-HD\%22+dataset+remote+sensing}{PASTIS-HD} & 2024 & S,C,I & 20 & Multi & -- & -- & 1m & -- & Yes & Yes & GFM \\
+\addlinespace[0.22em]
+47 & \href{https://arxiv.org/abs/2401.04464}{PhilEO Bench} & 2024 & R,S,C & -- & S2 MS & -- & -- & 10m & 400 & Yes & Yes & PH \\
+\addlinespace[0.22em]
+48 & \href{https://docs.torchgeo.org/en/stable/api/datasets/quakeset.html\#quakeset}{QuakeSet} & 2024 & C,R & 2 & S1 SAR & 3.3K & 512 & 10m & 11 & Yes & ? & TG \\
+\addlinespace[0.22em]
+49 & \href{https://arxiv.org/abs/2312.00069}{SICKLE} & 2024 & S,C & 21 & S1/S2+L8 TS & 34.8K & -- & 3m-30m & -- & Yes & Yes & GFM+Paper \\
+\addlinespace[0.22em]
+50 & \href{https://github.com/RolnickLab/FoMo-Bench}{TalloS} & 2024 & C & 1160 & Multi & 335K & -- & 10m & -- & Yes & Yes & FOMO \\
+51 & \href{https://github.com/isaaccorley/landsatbench}{BigEarthNet-L (Landsat-Bench)} & 2025 & C & 19 & Landsat MS & -- & -- & 30m & -- & Yes & Yes & LB \\
+52 & \href{https://huggingface.co/datasets/wangyi111/Copernicus-Bench}{BigEarthNetV2-S2 (Copernicus-Bench)} & 2025 & C & 19 & S2 MS & 24K & 120 & 10m & -- & Yes & Yes & CB \\
+53 & \href{https://github.com/isaaccorley/landsatbench}{EuroSAT-L (Landsat-Bench)} & 2025 & C & 10 & Landsat MS & -- & -- & 30m & -- & Yes & Yes & LB \\
+\addlinespace[0.22em]
+54 & \href{https://arxiv.org/abs/2511.15658}{GEO-Bench-2} & 2025 & \shortstack{C,S,R,\\OD,I} & -- & Multi & 19 datasets & -- & -- & -- & Yes & Yes & GB2 \\
+\addlinespace[0.22em]
+55 & \href{https://www.google.com/search?q=\%22Landsat-Bench\%22+dataset+remote+sensing}{Landsat-Bench} & 2025 & C & -- & Landsat MS & 3 datasets & -- & 30m & -- & Yes & Yes & LB \\
+56 & \href{https://github.com/isaaccorley/landsatbench}{LC100-L (Landsat-Bench)} & 2025 & C & -- & Landsat MS & -- & -- & 30m & -- & Yes & Yes & LB \\
+\addlinespace[0.22em]
+57 & \href{https://arxiv.org/html/2505.16793v2}{REOBench} & 2025 & \shortstack{C,S,\\OD,IC} & -- & OPT+Text & 6 subsets & -- & -- & -- & Yes & Yes & REO \\
+\addlinespace[0.22em]
+58 & \href{https://www.drivendata.org/competitions/72/predict-wind-speeds/}{Tropical Cyclone} & 2020 & R & -- & GOES 8--16 MSI & 108.1K & 256x256 & 4K--8K & -- & Yes & ? & TG \\
+59 & \href{https://docs.torchgeo.org/en/stable/api/datasets/sustainbench-crop-yield.html\#sustainbench-crop-yield}{SustainBench Crop Yield} & 2021 & R & -- & MODIS MSI & 11K & 32 & -- & -- & Yes & ? & TG \\
+60 & \href{https://docs.torchgeo.org/en/stable/api/datasets/usavars.html}{USAVars} & 2021 & R & -- & NAIP RGB+NIR & 100K & -- & 4m & -- & Yes & ? & TG \\
+61 & \href{https://www.google.com/search?q=\%22Hyperview+Challenge\%22+dataset+remote+sensing}{Hyperview Challenge} & 2022 & R & -- & HS & 2.9K & 11$\sim$250 & 2m & 1.85 & Yes & ? & Name+Paper \\
+62 & \href{https://arxiv.org/abs/2204.08524}{So2Sat Population} & 2022 & R & -- & DEM+S2 & -- & -- & 10m & -- & Yes & ? & Paper \\
+63 & \href{https://nascetti-a.github.io/BioMasster/}{BioMassters} & 2023 & R & -- & S1/S2 & 13K & 256 & 10m & 201 & Yes & Yes & GB2+PG+TG \\
+64 & \href{https://docs.torchgeo.org/en/stable/api/datasets/skippd.html\#skipp-d}{SKIPP'D} & 2023 & R & -- & RGB & 363.4K & 64 & -- & -- & Yes & ? & TG \\
+65 & \href{https://arxiv.org/abs/2407.09392}{Open-Canopy} & 2024 & R,CD & -- & SPOT-6/7+LiDAR & >87K km$^2$ & 1K tiles & 1.5m & -- & Yes & Yes & PG+Paper \\
+66 & \href{https://docs.torchgeo.org/en/stable/api/datasets/western-usa-live-fuel-moisture.html\#western-usa-live-fuel-moisture}{Western USA Live Fuel Moisture} & 2024 & R & -- & L8+S1 & 2.6K & -- & -- & -- & Yes & ? & TG \\
+67 & \href{https://docs.torchgeo.org/en/stable/api/datasets/air-quality.html\#air-quality}{Air Quality} & -- & R & -- & Multi-sensor & 9.4K & -- & -- & -- & Yes & ? & TG \\
+\addlinespace[0.22em]
+68 & \href{https://scholar.google.com/scholar?q=\%22ISPRS-Contest.+Isprs+2d+semantic+labeling+contest\%2C\%E2\%80\%9D+accessed+on+oct.+9\%2C+2022.\%2C+2022.+3\%2C+5\%2C+7\%22}{ISPRS 2D - Potsdam} & 2011 & S & 6 & RGB+nDSM & 38 & 6000 & 0.05m & 16 & Yes & ? & Paper+TG \\
+69 & \href{https://scholar.google.com/scholar?q=\%22ISPRS-Contest.+Isprs+2d+semantic+labeling+contest\%2C\%E2\%80\%9D+accessed+on+oct.+9\%2C+2022.\%2C+2022.+3\%2C+5\%2C+7\%22}{ISPRS 2D - Vaihingen} & 2011 & S & 6 & RGB+nDSM & 33 & 2200 & 0.09m & 17 & Yes & Yes & GFM+Paper+TG \\
+70 & \href{https://scholar.google.com/scholar?q=\%22Gabriele+Moser\%2C+Devis+Tuia\%2C+and+Michal+Shimoni.+2015+ieee+grss+data+fusion+contest\%3A+Extremely+high+resolution+lidar+and+optical+data+\%5Btechnical+committees\%5D.+IEEE+GRSM\%2C+3\%281\%29\%3A40\%E2\%80\%9341\%2C+2015.+7\%22}{DFC2015 Zeebruges} & 2015 & S & 8 & Multi & 7 & 0$\sim$100 & 0.05m & 0.002 & Yes & ? & Paper \\
+71 & \href{https://scholar.google.com/scholar?q=\%22Steve+Foga\%2C+Pat+L+Scaramuzza\%2C+Song+Guo\%2C+Zhe+Zhu\%2C+Ronald+D+Dilley+Jr\%2C+Tim+Beckmann\%2C+Gail+L+Schmidt\%2C+John+L+Dwyer\%2C+M+Joseph+Hughes\%2C+and+Brady+Laue.+Cloud+detection+algorithm+comparison+and+validation+for+operational+landsat+data+products.+Remote+Sens.+Environ.\%2C+194\%3A379\%E2\%80\%93+390\%2C+2017.+5\%2C+7\%22}{L8 Biome} & 2016 & S & 5 & L8 MSI & 96 & 8.9K & 15$\sim$30m & 96 & Yes & ? & TG \\
+72 & \href{https://arxiv.org/abs/1807.01232}{SpaceNet-1} & 2016 & S & 1 & RGB+MS & 9.7K & 650 & 0.5$\sim$1m & 31 & Yes & ? & Paper \\
+73 & \href{https://scholar.google.com/scholar?q=\%22Emmanuel+Maggiori\%2C+Yuliya+Tarabalka\%2C+Guillaume+Charpiat\%2C+and+Pierre+Alliez.+Can+semantic+labeling+methods+generalize+to+any+city\%3F+the+inria+aerial+image+labeling+benchmark.+In+IGARSS\%2C+pages+3226\%E2\%80\%933229.+IEEE\%2C+2017.+5\%2C+7\%22}{INRIA} & 2017 & S & 1 & RGB & 360 & 1500 & 0.3m & 19.5 & Yes & ? & Paper \\
+74 & \href{https://scholar.google.com/scholar?q=\%22Emmanuel+Maggiori\%2C+Yuliya+Tarabalka\%2C+Guillaume+Charpiat\%2C+and+Pierre+Alliez.+Can+semantic+labeling+methods+generalize+to+any+city\%3F+the+inria+aerial+image+labeling+benchmark.+In+IGARSS\%2C+pages+3226\%E2\%80\%933229.+IEEE\%2C+2017.+5\%2C+7\%22}{Inria Aerial Image Labeling} & 2017 & S & 2 & RGB & 360 & 5000 & 0.3m & -- & Yes & ? & Paper+TG \\
+75 & \href{https://arxiv.org/abs/1807.01232}{SpaceNet-2} & 2017 & S & 1 & RGB+MS & 24.6K & 650 & 0.3m & 182 & Yes & Yes & GB2+GFM+Paper \\
+76 & \href{https://arxiv.org/abs/1807.01232}{SpaceNet-3} & 2017 & S & 1 & Multi & 3.7K & 1300 & 0.3$\sim$1.24m & 182 & Yes & ? & Paper \\
+77 & \href{https://www.google.com/search?q=\%22Urban+3D+Challenge\%22+dataset+remote+sensing}{Urban 3D Challenge} & 2017 & S & 2 & RGB & 157K & -- & 0.5m & -- & Yes & ? & Name \\
+78 & \href{https://www.google.com/search?q=\%22DeepGlobe-LandCover\%22+dataset+remote+sensing}{DeepGlobe-LandCover} & 2018 & S & 7 & RGB & 1.1K & 2448 & 0.5m & 2.75 & Yes & ? & TG \\
+79 & \href{https://scholar.google.com/scholar?q=\%22Ilke+Demir\%2C+Krzysztof+Koperski\%2C+David+Lindenbaum\%2C+Guan+Pang\%2C+Jing+Huang\%2C+Saikat+Basu\%2C+Forest+Hughes\%2C+Devis+Tuia\%2C+and+Ramesh+Raskar.+Deepglobe+2018\%3A+A+challenge+to+parse+the+earth+through+satellite+images.+In+CVPRW\%2C+June+2018.+5\%2C+6\%22}{DeepGlobe-Road} & 2018 & S & 1 & OPT (Satellite) & 8.6K & 1024 & -- & 3.84 & Yes & ? & Paper \\
+80 & \href{https://scholar.google.com/scholar?q=\%22Bertrand+Le+Saux\%2C+Naoto+Yokoya\%2C+Ronny+H\%C3\%A4nsch\%2C+and+Saurabh+Prasad.+2018+ieee+grss+data+fusion+contest\%3A+Multimodal+land+use+classification+\%5Btechnical+committees\%5D.+IEEE+GRSM\%2C+6\%281\%29\%3A52\%E2\%80\%9354\%2C+2018.+7\%22}{DFC18} & 2018 & S & 20 & Multi & 1 & -- & 0.05$\sim$1m & 19.8 & Yes & ? & Paper \\
+81 & \href{https://scholar.google.com/scholar?q=\%22Zhenfeng+Shao\%2C+Ke+Yang\%2C+and+Weixun+Zhou.+Performance+evaluation+of+single-label+and+multi-label+remote+sensing+image+retrieval+using+a+dense+labeling+dataset.+Remote+Sensing\%2C+10\%286\%29\%3A964\%2C+2018.+7\%22}{DLRSD} & 2018 & S & 21 & RGB & 2.1K & 256 & 0.3m & 0.004 & Yes & ? & TG \\
+82 & \href{https://scholar.google.com/scholar?q=\%22Xin-Yi+Tong\%2C+Gui-Song+Xia\%2C+Qikai+Lu\%2C+Huanfeng+Shen\%2C+Shengyang+Li\%2C+Shucheng+You\%2C+and+Liangpei+Zhang.+Land-cover+classification+with+high-resolution+remote+sensing+images+using+transferable+deep+models.+Remote+Sens.+Environ.\%2C+237\%3A111322\%2C+2020.+4\%22}{GID-15 (Gaofen Image Dataset)} & 2018 & S & 15 & GF-2 RGB & 150 & 6800$\times$7200 & 3m & 36 & Yes & ? & Paper+TG \\
+83 & \href{https://scholar.google.com/scholar?q=\%22Caleb+Robinson\%2C+Le+Hou\%2C+Kolya+Malkin\%2C+Bistra+Dilkina\%2C+and+Nebojsa+Jojic.+Large+scale+high-resolution+land+cover+mapping+with+multiresolution+data.+In+CVPR\%2C+pages+12726\%E2\%80\%9312735\%2C+2019.+7\%22}{Chesapeake Land Cover} & 2019 & S & 16 & RGB+MS & 250K & 240 & 1m & 140 & Yes & ? & TG \\
+84 & \href{https://www.google.com/search?q=\%22Open+AI+Challenge\%3A+Caribbean\%22+dataset+remote+sensing}{Open AI Challenge: Caribbean} & 2019 & S & 5 & RGB & 7 & 52$\sim$318 & 0.04m & -- & Yes & ? & Name+Paper \\
+85 & \href{https://arxiv.org/abs/1807.01232}{SpaceNet-5} & 2019 & S & 1 & Multi & 2.4K & 1300 & 0.3m & 84.1 & Yes & ? & Paper \\
+86 & \href{https://www.google.com/search?q=\%22BDCI2020\%22+dataset+remote+sensing}{BDCI2020} & 2020 & S & 7 & RGB & 146K & 256 & 2m & 1.3 & Yes & ? & Paper \\
+87 & \href{https://scholar.google.com/scholar?q=\%22Naoto+Yokoya\%2C+Pedram+Ghamisi\%2C+Ronny+H\%C3\%A4nsch\%2C+and+Michael+Schmitt.+2020+IEEE+GRSS+data+fusion+contest\%3A+Global+land+cover+mapping+with+weak+supervision+\%5Btechnical+committees\%5D.+IEEE+GRSM\%2C+8\%281\%29\%3A154\%E2\%80\%93157\%2C+2020.+7\%22}{DFC20} & 2020 & S & 17 & S1+S2 & 180.7K & -- & 10m & 19.2 & Yes & ? & Paper \\
+88 & \href{https://huggingface.co/datasets/GFM-Bench/DFC2020}{DFC2020} & 2020 & S & 8 & S1/S2 & 55,026 & 96 & 10m & 10.6 & Yes & Yes & CB+GFM \\
+89 & \href{https://arxiv.org/abs/2004.03023}{Kenya Crop Type} & 2020 & S & 7 & S2 MSI & 4.7K & 3035x2016 & 10m & -- & Yes & ? & TG \\
+90 & \href{https://scholar.google.com/scholar?q=\%22Adrian+Boguszewski\%2C+Dominik+Batorski\%2C+Natalia+Ziemba-Jankowska\%2C+Tomasz+Dziedzic\%2C+and+Anna+Zambrzycka.+Landcover.+ai\%3A+Dataset+for+automatic+mapping+of+buildings\%2C+woodlands\%2C+water+and+roads+from+aerial+imagery.+In+CVPR\%2C+pages+1102\%E2\%80\%931110\%2C+2021.+5\%2C+7\%22}{LandCoverAI} & 2020 & S & -- & RGB & 41 & 9000 & 0$\sim$0.2 & 1.4 & Yes & ? & TG \\
+91 & \href{https://scholar.google.com/scholar?q=\%22GFDRR+Labs.+Open+cities+ai+challenge+dataset\%2Cversion+1.0\%2C+radiant+mlhub\%2C+2018.+7\%22}{Open Cities AI Challenge} & 2020 & S & 2 & RGB & 11K & 1$\sim$24 & 0.03$\sim$0.2m & 81.5 & Yes & ? & Name+Paper \\
+92 & \href{https://scholar.google.com/scholar?q=\%22Ribana+Roscher\%2C+Michele+Volpi\%2C+Cl\%C3\%A9ment+Mallet\%2C+Lukas+Drees\%2C+and+Jan+Dirk+Wegner.+Semcity+toulouse\%3A+A+benchmark+for+building+instance+segmentation+in+satellite+images.+In+ISPRS+Annals\%2C+volume+5\%2C+pages+109\%E2\%80\%93116\%2C+2020.+7\%22}{SemCity Toulouse} & 2020 & S & -- & MS & 16 & 3500 & 0.5$\sim$2m & 5.2 & Yes & ? & Paper \\
+93 & \href{https://scholar.google.com/scholar?q=\%22Derrick+Bonafilia\%2C+Beth+Tellman\%2C+Tyler+Anderson\%2C+and+Erica+Issenberg.+Sen1floods11\%3A+A+georeferenced+dataset+to+train+and+test+deep+learning+flood+algorithms+for+sentinel-1.+In+CVPRW\%2C+pages+210\%E2\%80\%93211\%2C+2020.+3\%2C+4\%22}{Sen1Floods11} & 2020 & S & 2 & S1/S2 & 4.8K & 512 & 10m & 14.3 & Yes & Yes & GFM+PG \\
+94 & \href{https://source.coop/stanford/african-crops-south-sudan}{South Sudan Crop Type} & 2020 & S & 5 & S1/S2+Planet & 837 tiles & 64 & 10m & 977 & Yes & Yes & PG \\
+95 & \href{https://scholar.google.com/scholar?q=\%22Jacob+Shermeyer\%2C+Daniel+Hogan\%2C+Jason+Brown\%2C+Adam+Van+Etten\%2C+Nicholas+Weir\%2C+Fabio+Pacifici\%2C+Ronny+Hansch\%2C+Alexei+Bastidas\%2C+Scott+Soenen\%2C+Todd+Bacastow\%2C+et+al.+Spacenet+6\%3A+Multi-sensor+all+weather+mapping+dataset.+In+CVPRW\%2C+pages+196\%E2\%80\%93197\%2C+2020.+7+26\%22}{SpaceNet-6} & 2020 & S & 1 & SAR+RGB & 3.4K & 900 & 0.5m & 0.368 & Yes & Yes & GB2 \\
+\addlinespace[0.22em]
+96 & \href{https://scholar.google.com/scholar?q=\%22Adam+Van+Etten\%2C+Daniel+Hogan\%2C+Jesus+Martinez+Manso\%2C+Jacob+Shermeyer\%2C+Nicholas+Weir\%2C+and+Ryan+Lewis.+The+multi-temporal+urban+development+spacenet+dataset.+In+CVPR\%2C+pages+6398\%E2\%80\%936407\%2C+2021.+7\%22}{SpaceNet-7} & 2020 & CD,S & 1 & MS+MT & 1.5K & 1024 & 4m & 20.6 & Yes & Yes & GB2+PG \\
+\addlinespace[0.22em]
+97 & \href{https://scholar.google.com/scholar?q=\%22Giulio+Weikmann\%2C+Claudia+Paris\%2C+and+Lorenzo+Bruzzone.+Timesen2crop\%3A+A+million+labeled+samples+dataset+of+sentinel+2+image+time+series+for+crop-type+classification.+IEEE+J.+Sel.+Top.+Appl.+Earth+Obs.+Remote+Sens.\%2C+14\%3A4699\%E2\%80\%934708\%2C+2021.+5\%2C+7\%22}{TimeSen2Crop} & 2020 & S & 16 & S2 & 1M & 10980 & 10m & 1.1 & Yes & Yes & GFM \\
+98 & \href{https://scholar.google.com/scholar?q=\%22Yanfei+Zhong\%2C+Xin+Hu\%2C+Chang+Luo\%2C+Xinyu+Wang\%2C+Ji+Zhao\%2C+and+Liangpei+Zhang.+Whu-hi\%3A+Uav-borne+hyperspectral+with+high+spatial+resolution+\%28h2\%29+benchmark+datasets+and+classifier+for+precise+crop+identification+based+on+deep+convolutional+neural+network+with+crf.+Remote+Sens.+Environ.\%2C+250\%3A112012\%2C+2020.+7\%22}{WHU-Hi} & 2020 & S & 11 & HS (Drone) & 3 & 1217 & 0.109m & 0.817 & Yes & ? & Paper \\
+99 & \href{https://scholar.google.com/scholar?q=\%22Yanfei+Zhong\%2C+Xin+Hu\%2C+Chang+Luo\%2C+Xinyu+Wang\%2C+Ji+Zhao\%2C+and+Liangpei+Zhang.+Whu-hi\%3A+Uav-borne+hyperspectral+with+high+spatial+resolution+\%28h2\%29+benchmark+datasets+and+classifier+for+precise+crop+identification+based+on+deep+convolutional+neural+network+with+crf.+Remote+Sens.+Environ.\%2C+250\%3A112012\%2C+2020.+7\%22}{WHU-Hi-HongHu} & 2020 & S & 22 & HS & 1 & 940x475 & 0.043m & -- & Yes & ? & Paper \\
+100 & \href{https://zenodo.org/records/8008800}{Benin Cashews} & 2021 & S & 6 & S2 (labels corrected with Pléiades) & 70 & 1186x1122 & 0$\sim$1 & -- & Yes & ? & TG \\
+101 & \href{https://www.google.com/search?q=\%22DFC21-DSE\%22+dataset+remote+sensing}{DFC21-DSE} & 2021 & S & 4 & Multi & 6K & 16 & 10$\sim$750m & 18 & Yes & ? & Paper \\
+102 & \href{https://www.google.com/search?q=\%22ETCI2021\%22+dataset+remote+sensing}{ETCI2021} & 2021 & S & 2 & SAR (Satellite) & 66.8K & 256 & -- & 5.3 & Yes & ? & TG \\
+103 & \href{https://arxiv.org/abs/2110.08733}{LoveDA} & 2021 & S & 7 & RGB & 6K & 1024 & 0.3m & 9.6 & Yes & ? & TG \\
+104 & \href{https://marine-debris.github.io/}{MARIDA} & 2021 & S & 15 & MS (Satellite) & 1.4K$\times$10 & 256 & -- & 1.2 & Yes & Yes & GFM \\
+105 & \href{https://scholar.google.com/scholar?q=\%22Emmanuel+Maggiori\%2C+Yuliya+Tarabalka\%2C+Guillaume+Charpiat\%2C+and+Pierre+Alliez.+Can+semantic+labeling+methods+generalize+to+any+city\%3F+the+inria+aerial+image+labeling+benchmark.+In+IGARSS\%2C+pages+3226\%E2\%80\%933229.+IEEE\%2C+2017.+5\%2C+7\%22}{Mini Inria Aerial Image Labeling Dataset} & 2021 & S & 2 & RGB & 32.5K & 512 & 0.3m & -- & Yes & ? & Paper \\
+106 & \href{https://scholar.google.com/scholar?q=\%22Vivien+Sainte+Fare+Garnot+and+Loic+Landrieu.+Panoptic+segmentation+of+satellite+image+time+series+with+convolutional+temporal+attention+networks.+ICCV\%2C+2021.+5\%2C+6\%22}{PASTIS} & 2021 & S & 18 & S2 & 2433*45*10 & 128 & 10m & 29 & Yes & Yes & GB2+TG+Paper \\
+107 & \href{https://github.com/VSainteuf/pastis-benchmark}{PASTIS-R} & 2021 & S & 18 & Multiple (Satellite) & 2.4K & 128 & -- & 54 & Yes & Yes & PG \\
+108 & \href{https://docs.torchgeo.org/en/stable/api/datasets/rwanda-field-boundary.html\#rwanda-field-boundary}{Rwanda Field Boundary} & 2021 & S & 2 & RGB+NIR & 70 & 256 & 4.7m & -- & Yes & ? & TG \\
+109 & \href{https://scholar.google.com/scholar?q=\%22Dimitris+Sykas\%2C+Ioannis+Papoutsis\%2C+and+Dimitrios+Zografakis.+Sen4agrinet\%3A+A+harmonized+multi-country\%2C+multi-temporal+benchmark+dataset+for+agricultural+earth+observation+machine+learning+applications.+In+IGARSS\%2C+pages+5830\%E2\%80\%935833.+IEEE\%2C+2021.+3\%2C+4\%2C+9\%22}{Sen4AgriNet} & 2021 & S & -- & S2 & -- & -- & 10$\sim$60m & 262 & Yes & ? & Paper \\
+110 & \href{https://www.nature.com/articles/s41597-022-01878-2}{CloudSEN12} & 2022 & S & 4 & S2/S1+DEM & 49.4K & 509 & 10m & $\sim$1K & Yes & Yes & CB+GB2+Paper \\
+111 & \href{https://docs.torchgeo.org/en/stable/api/datasets/dfc2022.html\#dfc2022}{DFC2022} & 2022 & S & 15 & RGB & 4K & 2000 & 0.5m & -- & Yes & ? & TG \\
+\addlinespace[0.22em]
+112 & \href{https://scholar.google.com/scholar?q=\%22Aysim+Toker\%2C+Lukas+Kondmann\%2C+Mark+Weber\%2C+Marvin+Eisenberger\%2C+Andr\%C3\%A9s+Camero\%2C+Jingliang+Hu\%2C+Ariadna+Pregel+Hoderlein\%2C+Caglar+Senaras\%2C+Timothy+Davis\%2C+Daniel+Cremers\%2C+Giovanni+Marchisio\%2C+Xiao+Xiang+Zhu\%2C+and+Laura+Leal-Tai\%C3\%A9.+DynamicEarthNet\%3A+Daily+Multi-Spectral+Satellite+Dataset+for+Semantic+Change+Segmentation.+In+CVPR\%2C+2022.+8\%22}{DynamicEarthNet} & 2022 & CD,S & 7 & PlanetFusion & 54.8K & 1024 & 3m & 524 & Yes & Yes & GB2+GFM+PG \\
+\addlinespace[0.22em]
+113 & \href{https://arxiv.org/abs/2209.00727}{Five-Billion-Pixels} & 2022 & S & 24 & RGB+MS & 150 & 7200$\times$6800 & 4m & 104 & Yes & Yes & PG \\
+114 & \href{https://scholar.google.com/scholar?q=\%22Gerald+Baier\%2C+Antonin+Deschemps\%2C+Michael+Schmitt\%2C+and+Naoto+Yokoya.+Synthesizing+optical+and+sar+imagery+from+land+cover+maps+and+auxiliary+raster+data.+IEEE+TGRS\%2C+60\%3A1\%E2\%80\%9312\%2C+2021.+7\%2C+12\%2C+14\%2C+18\%22}{GeoNRW} & 2022 & S & 10 & RGB+nDSM & 7.8K$\times$3 & 1000 & 1m & 30 & Yes & ? & TG \\
+115 & \href{https://www.google.com/search?q=\%22MapInWild\%22+dataset+remote+sensing}{MapInWild} & 2022 & S & 11 & Multiple (Satellite) & 1K$\times$8 & 1920 & -- & 365 & Yes & ? & TG \\
+116 & \href{https://docs.torchgeo.org/en/stable/api/datasets/mdas.html\#mdas}{MDAS} & 2022 & S & 20 & Multi & 3 & 100$\sim$18K & 0.3$\sim$30m & -- & Yes & ? & TG \\
+117 & \href{https://www.google.com/search?q=\%22MMFlood\%22+dataset+remote+sensing}{MMFlood} & 2022 & S & 1 & SAR (Satellite) & 1.7K$\times$2 & 2000 & -- & 11.3 & Yes & ? & TG \\
+118 & \href{https://scholar.google.com/scholar?q=\%22Romain+Wenger\%2C+A+Puissant\%2C+J+Weber\%2C+L+Idoumghar\%2C+and+G+Forestier.+Multisenge\%3A+a+multimodal+and+multitemporal+benchmark+dataset+for+land+use\%2Fland+cover+remote+sensing+applications.+ISPRS+Annals\%2C+pages+635\%E2\%80\%93640\%2C+2022.+7\%22}{MultiSenGE} & 2022 & S & 14 & S1+S2 & 1.1M$\times$12 & 256 & 10m & 530 & Yes & ? & Paper \\
+119 & \href{https://scholar.google.com/scholar?q=\%22Dominik+Ko\%C3\%9Fmann\%2C+Viktor+Brack\%2C+and+Thorsten+Wilhelm.+Seasonet\%3A+A+seasonal+scene+classification\%2C+segmentation+and+retrieval+dataset+for+satellite+imagery+over+germany.+In+IGARSS\%2C+pages+243\%E2\%80\%93246.+IEEE\%2C+2022.+2\%2C+5\%2C+7\%2C+12\%2C+14\%2C+18\%22}{SeasoNet} & 2022 & S & 33 & S2 & 1.8M & 120 & 10m & 229 & Yes & ? & TG \\
+120 & \href{https://www.google.com/search?q=\%22Sentinel-2+Cloud+Cover\%22+dataset+remote+sensing}{Sentinel-2 Cloud Cover} & 2022 & S & 2 & MS & 22.7K & -- & 10m-60m & 51.2 & Yes & ? & TG \\
+121 & \href{https://scholar.google.com/scholar?q=\%22Ronny+H\%C3\%A4nsch\%2C+Jacob+Arndt\%2C+Dalton+Lunga\%2C+Matthew+Gibb\%2C+Tyler+Pedelose\%2C+Arnold+Boedihardjo\%2C+Desiree+Petrie\%2C+and+Todd+M+Bacastow.+Spacenet+8-the+detection+of+flooded+roads+and+buildings.+In+CVPR\%2C+pages+1472\%E2\%80\%931480\%2C+2022.+7\%22}{SpaceNet-8} & 2022 & S & 2 & PAN+RGB & 1.2K$\times$2 & 1200 & 0.3$\sim$0.8m & 6.8 & Yes & Yes & GB2 \\
+122 & \href{https://scholar.google.com/scholar?q=\%22Jiayi+Li\%2C+Xin+Huang\%2C+and+Lilin+Tu.+Whu-ohs\%3A+A+benchmark+dataset+for+large-scale+hersepctral+image+classification.+Int.+J.+Appl.+Earth+Obs.+Geoinf.\%2C+113\%3A103022\%2C+2022.+7\%22}{WHU-OHS} & 2022 & S & 24 & HS & 7.8K & 512 & 10m & 94.9 & Yes & ? & Paper \\
+123 & \href{https://ieeexplore.ieee.org/document/10278130}{AI4SmallFarms} & 2023 & S & 2 & S2 MS & 62 tiles & -- & 10m & -- & Yes & Yes & PG \\
+\addlinespace[0.22em]
+124 & \href{https://github.com/ecovision-uzh/BraDD-S1TS}{BraDD-S1TS} & 2023 & CD,S & 2 & S1 TS & 13.2K & -- & 10m & 17.7 & Yes & Yes & GFM \\
+\addlinespace[0.22em]
+125 & \href{https://huggingface.co/datasets/antofuller/CROMA_benchmarks}{DW-Expert} \href{https://proceedings.neurips.cc/paper_files/paper/2023/file/11822e84689e631615199db3b75cd0e4-Paper-Conference.pdf}{[paper]} & 2023 & S & 9 & S1/S2 & 71.4K & 96 & 10m & -- & Yes & Yes & GFM \\
+126 & \href{https://ignf.github.io/FLAIR/FLAIR2/flair\_2.html}{FLAIR \#2} & 2023 & S & 13 & Multi & 77.8K & 512 & 0.2m-10m & -- & Yes & Yes & FOMO+GB2+GFM \\
+127 & \href{https://huggingface.co/datasets/ibm-nasa-geospatial/hls\_burn\_scars}{HLS Burn Scars} & 2023 & S & 2 & HLS & 804 & 512 & 30m & -- & Yes & Yes & GB2+GFM+PG \\
+128 & \href{https://docs.torchgeo.org/en/stable/api/datasets/io-bench.html\#i-o-bench}{I/O Bench} & 2023 & S & -- & Landsat MSI & 1 & 8000 & 30m & -- & Yes & ? & TG \\
+129 & \href{https://zenodo.org/records/8008800}{m-Cashew-Plantation (GEO-Bench)} & 2023 & S & 7 & S2 MS & 1,800 & 256 & 10m & 1.3 & Yes & Yes & GB1 \\
+130 & \href{https://arxiv.org/abs/2306.03831}{m-Chesapeake-LandCover (GEO-Bench)} & 2023 & S & 7 & RGBN & 5K & 256 & 1m & -- & Yes & Yes & GB1 \\
+131 & \href{https://arxiv.org/abs/2306.03831}{m-NeonTree (GEO-Bench)} & 2023 & S & 2 & RGB+HS+DEM & 457 & 400 & 0.1m & -- & Yes & Yes & GB1 \\
+132 & \href{https://zenodo.org/records/8277049}{m-NZ-Cattle (GEO-Bench)} & 2023 & S & 2 & RGB & 655 & 500 & 0.1m & 0.33 & Yes & Yes & GB1 \\
+133 & \href{https://zenodo.org/records/8277054}{m-PV4GER-Seg (GEO-Bench)} & 2023 & S & 2 & RGB & 3,806 & 320 & 0.1m & 0.32 & Yes & Yes & GB1 \\
+134 & \href{https://zenodo.org/records/8008825}{m-SA-Crop-Type (GEO-Bench)} & 2023 & S & 10 & S2 MS & 5K & 256 & 10m & 1.4 & Yes & Yes & GB1 \\
+135 & \href{https://scholar.google.com/scholar?q=\%22Adam+Stewart\%2C+Nils+Lehmann\%2C+Isaac+Corley\%2C+Yi+Wang\%2C+Yi-Chia+Chang\%2C+Nassim+Ait+Ait+Ali+Braham\%2C+Shradha+Sehgal\%2C+Caleb+Robinson\%2C+and+Arindam+Banerjee.+Ssl4eo-l\%3A+Datasets+and+foundation+models+for+landsat+imagery.+Advances+in+Neural+Information+Processing+Systems\%2C+36\%2C+2024.+9\%22}{SSL4EO-L Benchmark} & 2023 & S & 17/134 & Landsat MSI & 25K & 264 & 30m & -- & Yes & ? & Name+TG \\
+136 & \href{https://source.coop/kerner-lab/fields-of-the-world}{Fields Of The World} \href{https://arxiv.org/abs/2409.16252}{[paper]} & 2024 & S,I & 2/3 & S2 MSI & 70.8K & 256 & 10m & -- & Yes & Yes & GB2+TG+Paper \\
+137 & \href{https://scholar.google.com/scholar?q=\%22Zhitong+Xiong\%2C+Sining+Chen\%2C+Yi+Wang\%2C+Lichao+Mou\%2C+and+Xiao+Xiang+Zhu.+Gamus\%3A+A+geometry-aware+multi-modal+semantic+segmentation+benchmark+for+remote+sensing+data\%2C+2023.+7\%22}{GAMUS} & 2024 & S & 7 & RGB+nDSM & -- & -- & 1m & 10 & Yes & ? & Paper \\
+138 & \href{https://arxiv.org/abs/2311.12056}{Kuro Siwo} & 2024 & S & 3 & S1 SAR+DEM & 67.5K labeled & 224 & 10m & -- & Yes & Yes & CB+GB2+Paper \\
+139 & \href{https://zenodo.org/records/10664073}{MADOS} & 2024 & S & 15 & S2 MS & 2.8K & 40$\sim$240 & 10$\sim$60m & 5.35 & Yes & Yes & PG \\
+140 & \href{https://docs.torchgeo.org/en/stable/api/datasets/dl4gam.html\#dl4gam}{DL4GAM} & 2025 & S & 2 & S2 MSI & 2.3K/11.4K & 256 & 10m & -- & Yes & ? & TG \\
+141 & \href{https://huggingface.co/datasets/ibm-nasa-geospatial/multi-temporal-crop-classification}{CropSeg} & 2023 & S & 13 & HLS MS+MT & 3,854 & 224 & 30m & 11.8 & Yes & Yes & GFM \\
+142 & \href{https://docs.torchgeo.org/en/stable/api/datasets/flair-hub.html\#flair-hub}{FLAIR-HUB} & 2026 & S & 19/23 & Multi & 241.1K & 10$\sim$512 & 0.2$\sim$10m & -- & Yes & ? & TG \\
+143 & \href{https://docs.torchgeo.org/en/stable/api/datasets/caffe.html\#caffe}{CaFFe} & -- & S & 2/4 & SAR & 19.1K & 512 & 6$\sim$20m & -- & Yes & Yes & GB2+TG+Paper \\
+144 & \href{https://docs.torchgeo.org/en/stable/api/datasets/enviroatlas.html\#enviroatlas}{EnviroAtlas} & -- & S & 10 & Multi & -- & -- & 1m & -- & Yes & ? & TG \\
+145 & \href{https://docs.torchgeo.org/en/stable/api/datasets/l7-irish.html\#l7-irish}{L7 Irish} & -- & S & 5 & L7 MSI & 206 & 7.5K$\sim$8.4K & 15$\sim$30m & -- & Yes & ? & TG \\
+146 & \href{https://docs.torchgeo.org/en/stable/api/datasets/solar-plants-brazil.html\#solar-plants-brazil}{Solar Plants Brazil} & -- & S & 2 & RGB+NIR & 272 & 256 & 10m & -- & Yes & ? & TG \\
+147 & \href{https://docs.torchgeo.org/en/stable/api/datasets/substation.html\#substation}{Substation} & -- & S & 2 & S2 MSI & 27K & 228 & 10m & -- & Yes & Yes & GB2+TG+Paper \\
+\addlinespace[0.22em]
+148 & \href{https://rcdaudt.github.io/oscd/}{OSCD} & 2018 & CD & 2 & S2 & 24 & 600 & 10m & 0.48 & Yes & Yes & GFM+TG \\
+149 & \href{https://arxiv.org/abs/1911.09296}{xView2} & 2018 & CD & 4 & RGB & 22.1K & 1024 & 0.5m & 51 & Yes & Yes & PG+TG \\
+150 & \href{https://justchenhao.github.io/LEVIR/}{LEVIR-CD} & 2020 & CD & 1 & RGB & 637 & 1024 & 0.5m & 2.7 & Yes & Yes & GFM+TG \\
+151 & \href{https://www.google.com/search?q=\%22DFC21-MSD\%22+dataset+remote+sensing}{DFC21-MSD} & 2021 & CD & 15 & MS+MT & 2.2K$\times$9 & 4000 & 1$\sim$30m & 325 & Yes & ? & Paper \\
+152 & \href{https://www.google.com/search?q=\%22Dynamic+EarthNet+Challenge\%22+dataset+remote+sensing}{Dynamic EarthNet Challenge} & 2021 & CD & 7 & RGB & 22.5K & 1024 & 3m & -- & Yes & ? & Name \\
+153 & \href{https://scholar.google.com/scholar?q=\%22Giovanni+Marchisio\%2C+Patrick+Helber\%2C+Benjamin+Bischke\%2C+Timothy+Davis\%2C+Caglar+Senaras\%2C+Daniele+Zanaga\%2C+Ruben+Van+De+Kerchove\%2C+and+Annett+Wania.+Rapidai4eo\%3A+A+corpus+for+higher+spatial+and+temporal+reasoning.+In+2021+IEEE+International+Geoscience+and+Remote+Sensing+Symposium+IGARSS\%2C+pages+1161\%E2\%80\%931164.+IEEE\%2C+2021.+1\%2C+8\%22}{RapidAI4EO} & 2021 & CD & 44 & MS+RGB & 500K & -- & 3m,10m & -- & Yes & Yes & FOMO \\
+154 & \href{https://scholar.google.com/scholar?q=\%22Jingwen+Yuan\%2C+Lixiang+Ru\%2C+Shugen+Wang\%2C+and+Chen+Wu.+Wh-mavs\%3A+A+novel+dataset+and+deep+learning+benchmark+for+multiple+land+use+and+land+cover+applications.+IEEE+J.+Sel.+Top.+Appl.+Earth+Obs.+Remote+Sens.\%2C+15\%3A1575\%E2\%80\%931590\%2C+2022.+8\%22}{WH-MAVS} & 2021 & CD & 15 & RGB & 47.1K & 200 & 1.2m & -- & Yes & ? & Paper \\
+155 & \href{https://docs.torchgeo.org/en/stable/api/datasets/bright.html\#bright}{BRIGHT} & 2025 & CD & 4 & RGB+SAR & 3.2K & 1024 & 0.1$\sim$1m & -- & Yes & ? & TG \\
+156 & \href{https://huggingface.co/bvlabs/FAIR-EO-CD-benchmark}{FAIR-EO CD Benchmark} & 2026 & CD & -- & Multi & -- & -- & -- & -- & Yes & ? & Name \\
+157 & \href{https://docs.torchgeo.org/en/stable/api/datasets/cabuar.html\#cabuar}{CaBuAr} & -- & CD & 2 & S2 MSI & 424 & 512 & 20m & -- & Yes & ? & TG \\
+158 & \href{https://docs.torchgeo.org/en/stable/api/datasets/chabud.html\#chabud}{ChaBuD} & -- & CD & 2 & S2 MSI & 356 & 512 & 10m & -- & Yes & ? & TG \\
+\addlinespace[0.22em]
+159 & \href{https://www.google.com/search?q=\%22NWPU-VHR10\%22+dataset+remote+sensing}{NWPU-VHR10} & 2014 & OD & 10 & RGB+IRRG & 800 & 1000 & 0.08$\sim$2m & 0.073 & Yes & ? & TG \\
+160 & \href{https://scholar.google.com/scholar?q=\%22T+Nathan+Mundhenk\%2C+Goran+Konjevod\%2C+Wesam+A+Sakla\%2C+and+Kofi+Boakye.+A+large+contextual+dataset+for+classification\%2C+detection+and+counting+of+cars+with+deep+learning.+In+ECCV\%2C+pages+785\%E2\%80\%93800.+Springer\%2C+2016.+5\%2C+6\%22}{COWC} & 2016 & OD & 1 & RGB & 388.4K & 256 & 0.15m & 64 & Yes & ? & TG \\
+161 & \href{https://www.kaggle.com/c/airbus-ship-detection}{Airbus Ship Detection Challenge} & 2018 & OD & -- & RGB & 192.6K & 768 & -- & 30 & Yes & ? & Name+Paper \\
+162 & \href{https://scholar.google.com/scholar?q=\%22Gui-Song+Xia\%2C+Xiang+Bai\%2C+Jian+Ding\%2C+Zhen+Zhu\%2C+Serge+Belongie\%2C+Jiebo+Luo\%2C+Mihai+Datcu\%2C+Marcello+Pelillo\%2C+and+Liangpei+Zhang.+Dota\%3A+A+large-scale+dataset+for+object+detection+in+aerial+images.+In+CVPR\%2C+June+2018.+5\%2C+6\%22}{DOTA} & 2018 & OD & 15 & RGB & 5.2K & 800$\sim$4K & -- & -- & Yes & ? & TG \\
+163 & \href{https://www.google.com/search?q=\%22Map+Challenge\%22+dataset+remote+sensing}{Map Challenge} & 2018 & OD & 2 & RGB & 341.1K & 300 & -- & -- & Yes & ? & Name \\
+164 & \href{https://www.google.com/search?q=\%22TBF\%22+dataset+remote+sensing}{TBF} & 2018 & OD & 2 & RGB & 13 & 0$\sim$40 & -- & -- & Yes & ? & Paper \\
+165 & \href{https://scholar.google.com/scholar?q=\%22Pengfei+Zhu\%2C+Longyin+Wen\%2C+Dawei+Du\%2C+Xiao+Bian\%2C+Heng+Fan\%2C+Qinghua+Hu\%2C+and+Haibin+Ling.+Detection+and+tracking+meet+drones+challenge.+IEEE+Trans.+Pattern+Anal.+Mach.+Intell.\%2C+pages+1\%E2\%80\%931\%2C+2021.+6\%2C+17\%22}{VisDrone2019-DET} & 2019 & OD & 10 & RGB & 10.2K & 2000x1500 & -- & 2 & Yes & ? & Paper \\
+166 & \href{https://scholar.google.com/scholar?q=\%22Pengfei+Zhu\%2C+Longyin+Wen\%2C+Dawei+Du\%2C+Xiao+Bian\%2C+Heng+Fan\%2C+Qinghua+Hu\%2C+and+Haibin+Ling.+Detection+and+tracking+meet+drones+challenge.+IEEE+Trans.+Pattern+Anal.+Mach.+Intell.\%2C+pages+1\%E2\%80\%931\%2C+2021.+6\%2C+17\%22}{VisDrone2019-MOT} & 2019 & OD & 5 & RGB Video & 40K & 3840x2160 & -- & 14 & Yes & ? & Paper \\
+167 & \href{https://scholar.google.com/scholar?q=\%22Pengfei+Zhu\%2C+Longyin+Wen\%2C+Dawei+Du\%2C+Xiao+Bian\%2C+Heng+Fan\%2C+Qinghua+Hu\%2C+and+Haibin+Ling.+Detection+and+tracking+meet+drones+challenge.+IEEE+Trans.+Pattern+Anal.+Mach.+Intell.\%2C+pages+1\%E2\%80\%931\%2C+2021.+6\%2C+17\%22}{VisDrone2019-SOT} & 2019 & OD & 3 & RGB Video & 139.3K & 3840x2160 & -- & 68 & Yes & ? & Paper \\
+168 & \href{https://scholar.google.com/scholar?q=\%22Pengfei+Zhu\%2C+Longyin+Wen\%2C+Dawei+Du\%2C+Xiao+Bian\%2C+Heng+Fan\%2C+Qinghua+Hu\%2C+and+Haibin+Ling.+Detection+and+tracking+meet+drones+challenge.+IEEE+Trans.+Pattern+Anal.+Mach.+Intell.\%2C+pages+1\%E2\%80\%931\%2C+2021.+6\%2C+17\%22}{VisDrone2019-VID} & 2019 & OD & 5 & RGB & 40K & 3840x2160 & -- & 14 & Yes & ? & Paper \\
+169 & \href{https://www.google.com/search?q=\%22DIOR\%22+dataset+remote+sensing}{DIOR} & 2020 & OD & 20 & RGB & 23.5K & 800 & 0.5m-30m & -- & Yes & Yes & REO+TG \\
+170 & \href{https://www.google.com/search?q=\%22FAIR1M\%22+dataset+remote+sensing}{FAIR1M} & 2020 & OD & 37 & OPT (Satellite) & 15.3K & 5000 & -- & 120 & Yes & ? & TG \\
+171 & \href{https://scholar.google.com/scholar?q=\%22Murari+Mandal\%2C+Lav+Kush+Kumar\%2C+and+Santosh+Kumar+Vipparthi.+Moruav\%3A+A+benchmark+dataset+and+baselines+for+moving+object+recognition+in+uav+videos.+In+ACM+Multimedia\%2C+pages+2626\%E2\%80\%932635\%2C+2020.+6\%22}{MOR-UAV} & 2020 & OD & 2 & RGB & 10.9K & 608 & -- & -- & Yes & ? & Paper \\
+172 & \href{https://scholar.google.com/scholar?q=\%22Guangshuai+Gao\%2C+Qingjie+Liu\%2C+and+Yunhong+Wang.+Counting+from+sky\%3A+A+large-scale+data+set+for+remote+sensing+object+counting+and+a+benchmark+method.+IEEE+TGRS\%2C+59\%285\%29\%3A3642\%E2\%80\%933655\%2C+2020.+6\%2C+17\%22}{RSOC} & 2020 & OD & 4 & RGB & 3.1K & 2500 & -- & -- & Yes & ? & Paper \\
+173 & \href{https://scholar.google.com/scholar?q=\%22Immanuel+Weber\%2C+Jens+Bongartz\%2C+and+Ribana+Roscher.+Artifivepotsdam\%3A+A+benchmark+for+learning+with+artificial+objects+for+improved+aerial+vehicle+detection.+In+IGARSS\%2C+pages+1214\%E2\%80\%931217.+IEEE\%2C+2021.+6\%22}{ArtifiVe-Potsdam} & 2021 & OD & 1 & MS & 4.8K & 600 & 0.05m & 15.6 & Yes & ? & Paper \\
+174 & \href{https://www.google.com/search?q=\%22Forest+Damage\%22+dataset+remote+sensing}{Forest Damage} & 2021 & OD & 5 & RGB & 1.5K & 1500 & -- & 3.3 & Yes & ? & TG \\
+175 & \href{https://www.google.com/search?q=\%22NASAdebris\%22+dataset+remote+sensing}{NASAdebris} & 2021 & OD & 1 & OPT (Satellite) & 707 & 256 & -- & 0.073 & Yes & ? & TG \\
+176 & \href{https://scholar.google.com/scholar?q=\%22Ben+Weinstein\%2C+Sergio+Marconi\%2C+Alina+Zare\%2C+Stephanie+Bohlman\%2C+Sarah+Graves\%2C+Aditya+Singh\%2C+and+Ethan+White.+Neon+tree+crowns+dataset\%2C+April+2020.+Gordon+and+Betty+Moore+Foundation\%3A+GBMF4563.+6\%22}{NEON Tree Dataset} & 2021 & OD & 1 & Multiple (Aerial) & 2.2K$\times$426 & 40 & -- & 8.4 & Yes & Yes & FOMO \\
+177 & \href{https://scholar.google.com/scholar?q=\%22Leon+Amadeus+Varga\%2C+Benjamin+Kiefer\%2C+Martin+Messmer\%2C+and+Andreas+Zell.+Seadronessee\%3A+A+maritime+benchmark+for+detecting+humans+in+open+water.+In+WACV\%2C+pages+2260\%E2\%80\%932270\%2C+2022.+6\%22}{SeaDronesSee} & 2022 & OD & 6 & RGB & 5.6K & 3$\sim$840 & -- & 60.3 & Yes & ? & Paper \\
+178 & \href{https://arxiv.org/abs/2207.14096}{SODA} & 2022 & OD & 9 & RGB & 2.5K & 2.7K$\sim$4.8K & -- & -- & Yes & ? & TG \\
+179 & \href{https://scholar.google.com/scholar?q=\%22Han+Wei\%2C+Li+Jun\%2C+Wang+Sheng\%2C+Wang+Yi\%2C+Yan+Jining\%2C+Fan+Runyu\%2C+Zhang+Xiaohan\%2C+and+Wang+Lizhe.+A+context-scale-aware+detector+and+a+new+benchmark+for+remote+sensing+small+weak+object+detection+in+unmanned+aerial+vehicle+images.+Int.+J.+Appl.+Earth+Obs.+Geoinformation\%2C+112\%3A102966\%2C+2022.+5\%2C+6\%22}{UAVOD-10} & 2022 & OD & 10 & OPT & 844 & -- & -- & -- & Yes & ? & Paper \\
+180 & \href{https://docs.torchgeo.org/en/stable/api/datasets/everwatch.html\#everwatch}{EverWatch} & 2024 & OD & 8 & RGB & 5.3K & 1500 & 0.01m & -- & Yes & Yes & GB2+TG+Paper \\
+\addlinespace[0.22em]
+181 & \href{https://vrsbench.github.io/}{VRSBench} & 2024 & IC & -- & OPT+Text & 29.6K & -- & -- & -- & Yes & Yes & REO \\
+\addlinespace[0.22em]
+182 & \href{https://patricktum.github.io/cloud_removal/sen12mscr/}{SEN12MS-CR} & 2020 & SR & -- & S1/S2 & 122.2K triplets & 256 & 10m & -- & Yes & Yes & GFM+Paper \\
+183 & \href{https://proceedings.neurips.cc/paper_files/paper/2022/file/a6fe99561d9eb9c90b322afe664587fd-Paper-Datasets_and_Benchmarks.pdf}{WorldStrat} & 2022 & SR & 8 & Multi & 3.4K & 1054 & 1.5m-60m & 110 & Yes & ? & Paper+TG \\
+\addlinespace[0.22em]
+184 & \href{https://wilds.stanford.edu/datasets/}{WILDS} & 2021 & B & -- & Multi & 10 datasets & -- & -- & -- & Yes & ? & WILDS+Name \\
+185 & \href{https://arxiv.org/abs/2306.03831}{GEO-Bench} & 2023 & B & -- & Multi & 12 datasets & -- & -- & $\sim$65 & Yes & Yes & GB1+Name \\
+186 & \href{https://arxiv.org/abs/2312.10114}{FoMo-Bench} & 2024 & B & -- & Multi & 15 datasets & -- & -- & -- & Yes & Yes & FOMO+Name \\
+187 & \href{https://arxiv.org/abs/2412.04204}{PANGAEA} & 2024 & B & -- & Multi & 11 datasets & -- & -- & -- & Yes & Yes & Name+PG \\
+188 & \href{https://huggingface.co/datasets/wangyi111/Copernicus-Bench}{Copernicus-Bench} & 2025 & B & -- & Multi & 15 datasets & -- & -- & -- & Yes & Yes & CB+Name \\
+189 & \href{https://www.google.com/search?q=\%22PlantationBench\%22+dataset+remote+sensing}{PlantationBench} & 2025 & B & -- & Multi & -- & -- & -- & -- & Yes & Yes & Name+PB \\
+190 & \href{https://www.google.com/search?q=\%22EarthShift\%22+dataset+remote+sensing}{EarthShift} & 2026 & B & -- & Multi & 11 tasks & -- & -- & -- & Yes & Yes & ES+Name \\
+191 & \href{https://www.google.com/search?q=\%22MMEarth-Bench\%22+dataset+remote+sensing}{MMEarth-Bench} & 2026 & B & -- & Multi & 5 tasks & -- & -- & -- & Yes & Yes & MMB+Name \\
+\end{longtable}
+\vspace{0.25em}
+{\fontsize{5.6}{6.5}\selectfont
+\noindent\textit{Subset:} only entries with \textbf{Benchmark = Yes} are included.
+\quad
+\textit{FM Eval:} Yes = documented use for foundation-model / GeoFM evaluation; ? = not yet established.
+\quad
+\textit{Evidence:} TG = TorchGeo; GB1 = GEO-Bench; GB2 = GEO-Bench-2; GFM = documented GeoFM/FM evaluation;
+PG = PANGAEA; FOMO = FoMo-Bench; CB = Copernicus-Bench; REO = REOBench; LB = Landsat-Bench;
+PH = PhilEO Bench; PB = PlantationBench; ES = EarthShift; MMB = MMEarth-Bench; Paper = scientific paper;
+WILDS = WILDS distribution-shift benchmark; Name = explicit benchmark/challenge/evaluation naming.
+\\
+\textit{Version notes:} DFC2020 statistics refer to the GFM-Bench repackaging (8 mapped classes; 55,026 patches of 96$\times$96; 10.6 GB). WILDS is a multi-domain distribution-shift suite; FMoW-WILDS is its EO/satellite entry relevant here.
+}
+\endgroup
+\restoregeometry

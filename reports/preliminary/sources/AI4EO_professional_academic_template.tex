@@ -1,0 +1,1358 @@
+\documentclass[
+    11pt,
+    a4paper,
+    parskip=half,
+    bibliography=totoc,
+    numbers=noenddot
+]{scrartcl}
+
+%================================================
+% Typography
+%================================================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage[scaled=0.94]{sourcesanspro}
+\usepackage{inconsolata}
+\usepackage[protrusion=true,expansion=true]{microtype}
+
+%================================================
+% Mathematics, figures, tables
+%================================================
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{enumitem}
+\usepackage[section]{placeins}
+\usepackage{float}
+\usepackage{caption}
+
+%================================================
+% Page geometry and document structure
+%================================================
+
+\usepackage{geometry}
+\geometry{
+    top=2.35cm,
+    bottom=2.45cm,
+    inner=2.65cm,
+    outer=2.35cm,
+    headheight=15pt,
+    headsep=0.75cm
+}
+
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles
+\automark{section}
+\ihead{\sffamily\footnotesize\color{TextMuted} AI4EO Research Landscape}
+\ohead{\sffamily\footnotesize\color{TextMuted} \headmark}
+\cfoot{\sffamily\small\color{TextMuted} \pagemark}
+\setkomafont{pageheadfoot}{\normalfont}
+\KOMAoptions{headsepline=0.35pt}
+\addtokomafont{headsepline}{\color{RuleGray}}
+
+%================================================
+% Colour system
+%================================================
+
+\usepackage{xcolor}
+\definecolor{Navy}{HTML}{18324A}
+\definecolor{Accent}{HTML}{2B6F8A}
+\definecolor{AccentSoft}{HTML}{EAF3F6}
+\definecolor{TableHeader}{HTML}{EEF4F7}
+\definecolor{TextMain}{HTML}{20262C}
+\definecolor{TextMuted}{HTML}{68737D}
+\definecolor{RuleGray}{HTML}{D5DDE2}
+
+\color{TextMain}
+
+%================================================
+% Section hierarchy
+%================================================
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+\setkomafont{section}{\sffamily\bfseries\Large\color{Navy}}
+\setkomafont{subsection}{\sffamily\bfseries\large\color{Navy}}
+\setkomafont{subsubsection}{\sffamily\bfseries\normalsize\color{Accent}}
+\setkomafont{paragraph}{\sffamily\bfseries\normalsize\color{Navy}}
+\setkomafont{disposition}{\normalcolor}
+
+\renewcommand*\sectionformat{%
+    \makebox[2.2em][l]{\color{Accent}\thesection\autodot}%
+}
+\renewcommand*\subsectionformat{%
+    \makebox[2.8em][l]{\color{Accent}\thesubsection\autodot}%
+}
+\renewcommand*\subsubsectionformat{%
+    \makebox[3.5em][l]{\color{TextMuted}\thesubsubsection\autodot}%
+}
+
+\RedeclareSectionCommand[
+    beforeskip=2.4ex plus 0.8ex minus 0.4ex,
+    afterskip=1.15ex plus 0.25ex
+]{section}
+\RedeclareSectionCommand[
+    beforeskip=1.8ex plus 0.6ex minus 0.3ex,
+    afterskip=0.7ex plus 0.2ex
+]{subsection}
+\RedeclareSectionCommand[
+    beforeskip=1.4ex plus 0.5ex minus 0.2ex,
+    afterskip=0.45ex plus 0.15ex
+]{subsubsection}
+
+%================================================
+% Lists, captions, tables
+%================================================
+
+\setlist[itemize]{
+    leftmargin=1.7em,
+    itemsep=0.18em,
+    topsep=0.35em,
+    parsep=0pt
+}
+
+\captionsetup{
+    font=small,
+    labelfont={bf,sf,color=Accent},
+    textfont={color=TextMain},
+    labelsep=period,
+    skip=7pt
+}
+
+\renewcommand{\arraystretch}{1.16}
+\setlength{\tabcolsep}{5.5pt}
+
+%================================================
+% Hyperlinks
+%================================================
+
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Navy,
+    citecolor=Accent,
+    urlcolor=Accent,
+    pdfauthor={Stefano Infusini},
+    pdftitle={Artificial Intelligence for Earth Observation},
+    pdfsubject={Research landscape, evaluation challenges, and open problems}
+}
+
+%================================================
+% Title-page helpers
+%================================================
+
+\newcommand{\ReportTitle}{Artificial Intelligence for\\[-0.05em] Earth Observation}
+\newcommand{\ReportSubtitle}{Research Landscape, Evaluation Challenges, and Open Problems}
+\newcommand{\ReportAuthor}{Stefano Infusini}
+\newcommand{\ReportDate}{August 2026}
+
+\newcommand{\makeReportTitle}{%
+\begin{titlepage}
+    \thispagestyle{empty}
+    \vspace*{1.2cm}
+
+    {\sffamily\small\bfseries\color{Accent}\MakeUppercase{Thesis Scoping Report}}\par
+    \vspace{0.45cm}
+    {\color{Accent}\rule{2.4cm}{2.2pt}}\par
+
+    \vspace{1.35cm}
+    {\sffamily\bfseries\fontsize{29}{33}\selectfont\color{Navy}
+        \ReportTitle\par}
+
+    \vspace{0.65cm}
+    {\sffamily\fontsize{15.5}{20}\selectfont\color{TextMuted}
+        \ReportSubtitle\par}
+
+    \vspace{1.1cm}
+    \begin{minipage}{0.88\textwidth}
+        \small\color{TextMuted}
+        A concise technical overview intended to support the discussion of
+        possible MSc thesis directions in Artificial Intelligence for Earth
+        Observation, with emphasis on the current research landscape,
+        evaluation methodology, and open research problems.
+    \end{minipage}
+
+    \vfill
+
+    {\color{RuleGray}\rule{\textwidth}{0.7pt}}\par
+    \vspace{0.55cm}
+
+    \begin{tabular}{@{}>{\sffamily\bfseries\color{Navy}}p{2.3cm} p{8.8cm}@{}}
+        Author & \ReportAuthor \\
+        Date   & \ReportDate \\
+    \end{tabular}
+
+    \vspace{0.7cm}
+\end{titlepage}
+}
+
+%================================================
+% Document
+%================================================
+
+\begin{document}
+
+\makeReportTitle
+
+\clearpage
+\thispagestyle{plain}
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+
+Earth Observation (EO) provides systematic information about the Earth's
+surface, oceans, and atmosphere through remote-sensing technologies such
+as optical imaging, radar, LiDAR, and related geospatial products.
+Modern satellite missions generate large and heterogeneous archives
+characterized by different spatial, spectral, temporal, and radiometric
+resolutions.
+
+Artificial Intelligence (AI) is now applied to a broad range of EO
+problems, including scene classification, land-cover mapping, object
+detection, change detection, geophysical parameter estimation,
+spatio-temporal analysis, and environmental forecasting. More recently,
+research has expanded toward self-supervised learning, multimodal
+representation learning, large-scale pretraining, and Earth Observation
+foundation models.
+
+The objective of this report is not to provide a complete textbook
+treatment of remote sensing or to preselect a thesis topic. Instead, it
+aims to provide a compact technical basis for discussing possible MSc
+thesis directions. The report therefore focuses on three questions:
+which characteristics of EO data are most relevant to AI, which
+downstream tasks define the main problem families, and which research
+problems are currently receiving significant attention in the AI4EO
+literature.
+
+Detailed mathematical formulations and additional remote-sensing
+background are collected in the appendices so that the main text remains
+focused on the research landscape and on the issues that are most
+relevant when evaluating possible thesis directions.
+
+%================================================
+\section{Earth Observation for AI}
+
+\subsection{EO Data Modalities}
+
+Earth Observation data differ substantially from conventional RGB
+computer-vision datasets. Depending on the sensor, the input may contain
+a few visible channels, many spectral bands, radar backscatter,
+three-dimensional measurements, elevation data, or combinations of
+multiple modalities. These differences directly affect model design,
+preprocessing, pretraining, data fusion, and evaluation.
+
+\subsubsection{Optical, Multispectral, and Hyperspectral Imagery}
+
+Optical remote sensing measures reflected solar radiation and includes
+conventional RGB, multispectral, and hyperspectral imaging. Different
+materials exhibit wavelength-dependent spectral responses, allowing
+vegetation, water, soil, snow, rock, and artificial surfaces to be
+distinguished through their spectral behaviour
+\cite{esa_optical_imagery,esa_reflectance_curves}.
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{../figures/reflectance_plot.jpg}{
+        \includegraphics[
+            width=0.95\linewidth,
+            height=0.38\textheight,
+            keepaspectratio
+        ]{../figures/reflectance_plot.jpg}
+    }{
+        \fbox{
+            \parbox[c][4.8cm][c]{0.88\linewidth}{
+                \centering
+                Add \texttt{../figures/reflectance\_plot.jpg}
+            }
+        }
+    }
+    \caption{
+        Representative spectral reflectance curves of different surface
+        materials and atmospheric transmission windows. Source: ESA
+        \cite{esa_reflectance_curves}.
+    }
+    \label{fig:reflectance-curves-earth-features}
+\end{figure}
+
+Multispectral sensors acquire a limited number of broad spectral bands.
+Sentinel-2, for example, acquires 13 bands spanning visible, red-edge,
+near-infrared, and short-wave infrared regions, with native spatial
+resolutions of 10, 20, and 60 m \cite{esa_sentinel2_msi}. This is
+important for AI because a model may receive more than three channels,
+and because bands may have to be aligned or resampled before being used
+jointly.
+
+Hyperspectral sensors acquire tens or hundreds of narrow and often
+contiguous bands. Their dense spectral sampling can reveal absorption
+features that are not visible in RGB or conventional multispectral
+imagery, but also produces high-dimensional inputs, strong correlation
+between neighbouring bands, larger storage requirements, and a greater
+risk of overfitting when labels are scarce
+\cite{jpl_imaging_spectroscopy,bioucasdias2013hyperspectral}.
+
+For AI4EO, the key distinction is therefore not simply the number of
+channels. Optical EO data may involve heterogeneous band resolutions,
+spectral redundancy, atmospheric effects, mixed pixels, missing
+observations due to clouds, and sensor-dependent spectral responses.
+
+\subsubsection{Synthetic Aperture Radar}
+
+Synthetic Aperture Radar (SAR) is an active microwave sensing technology.
+The sensor transmits electromagnetic pulses toward the Earth's surface
+and measures the energy scattered back toward the instrument
+\cite{moreira2013sar}. Because SAR provides its own illumination and
+operates at microwave wavelengths, it can acquire observations during
+day or night and can generally observe through cloud cover
+\cite{esa_sentinel1_instrument}.
+
+SAR imagery differs fundamentally from optical imagery. The measured
+response depends on wavelength, incidence angle, polarization, surface
+roughness, dielectric properties, moisture, geometry, and scattering
+mechanisms. Smooth water often appears dark because most of the signal
+is reflected away from the sensor, while rough surfaces, vegetation, and
+urban structures may produce stronger backscatter.
+
+SAR is also a coherent imaging system and is affected by speckle.
+Furthermore, its side-looking geometry can produce foreshortening,
+layover, and radar shadow. These properties make SAR an important
+example of why EO cannot always be treated as ordinary natural-image
+computer vision.
+
+Sentinel-1 is a representative spaceborne SAR mission. Its data are used
+for flood mapping, soil-moisture analysis, forest monitoring, sea-ice
+observation, maritime surveillance, and surface-deformation analysis.
+Interferometric SAR (InSAR) additionally exploits phase differences
+between multiple SAR acquisitions.
+
+\subsubsection{LiDAR and Elevation Data}
+
+LiDAR is an active optical technology that emits laser pulses and
+measures their return time to estimate three-dimensional structure
+\cite{baltsavias1999airborne}. LiDAR measurements are commonly
+represented as point clouds and can be used to characterize terrain,
+vegetation structure, buildings, and other three-dimensional objects.
+
+Elevation information may also be represented through Digital Elevation
+Models (DEMs), Digital Surface Models (DSMs), and Digital Terrain Models
+(DTMs). These are derived geospatial products rather than sensors
+themselves \cite{guth2021dem,usgs_dem_definition}. They can be used as
+additional model inputs, for example to provide terrain context for
+classification, segmentation, hydrology, landslide assessment, or
+environmental modelling.
+
+From an AI perspective, LiDAR and elevation products introduce additional
+forms of heterogeneity: irregular point sets, rasterized height products,
+different horizontal and vertical accuracies, and the need to combine
+three-dimensional or topographic information with optical or radar data.
+
+\subsection{Spatial, Spectral, Temporal, and Radiometric Resolution}
+
+EO sensors are commonly characterized through four forms of resolution.
+Spatial resolution determines the ground area represented by a pixel.
+Spectral resolution describes how finely the electromagnetic spectrum is
+sampled. Temporal resolution describes how frequently the same area can
+be observed, while radiometric resolution describes sensitivity to
+differences in measured energy.
+
+These dimensions are especially important in AI4EO because datasets from
+different sensors rarely share the same sampling characteristics.
+Combining Sentinel-1, Sentinel-2, Landsat, LiDAR, DEMs, or commercial
+very-high-resolution imagery may therefore require co-registration,
+resampling, temporal matching, cloud filtering, and careful treatment of
+the information lost or interpolated during preprocessing.
+
+The main consequence is that ``more data'' does not automatically imply
+more usable information. Spatial, spectral, and temporal resolutions are
+often traded against each other, and the model must operate on
+measurements generated by different physical processes and acquisition
+geometries.
+
+\subsection{EO Data Availability and Access}
+
+Data accessibility is an important practical constraint for AI4EO
+research. A scientifically interesting problem may still be unsuitable
+for a thesis if the relevant data are commercial, geographically
+restricted, difficult to reproduce, or too expensive to process at the
+required scale.
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{
+        p{0.20\textwidth}
+        p{0.27\textwidth}
+        p{0.25\textwidth}
+        p{0.17\textwidth}}
+        \toprule
+        \rowcolor{TableHeader}
+        \textbf{Source} &
+        \textbf{Representative Data} &
+        \textbf{Programmatic Access} &
+        \textbf{Access Model} \\
+        \midrule
+
+        Copernicus Data Space Ecosystem &
+        Sentinel missions and other Copernicus collections &
+        STAC, OData, Sentinel Hub and related APIs &
+        Open \\
+
+        USGS / EROS &
+        Landsat and other EROS archive products &
+        Machine-to-Machine (M2M) API &
+        Open \\
+
+        NASA Earthdata &
+        MODIS, ICESat-2, SMAP and other Earth-science products &
+        Earthdata services and \texttt{earthaccess} &
+        Open \\
+
+        Planet &
+        PlanetScope and other high-resolution imagery &
+        Data API and Processing API &
+        Commercial / account-dependent \\
+
+        \bottomrule
+    \end{tabular}
+    \caption{Representative data-access ecosystems relevant to AI4EO research.}
+    \label{tab:eo-data-access}
+\end{table}
+
+Open archives such as the Copernicus Data Space Ecosystem, USGS
+EarthExplorer/EROS, and NASA Earthdata make it possible to construct
+reproducible acquisition pipelines
+\cite{cdse_documentation,cdse_apis,usgs_m2m,nasa_earthdata_search,nasa_earthaccess}.
+Commercial providers can offer higher spatial or temporal resolution,
+but licensing and cost can limit reproducibility
+\cite{planet_data_api,planet_processing_api}.
+
+Python clients previously developed for programmatic access to CDSE and
+the USGS M2M API are publicly available at:
+
+\begin{itemize}
+    \item \url{https://github.com/stefanoIn/CDSE-api}
+    \item \url{https://github.com/stefanoIn/USGS-m2m-client}
+\end{itemize}
+
+
+%================================================
+\section{AI Tasks in Earth Observation}
+
+The task categories below describe the type of mapping learned from EO
+data rather than a specific application domain. A single application can
+combine multiple task families. Wildfire assessment, for example, may
+involve change detection, segmentation, regression, and time-series
+analysis. Formal mathematical mappings for the main task families are
+collected in Appendix~\ref{app:task-formulations}.
+
+To keep the section visually balanced, representative figures are used
+selectively rather than for every task family.
+
+\subsection{Classification}
+
+Image or scene classification assigns a semantic label to an entire EO
+image, image patch, parcel, or region. Typical examples include aerial
+scene classification, crop-type classification, and assigning a dominant
+land-use category to a spatial unit. Dense pixel-level land-cover mapping
+is instead a segmentation problem.
+
+The AID benchmark is a representative aerial scene-classification
+dataset containing categories such as farmland, forest, industrial
+areas, residential areas, and airports \cite{xia2017aid}.
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{../figures/classification.png}{
+        \includegraphics[
+            width=0.86\linewidth,
+            height=0.34\textheight,
+            keepaspectratio
+        ]{../figures/classification.png}
+    }{
+        \fbox{
+            \parbox[c][4.5cm][c]{0.84\linewidth}{
+                \centering
+                Add \texttt{../figures/classification.png}
+            }
+        }
+    }
+    \caption{
+        Example images from the AID dataset, illustrating aerial
+        scene classification. Reproduced from \cite{peng2022mopnet}.
+    }
+    \label{fig:aid-classification}
+\end{figure}
+
+\subsection{Semantic and Instance Segmentation}
+
+Semantic segmentation assigns a semantic class to every pixel and is
+used for tasks such as land-cover mapping, flood delineation,
+burned-area mapping, road extraction, and vegetation mapping.
+
+Instance segmentation additionally separates distinct objects belonging
+to the same class. This is useful when individual buildings, vehicles,
+ships, or tree crowns must be identified rather than only assigning a
+shared semantic category to their pixels.
+
+\subsection{Object Detection}
+
+Object detection identifies and localizes individual objects using
+bounding regions together with class labels and confidence scores. In
+very-high-resolution EO imagery it is commonly applied to buildings,
+vehicles, ships, aircraft, and infrastructure.
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{../figures/object_detection.jpg}{
+        \includegraphics[
+            width=0.86\linewidth,
+            height=0.36\textheight,
+            keepaspectratio
+        ]{../figures/object_detection.jpg}
+    }{
+        \fbox{
+            \parbox[c][4.5cm][c]{0.84\linewidth}{
+                \centering
+                Add \texttt{../figures/object\_detection.jpg}
+            }
+        }
+    }
+    \caption{
+        Example of object detection in high-resolution remote-sensing
+        imagery, where individual objects are localized using bounding
+        boxes. Reproduced from \cite{ballinger2023rs4osint}.
+    }
+    \label{fig:object-detection}
+\end{figure}
+
+\subsection{Change Detection}
+
+Change detection identifies meaningful differences between observations
+of the same area acquired at different times. Applications include urban
+expansion, deforestation, flood mapping, wildfire assessment,
+infrastructure monitoring, and disaster response.
+
+A central EO-specific difficulty is that image differences do not always
+correspond to real changes on the ground. Illumination, atmospheric
+conditions, seasonality, viewing geometry, sensor characteristics,
+misregistration, and cloud cover can all create apparent differences.
+Change-detection methods must therefore distinguish semantic change from
+acquisition-related variability.
+
+\subsection{Regression and Geophysical Parameter Estimation}
+
+Regression tasks estimate continuous-valued quantities from EO data.
+Predictions may correspond to an entire region or to a spatially
+distributed continuous field. Typical applications include biomass
+estimation, land-surface temperature estimation, soil-moisture retrieval,
+air-quality variables, and other biophysical or geophysical parameters.
+
+Unlike segmentation, where each spatial location is assigned a discrete
+class, pixelwise regression assigns a continuous value to each spatial
+location.
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{../figures/lst_downscaling.png}{
+        \includegraphics[
+            width=0.86\linewidth,
+            height=0.35\textheight,
+            keepaspectratio
+        ]{../figures/lst_downscaling.png}
+    }{
+        \fbox{
+            \parbox[c][4.5cm][c]{0.84\linewidth}{
+                \centering
+                Optional figure:\\
+                \texttt{../figures/lst\_downscaling.png}
+            }
+        }
+    }
+    \caption{
+        Example of a spatially distributed continuous Earth Observation
+        product, illustrating regression or downscaling of land-surface
+        temperature.
+    }
+    \label{fig:regression-lst}
+\end{figure}
+
+\subsection{Time-Series Analysis and Forecasting}
+
+Satellite image time series consist of repeated observations of the same
+geographical area over time. The temporal dimension can support
+classification, change or event detection, regression, trend analysis,
+and forecasting.
+
+Applications include vegetation and crop monitoring, air-quality
+monitoring, land-cover dynamics, disaster monitoring, and weather or
+climate forecasting. Important EO-specific challenges include irregular
+acquisition times, missing observations, cloud contamination, seasonal
+variability, long temporal dependencies, and differences in revisit time
+between sensors.
+
+\subsection{Image Reconstruction and Enhancement}
+
+Image reconstruction and enhancement aim to recover or improve an EO
+image or continuous EO product rather than directly predicting a
+semantic label. Typical applications include super-resolution,
+statistical or learned downscaling, pansharpening, denoising, cloud
+removal, image fusion, and reconstruction of missing observations.
+
+These problems are especially relevant in EO because different sensors
+often trade spatial, spectral, and temporal resolution against one
+another.
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{../figures/reconstruction_enhancement.png}{
+        \includegraphics[
+            width=0.86\linewidth,
+            height=0.35\textheight,
+            keepaspectratio
+        ]{../figures/reconstruction_enhancement.png}
+    }{
+        \fbox{
+            \parbox[c][4.5cm][c]{0.84\linewidth}{
+                \centering
+                Optional figure:\\
+                \texttt{../figures/reconstruction\_enhancement.png}
+            }
+        }
+    }
+    \caption{
+        Representative example of an Earth Observation reconstruction
+        or enhancement task, such as super-resolution, downscaling,
+        pansharpening, denoising, or gap reconstruction.
+    }
+    \label{fig:reconstruction-enhancement}
+\end{figure}
+
+\subsection{Vision-Language Tasks}
+
+Vision-language tasks connect EO imagery with natural language.
+Representative tasks include image captioning, visual question answering,
+cross-modal retrieval, text-image matching, and grounding.
+
+In EO, these tasks are becoming increasingly relevant because they can
+connect large image archives with semantic descriptions and may support
+natural-language interaction with geospatial data. They also form part
+of the broader transition toward multimodal and agentic geospatial
+systems discussed later in the report.
+
+
+%================================================
+\section{Current AI4EO Research Landscape}
+
+The methodological evolution of AI4EO broadly follows the development of
+machine learning itself: hand-crafted features were progressively
+replaced by learned representations, supervised deep learning was
+followed by self-supervised and large-scale pretraining, and
+Transformer-based models increasingly enabled large reusable
+representations. The important question for this report is therefore not
+the chronology itself, but how these developments interact with the
+specific properties of EO data.
+
+The current landscape is shaped by recurring EO-specific problems:
+large unlabeled archives, expensive and geographically limited labels,
+heterogeneous sensors, different native resolutions, irregular temporal
+sampling, distribution shift across geography and season, and the need
+to evaluate models under realistic operational conditions.
+
+\subsection{Foundation Models and Large-Scale Pretraining}
+
+% To be populated from the literature review.
+% Focus on the move from task-specific models to reusable pretrained
+% representations, self-supervised pretraining, masked modelling,
+% adaptation strategies, sensor-specific vs sensor-agnostic models,
+% and whether large-scale pretraining consistently improves downstream
+% performance.
+
+\subsection{Multimodal and Multisensor Learning}
+
+% To be populated from the literature review.
+% Optical + SAR + hyperspectral + LiDAR/DEM + meteorological variables +
+% in-situ observations + text.
+% Discuss co-registration, asynchronous acquisitions, resolution mismatch,
+% missing modalities, and fusion strategies.
+
+\subsection{Spatio-Temporal Learning}
+
+% To be populated from the literature review.
+% Satellite image time series, bi-temporal and multi-temporal learning,
+% forecasting, event evolution, irregular sampling, cloud-related gaps,
+% long temporal context, and seasonality.
+
+\subsection{Generalization, Domain Shift, and Limited Supervision}
+
+% To be populated from the literature review.
+% Geographic, seasonal, sensor, and resolution shift.
+% Domain adaptation, semi-supervision, weak supervision, few-shot learning,
+% active learning, OOD detection, and evaluation outside the training domain.
+
+\subsection{Trustworthy and Uncertainty-Aware AI}
+
+% To be populated from the literature review.
+% Uncertainty quantification, calibration, explainability, robustness,
+% failure detection, out-of-distribution behaviour, and scientific reliability.
+
+\subsection{Physics-Aware and Hybrid AI}
+
+% To be populated from the literature review.
+% Physical constraints, differentiable physical models, hybrid
+% physical/data-driven approaches, radiative-transfer knowledge,
+% conservation laws, and scientific priors.
+
+\subsection{Vision-Language and Agentic Geospatial AI}
+
+% To be populated from the literature review.
+% Image-text representation learning, captioning, retrieval, grounding,
+% VLMs, domain-specific LLMs, RAG, tool use, and agentic workflows.
+% Distinguish vision-language representation learning from LLM-based assistants.
+
+\subsection{Efficient and Operational AI}
+
+% To be populated from the literature review.
+% Parameter-efficient adaptation, distillation, compression, cloud/HPC,
+% scalable inference, edge/onboard AI, data-transfer constraints,
+% and operational deployment.
+
+%================================================
+\section{Evaluation, Benchmarks, and Open Problems}
+
+Evaluation is a central issue in AI4EO because performance measured on a
+single benchmark may not reflect geographic transfer, sensor changes,
+limited-label settings, or operational cost. This section should
+therefore examine not only which models perform best, but also how
+comparisons are constructed and which dimensions of performance remain
+poorly measured.
+
+\subsection{Benchmarking AI4EO Models}
+
+% Discuss EO task suites and benchmarking initiatives such as PANGAEA,
+% GEO-Bench and related work.
+% Compare what they measure: tasks, modalities, resolutions, data regimes,
+% adaptation protocols, baselines, and computational requirements.
+% The purpose is to assess what current benchmarks reveal and what they miss,
+% not to assume that a specific benchmark or model family will become the thesis.
+
+\subsection{Geographic, Temporal, and Sensor Generalization}
+
+% Geographic train/test separation, seasonal and temporal transfer,
+% sensor transfer, resolution changes, acquisition-condition shifts,
+% and the distinction between in-distribution benchmark performance
+% and deployment robustness.
+
+\subsection{Label Efficiency and Data Availability}
+
+% Limited labels, annotation cost, weak/noisy labels, few-shot settings,
+% self-supervised pretraining, active learning, and whether models remain useful
+% when labelled data are scarce.
+
+\subsection{Multimodal and Multi-Resolution Integration}
+
+% Co-registration, asynchronous observations, missing modalities,
+% heterogeneous native resolutions, different measurement physics,
+% and the effect of resampling on fair comparisons.
+
+\subsection{Computational Cost and Scalability}
+
+% Training/fine-tuning cost, GPU memory, inference cost, storage,
+% data transfer, model size, cloud/HPC requirements, and whether
+% performance gains justify additional computational cost.
+
+\subsection{Reproducibility and Fair Evaluation}
+
+% Dataset leakage, geographic leakage, temporal leakage, sensor leakage,
+% hyperparameter budgets, preprocessing differences, baseline strength,
+% code/data availability, and reproducible protocols.
+
+%================================================
+\section{Discussion}
+
+The discussion should synthesize the literature rather than introduce a
+preselected thesis topic. In particular, it should identify which open
+problems recur across multiple branches of AI4EO, which claimed
+advantages of modern approaches are well supported, and which remain
+dependent on benchmark design, data availability, or computational
+resources.
+
+The final version of this section can also compare the practical
+feasibility of different research questions in terms of available data,
+compute, implementation effort, evaluation clarity, and scientific
+relevance. Possible thesis directions should emerge from this synthesis
+only after the research landscape and benchmark evidence have been
+reviewed.
+
+%================================================
+\section{Conclusion}
+
+The conclusion should summarize the principal characteristics that make
+AI4EO distinct from conventional computer vision, the strongest current
+research directions, and the main evaluation and feasibility challenges.
+It should provide a basis for discussion with the supervisors without
+preselecting a specific thesis topic.
+
+%================================================
+% Appendices
+%================================================
+
+\clearpage
+\appendix
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+
+\section{Technical Notes on Earth Observation Modalities}
+\label{app:eo-technical}
+
+This appendix collects mathematical details that are useful for technical
+reference but are not necessary for the main research-landscape
+discussion.
+
+\subsection{Optical and Multispectral Representations}
+
+A multispectral image aligned to a common spatial grid can be represented
+as
+
+\[
+\mathbf{X}\in\mathbb{R}^{H\times W\times B},
+\]
+
+where \(H\) and \(W\) are spatial dimensions and \(B\) is the number of
+bands. A pixel \(p\) is represented by
+
+\[
+\mathbf{x}_p =
+\left[
+x_{p,1},
+x_{p,2},
+\ldots,
+x_{p,B}
+\right].
+\]
+
+A spectral band integrates incoming radiance over a finite wavelength
+range. A simplified measurement model is
+
+\[
+x_{p,b}
+=
+\frac{
+    \int L_p(\lambda)S_b(\lambda)\,d\lambda
+}{
+    \int S_b(\lambda)\,d\lambda
+},
+\]
+
+where \(L_p(\lambda)\) is the spectral radiance reaching the sensor and
+\(S_b(\lambda)\) is the spectral response function of band \(b\).
+
+For Sentinel-2, a pixel may be represented by the 13-band vector
+
+\[
+\mathbf{x}_p =
+\left[
+B_1,B_2,B_3,B_4,B_5,B_6,B_7,B_8,B_{8A},B_9,B_{10},B_{11},B_{12}
+\right].
+\]
+
+A true-colour composite is commonly formed as
+
+\[
+\mathrm{RGB}_{\mathrm{true}}=[B_4,B_3,B_2],
+\]
+
+while a common false-colour composite is
+
+\[
+\mathrm{RGB}_{\mathrm{false}}=[B_8,B_4,B_3].
+\]
+
+The Normalized Difference Vegetation Index is
+
+\[
+\mathrm{NDVI}
+=
+\frac{\rho_{\mathrm{NIR}}-\rho_{\mathrm{Red}}}
+     {\rho_{\mathrm{NIR}}+\rho_{\mathrm{Red}}}
+\]
+
+\cite{rouse1974monitoring}.
+
+\subsection{Hyperspectral Representations}
+
+Hyperspectral imagery is also represented as a data cube,
+
+\[
+\mathbf{X}\in\mathbb{R}^{H\times W\times B},
+\]
+
+but \(B\) may contain tens or hundreds of narrow bands. The bandwidth of
+band \(b\) is
+
+\[
+\Delta\lambda_b =
+\lambda_{b,\max}-\lambda_{b,\min},
+\]
+
+and the corresponding resolving power can be written as
+
+\[
+R_b=\frac{\lambda_b}{\Delta\lambda_b}.
+\]
+
+In a simplified linear spectral-mixture model,
+
+\[
+\mathbf{x}_p
+=
+\sum_{k=1}^{K}a_{p,k}\mathbf{s}_k
++
+\boldsymbol{\epsilon}_p,
+\]
+
+subject to
+
+\[
+a_{p,k}\geq0,
+\qquad
+\sum_{k=1}^{K}a_{p,k}=1.
+\]
+
+Here, \(\mathbf{s}_k\) represents an endmember spectrum and \(a_{p,k}\)
+its fractional abundance within pixel \(p\).
+
+\subsection{SAR Measurements}
+
+The radar range can be estimated from the round-trip travel time:
+
+\[
+R=\frac{c\Delta t}{2}.
+\]
+
+A focused Single Look Complex SAR pixel can be written as
+
+\[
+S(p)=I(p)+jQ(p)=A(p)e^{j\phi(p)},
+\]
+
+with intensity
+
+\[
+I_{\mathrm{SAR}}(p)=|S(p)|^2.
+\]
+
+After radiometric calibration, backscatter is commonly expressed as
+
+\[
+\sigma^0_{\mathrm{dB}}
+=
+10\log_{10}(\sigma^0).
+\]
+
+A simplified representation of factors affecting the measured
+backscatter is
+
+\[
+\sigma^0 =
+f(\lambda,\theta,P,\varepsilon,r,g),
+\]
+
+where the variables denote wavelength, incidence angle, polarization,
+dielectric properties, surface roughness, and observation geometry.
+
+The principal polarization channels are
+
+\[
+HH,\qquad HV,\qquad VH,\qquad VV.
+\]
+
+A dual-polarization Sentinel-1 observation may therefore be represented as
+
+\[
+\mathbf{x}_p =
+\left[
+\sigma^0_{VV}(p),
+\sigma^0_{VH}(p)
+\right].
+\]
+
+\subsection{LiDAR and Elevation}
+
+The LiDAR range equation is
+
+\[
+R=\frac{c\Delta t}{2}.
+\]
+
+A LiDAR return may be represented as
+
+\[
+\mathbf{p}_i=
+[x_i,y_i,z_i,I_i,r_i],
+\]
+
+where the first three components are spatial coordinates and the
+remaining components may encode return intensity and return number.
+
+For elevation products,
+
+\[
+D(i,j)=z_{i,j},
+\]
+
+and a normalized Digital Surface Model can be computed as
+
+\[
+\mathrm{nDSM}(i,j)=\mathrm{DSM}(i,j)-\mathrm{DTM}(i,j).
+\]
+
+%------------------------------------------------
+\section{Formal AI4EO Task Formulations}
+\label{app:task-formulations}
+
+This appendix collects compact mathematical descriptions of the main
+downstream task families.
+
+\subsection{Classification}
+
+For an input image
+
+\[
+\mathbf{X}\in\mathbb{R}^{C\times H\times W},
+\]
+
+classification can be written as
+
+\[
+f:
+\mathbb{R}^{C\times H\times W}
+\rightarrow
+\{1,\ldots,K\}.
+\]
+
+\subsection{Captioning and Vision-Language Output}
+
+For a vocabulary of size \(V\) and a caption of length \(L\),
+
+\[
+f:
+\mathbb{R}^{C\times H\times W}
+\rightarrow
+\{1,\ldots,V\}^{L}.
+\]
+
+\subsection{Semantic Segmentation}
+
+\[
+f:
+\mathbb{R}^{C\times H\times W}
+\rightarrow
+\{1,\ldots,K\}^{H\times W}.
+\]
+
+\subsection{Instance Segmentation}
+
+A simplified mask representation is
+
+\[
+f:
+\mathbb{R}^{C\times H\times W}
+\rightarrow
+\{0,1\}^{D\times H\times W},
+\]
+
+where \(D\) is the image-dependent number of detected instances.
+
+\subsection{Object Detection}
+
+The localization component can be represented as
+
+\[
+f:
+\mathbb{R}^{C\times H\times W}
+\rightarrow
+\mathbb{R}^{D\times 4},
+\]
+
+with additional class labels and confidence scores in a complete detector.
+
+\subsection{Change Detection}
+
+For two co-registered acquisitions,
+
+\[
+\mathbf{X}_{t_1},\mathbf{X}_{t_2}
+\in
+\mathbb{R}^{C\times H\times W}.
+\]
+
+Binary change detection may be written as
+
+\[
+f:
+\mathbb{R}^{2\times C\times H\times W}
+\rightarrow
+\{0,1\}^{H\times W},
+\]
+
+while semantic change detection may use
+
+\[
+f:
+\mathbb{R}^{2\times C\times H\times W}
+\rightarrow
+\{1,\ldots,K\}^{H\times W}.
+\]
+
+\subsection{Regression}
+
+Image-level regression can be written as
+
+\[
+f:
+\mathbb{R}^{C\times H\times W}
+\rightarrow
+\mathbb{R},
+\]
+
+while pixelwise regression is
+
+\[
+f:
+\mathbb{R}^{C\times H\times W}
+\rightarrow
+\mathbb{R}^{H\times W}.
+\]
+
+\subsection{Time-Series Analysis and Forecasting}
+
+A satellite image time series may be represented as
+
+\[
+\mathbf{X}
+\in
+\mathbb{R}^{T\times C\times H\times W}.
+\]
+
+A spatial forecasting problem can then be written as
+
+\[
+f:
+\mathbb{R}^{T\times C\times H\times W}
+\rightarrow
+\mathbb{R}^{C'\times H\times W}.
+\]
+
+\subsection{Image Reconstruction and Enhancement}
+
+A general reconstruction mapping is
+
+\[
+f:
+\mathbb{R}^{C_{\mathrm{in}}\times H_{\mathrm{in}}\times W_{\mathrm{in}}}
+\rightarrow
+\mathbb{R}^{C_{\mathrm{out}}\times H_{\mathrm{out}}\times W_{\mathrm{out}}}.
+\]
+
+For super-resolution,
+
+\[
+f:
+\mathbb{R}^{C\times H\times W}
+\rightarrow
+\mathbb{R}^{C\times sH\times sW}.
+\]
+
+%================================================
+% Bibliography
+%================================================
+
+\begin{thebibliography}{99}
+
+\bibitem{esa_optical_imagery}
+European Space Agency,
+\textit{Optical Earth Observation},
+ESA Earth Observation.
+Available online:
+\url{https://www.esa.int/Applications/Observing_the_Earth}
+
+\bibitem{esa_reflectance_curves}
+European Space Agency,
+\textit{Reflectance Curves of Snow, Vegetation, Water and Rock},
+ESA Eduspace.
+Available online:
+\url{https://www.esa.int/SPECIALS/Eduspace_EN/}
+
+\bibitem{esa_sentinel2_msi}
+European Space Agency,
+\textit{Sentinel-2 Multispectral Instrument Overview},
+ESA Sentinel Application Platform.
+Available online:
+\url{https://step.esa.int/main/wp-content/help/versions/11.0.0/snap-toolboxes/eu.esa.opt.opttbx.s2msi.reader/Sentinel2Overview.html}
+
+\bibitem{jpl_imaging_spectroscopy}
+NASA Jet Propulsion Laboratory,
+\textit{AVIRIS Imaging Spectroscopy}.
+Available online:
+\url{https://aviris.jpl.nasa.gov/aviris/imaging_spectroscopy.html}
+
+\bibitem{bioucasdias2013hyperspectral}
+J.~M. Bioucas-Dias, A.~Plaza, G.~Camps-Valls, P.~Scheunders,
+N.~M. Nasrabadi, and J.~Chanussot,
+``Hyperspectral remote sensing data analysis and future challenges,''
+\textit{IEEE Geoscience and Remote Sensing Magazine},
+vol.~1, no.~2, pp.~6--36, 2013.
+
+\bibitem{rouse1974monitoring}
+J.~W. Rouse, R.~H. Haas, J.~A. Schell, and D.~W. Deering,
+``Monitoring vegetation systems in the Great Plains with ERTS,''
+in \textit{Proceedings of the Third Earth Resources Technology
+Satellite-1 Symposium},
+vol.~1, pp.~309--317, 1974.
+
+\bibitem{moreira2013sar}
+A.~Moreira, P.~Prats-Iraola, M.~Younis, G.~Krieger, I.~Hajnsek,
+and K.~P. Papathanassiou,
+``A tutorial on synthetic aperture radar,''
+\textit{IEEE Geoscience and Remote Sensing Magazine},
+vol.~1, no.~1, pp.~6--43, 2013.
+
+\bibitem{esa_sentinel1_instrument}
+European Space Agency,
+\textit{Sentinel-1 Instrument},
+ESA Earth Observation.
+Available online:
+\url{https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Instrument}
+
+\bibitem{baltsavias1999airborne}
+E.~P. Baltsavias,
+``Airborne laser scanning: Basic relations and formulas,''
+\textit{ISPRS Journal of Photogrammetry and Remote Sensing},
+vol.~54, no.~2--3, pp.~199--214, 1999.
+
+\bibitem{usgs_lidar_data}
+United States Geological Survey,
+\textit{What Is Lidar Data and Where Can I Download It?}
+Available online:
+\url{https://www.usgs.gov/faqs/what-lidar-data-and-where-can-i-download-it}
+
+\bibitem{guth2021dem}
+P.~L. Guth, A.~Van Niekerk, C.~H. Grohmann, J.-P. Muller,
+L.~Hawker, I.~V. Florinsky, D.~B. Gesch, H.~I. Reuter,
+V.~Herrera-Cruz, S.~Riazanoff, C.~Lopez-Vazquez,
+C.~C. Carabajal, C.~Albinet, and P.~Strobl,
+``Digital elevation models: Terminology and definitions,''
+\textit{Remote Sensing},
+vol.~13, no.~18, Art.~no.~3581, 2021.
+
+\bibitem{usgs_dem_definition}
+United States Geological Survey,
+\textit{What Is a Digital Elevation Model (DEM)?}
+Available online:
+\url{https://www.usgs.gov/faqs/what-a-digital-elevation-model-dem}
+
+\bibitem{esa_earth_observation}
+European Space Agency,
+\textit{Newcomers Earth Observation Guide}.
+Available online:
+\url{https://business.esa.int/newcomers-earth-observation-guide}
+
+\bibitem{cdse_documentation}
+Copernicus Data Space Ecosystem,
+\textit{Copernicus Data Space Ecosystem Documentation}.
+Available online:
+\url{https://documentation.dataspace.copernicus.eu/}
+
+\bibitem{cdse_apis}
+Copernicus Data Space Ecosystem,
+\textit{APIs}.
+Available online:
+\url{https://documentation.dataspace.copernicus.eu/APIs.html}
+
+\bibitem{cdse_browser}
+Copernicus Data Space Ecosystem,
+\textit{About the Copernicus Browser}.
+Available online:
+\url{https://documentation.dataspace.copernicus.eu/Applications/Browser.html}
+
+\bibitem{usgs_m2m}
+United States Geological Survey,
+\textit{Machine-to-Machine (M2M) API}.
+Available online:
+\url{https://m2m.cr.usgs.gov/}
+
+\bibitem{nasa_earthdata_search}
+National Aeronautics and Space Administration,
+\textit{Earthdata Search}.
+Available online:
+\url{https://www.earthdata.nasa.gov/data/tools/earthdata-search}
+
+\bibitem{nasa_earthaccess}
+National Aeronautics and Space Administration,
+\textit{earthaccess}.
+Available online:
+\url{https://www.earthdata.nasa.gov/data/tools/earthaccess}
+
+\bibitem{planet_data_api}
+Planet Labs,
+\textit{Data API Overview}.
+Available online:
+\url{https://docs.planet.com/develop/apis/data/}
+
+\bibitem{planet_processing_api}
+Planet Labs,
+\textit{Processing API}.
+Available online:
+\url{https://docs.planet.com/develop/apis/processing/}
+
+\bibitem{peng2022mopnet}
+F.~Peng, W.~Lu, W.~Tan, K.~Qi, X.~Zhang, and Q.~Zhu,
+``Multi-Output Network Combining GNN and CNN for Remote Sensing Scene Classification,''
+\textit{Remote Sensing},
+vol.~14, no.~6, Art.~no.~1478, 2022.
+
+\bibitem{xia2017aid}
+G.-S. Xia, J.~Hu, F.~Hu, B.~Shi, X.~Bai, Y.~Zhong, L.~Zhang,
+and X.~Lu,
+``AID: A Benchmark Data Set for Performance Evaluation of Aerial
+Scene Classification,''
+\textit{IEEE Transactions on Geoscience and Remote Sensing},
+vol.~55, no.~7, pp.~3965--3981, 2017.
+
+\bibitem{ni2024objectcounts}
+Z.~Ni, Z.~Zong, and P.~Ren,
+``Incorporating object counts into remote sensing image captioning,''
+\textit{International Journal of Digital Earth},
+vol.~17, no.~1, Art.~no.~2392847, 2024.
+
+\bibitem{davies2022semantic}
+A.~J. Davies,
+\textit{Semantic Segmentation of Aerial Imagery using U-Net in Python},
+Towards Data Science, Mar.~31, 2022.
+Available online:
+\url{https://towardsdatascience.com/semantic-segmentation-of-aerial-imagery-using-u-net-in-python-552705238514/}
+
+\bibitem{liu2025catnet}
+Y.~Liu, H.~Li, C.~Hu, S.~Luo, Y.~Luo, and C.~W. Chen,
+``Learning to Aggregate Multi-Scale Context for Instance Segmentation
+in Remote Sensing Images,''
+\textit{IEEE Transactions on Neural Networks and Learning Systems},
+vol.~36, no.~1, pp.~595--609, 2025.
+
+\bibitem{ballinger2023rs4osint}
+O.~Ballinger,
+\textit{Remote Sensing for OSINT: Object Detection},
+2023.
+Available online:
+\url{https://bellingcat.github.io/RS4OSINT/C5_Object_Detection.html}
+
+\end{thebibliography}
+
+\end{document}

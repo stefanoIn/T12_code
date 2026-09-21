@@ -1,0 +1,837 @@
+[
+  {
+    "old_path": "AI4EO_benchmarks (9).pdf",
+    "new_path": "reports/benchmarking/exports/AI4EO_benchmarks (9).pdf",
+    "action": "moved",
+    "sha256": "8eaa0beecf3d49d69195d5a210df69f1ab7b662519372769dbcbaa375c71075a"
+  },
+  {
+    "old_path": "AUTONAME/paper_renamer.py",
+    "new_path": "scripts/paper_renamer.py",
+    "action": "moved",
+    "sha256": "46facb47feb2317c34bfbadf1a416791cf4984909c0a8406a688373468169792"
+  },
+  {
+    "old_path": "benchmark shortlist/Intermediate Products/191_benchmark_candidates.pdf",
+    "new_path": "reports/shortlist/intermediate/191_benchmark_candidates.pdf",
+    "action": "moved",
+    "sha256": "7f951869b14aabaf34e7a8574f1bc0a0422e6d38c571a1f662bfbb23bb4522f3"
+  },
+  {
+    "old_path": "benchmark shortlist/Intermediate Products/38_candidates.pdf",
+    "new_path": "reports/shortlist/intermediate/38_candidates.pdf",
+    "action": "moved",
+    "sha256": "02dde582f6d0f74c91e3133b89f95656bec755ff5b4de786ab664c4ea74512a2"
+  },
+  {
+    "old_path": "benchmark shortlist/Intermediate Products/595.pdf",
+    "new_path": "reports/shortlist/intermediate/595.pdf",
+    "action": "moved",
+    "sha256": "eb66e07089f866b794042b2c00484fbc4883287ecf4633b7bae812de8cca59a1"
+  },
+  {
+    "old_path": "benchmark shortlist/Intermediate Products/eo_benchmark_candidate_table_clean_38_v4.tex",
+    "new_path": "reports/benchmarking/sources/eo_benchmark_candidate_table_clean_38_v4.tex",
+    "action": "duplicate_removed",
+    "sha256": "84f6449037ddf12d02b5587854f4d1f230d0aca842875d49dec4623c74f6393d"
+  },
+  {
+    "old_path": "benchmark shortlist/shortlisted_benchmark_datasets_portrait_cover.tex",
+    "new_path": "reports/shortlist/sources/shortlisted_benchmark_datasets_portrait_cover.tex",
+    "action": "moved",
+    "sha256": "c02c43432bac26d4685e90a2fae191a0fe79650c464ac7047cfb4b668e6fa556"
+  },
+  {
+    "old_path": "benchmarking report/AI4EO_benchmarking_scene_s5211120.pdf",
+    "new_path": "reports/benchmarking/exports/AI4EO_benchmarking_scene_s5211120.pdf",
+    "action": "moved",
+    "sha256": "6ae5be0887e96f153b909ccbfeff7c15984a6aa9219d0bf883d8eddea9a276a9"
+  },
+  {
+    "old_path": "benchmarking report/AI4EO_benchmarks (5).pdf",
+    "new_path": "reports/benchmarking/exports/AI4EO_benchmarks (5).pdf",
+    "action": "moved",
+    "sha256": "5a1dd31f17341670898de811df7f2856c5eb80fdd1886697d623bd21adec4e88"
+  },
+  {
+    "old_path": "benchmarking report/AI4EO_benchmarks.pdf",
+    "new_path": "reports/benchmarking/exports/AI4EO_benchmarks.pdf",
+    "action": "moved",
+    "sha256": "b6074bd9aa29107ef07ac02cdb3cdecdc3362f829b40968eaa9ae690962acd6b"
+  },
+  {
+    "old_path": "benchmarking report/eo_benchmark_candidate_shortlist_fast.csv",
+    "new_path": "reports/benchmarking/tables/eo_benchmark_candidate_shortlist_fast.csv",
+    "action": "moved",
+    "sha256": "77c4d5b4b89020519714b96490698ec6b25ff68eddedda133acdc9d41e1fa7f2"
+  },
+  {
+    "old_path": "benchmarking report/eo_benchmark_candidate_shortlist_fast.pdf",
+    "new_path": "reports/benchmarking/exports/eo_benchmark_candidate_shortlist_fast.pdf",
+    "action": "moved",
+    "sha256": "7eccbecabff05045828bc63ed569dd5d5a37882a04f87fd769f0bc98eded6fd9"
+  },
+  {
+    "old_path": "benchmarking report/eo_benchmark_candidate_shortlist_fast.tex",
+    "new_path": "reports/benchmarking/sources/eo_benchmark_candidate_shortlist_fast.tex",
+    "action": "moved",
+    "sha256": "c27ed56de31a87c1056e52a03a307e00ba0958876b27ec6356db53845c5048d6"
+  },
+  {
+    "old_path": "benchmarking report/eo_benchmark_candidate_table_clean (1).tex",
+    "new_path": "reports/benchmarking/sources/eo_benchmark_candidate_table_clean.tex",
+    "action": "duplicate_removed",
+    "sha256": "8719cb1dff4486a4033bb72a31b8712efcaf768a5cb81a2f04435c528b13226e"
+  },
+  {
+    "old_path": "benchmarking report/eo_benchmark_candidate_table_clean.pdf",
+    "new_path": "reports/benchmarking/exports/eo_benchmark_candidate_table_clean.pdf",
+    "action": "moved",
+    "sha256": "b35fde162c10b68117ead61ad2eb66fe49afabedb621f430275a5148f345b3da"
+  },
+  {
+    "old_path": "benchmarking report/eo_benchmark_candidate_table_clean.tex",
+    "new_path": "reports/benchmarking/sources/eo_benchmark_candidate_table_clean.tex",
+    "action": "moved",
+    "sha256": "8719cb1dff4486a4033bb72a31b8712efcaf768a5cb81a2f04435c528b13226e"
+  },
+  {
+    "old_path": "benchmarking report/eo_benchmark_candidate_table_clean_38_v4.tex",
+    "new_path": "reports/benchmarking/sources/eo_benchmark_candidate_table_clean_38_v4.tex",
+    "action": "moved",
+    "sha256": "84f6449037ddf12d02b5587854f4d1f230d0aca842875d49dec4623c74f6393d"
+  },
+  {
+    "old_path": "benchmarking report/eo_benchmark_fast_screen_188.csv",
+    "new_path": "reports/benchmarking/tables/eo_benchmark_fast_screen_188.csv",
+    "action": "moved",
+    "sha256": "1ad66c04ef06259d958933d0d456da2a5e47ff42b6b99646df2764fe48a4946e"
+  },
+  {
+    "old_path": "benchmarking report/eo_confirmed_benchmark_datasets_188 (1).tex",
+    "new_path": "reports/benchmarking/sources/eo_confirmed_benchmark_datasets_188.tex",
+    "action": "duplicate_removed",
+    "sha256": "638f57b52be688b411e0cf0b7e17343fe29e63a0a319390e277352ab0d10e4ba"
+  },
+  {
+    "old_path": "benchmarking report/eo_confirmed_benchmark_datasets_188.csv",
+    "new_path": "reports/benchmarking/tables/eo_confirmed_benchmark_datasets_188.csv",
+    "action": "moved",
+    "sha256": "757ee34b07a0e7e29357b113d7651facaf21754828e2722274cc7548838d2370"
+  },
+  {
+    "old_path": "benchmarking report/eo_confirmed_benchmark_datasets_188.pdf",
+    "new_path": "reports/benchmarking/exports/eo_confirmed_benchmark_datasets_188.pdf",
+    "action": "moved",
+    "sha256": "32fde800546c3c5d88393c6aabcb8b0483be3072659fdfa0226f9c02bd3cbf18"
+  },
+  {
+    "old_path": "benchmarking report/eo_confirmed_benchmark_datasets_188.tex",
+    "new_path": "reports/benchmarking/sources/eo_confirmed_benchmark_datasets_188.tex",
+    "action": "moved",
+    "sha256": "638f57b52be688b411e0cf0b7e17343fe29e63a0a319390e277352ab0d10e4ba"
+  },
+  {
+    "old_path": "benchmarking report/eo_confirmed_benchmark_datasets_191_v4.tex",
+    "new_path": "reports/benchmarking/sources/eo_confirmed_benchmark_datasets_191_v4.tex",
+    "action": "moved",
+    "sha256": "68c852381fb31618860e042ff6d2c4c0be82ac555bdc9742055cf502fab6f731"
+  },
+  {
+    "old_path": "benchmarking report/eo_dataset_inventory_2023.csv",
+    "new_path": "reports/benchmarking/tables/eo_dataset_inventory_2023.csv",
+    "action": "moved",
+    "sha256": "13b4c9da10c1f0bcf1fcf573c92ad9e17fa58e0f9fe965c4b6dca288eda90cb1"
+  },
+  {
+    "old_path": "benchmarking report/eo_dataset_inventory_2024.csv",
+    "new_path": "reports/benchmarking/tables/eo_dataset_inventory_2024.csv",
+    "action": "moved",
+    "sha256": "b1de6ffc7efff287df0a96e1c99b1457cf94c0a053deb9dbd5af8b6775503838"
+  },
+  {
+    "old_path": "benchmarking report/eo_dataset_suites_2023.tex",
+    "new_path": "reports/benchmarking/sources/eo_dataset_suites_2023.tex",
+    "action": "moved",
+    "sha256": "21e0583668a92f0dcd1e6edbf1cfd9e930523636b1b6b1327d19526b1d51adf9"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_benchmark_audit_593.csv",
+    "new_path": "reports/benchmarking/tables/eo_datasets_benchmark_audit_593.csv",
+    "action": "moved",
+    "sha256": "18a6003aa87ac98415286eca2fea3afa277f1f725442714c53ba9f3b2b05d17b"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_filtered_core_tasks.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_filtered_core_tasks.tex",
+    "action": "moved",
+    "sha256": "2d710356427bdf18d65738545898ae8cdac424b942a9ee4cc71bd43b56b4a461"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_filtered_core_tasks_complete_2026.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_filtered_core_tasks_complete_2026.tex",
+    "action": "moved",
+    "sha256": "dd238e2b99fe97ba305c75c1b86460814635f854ed829cae646ef8e70cde2023"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_filtered_core_tasks_complete_2026_plus_pangaea (1).tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_filtered_core_tasks_complete_2026_plus_pangaea.tex",
+    "action": "duplicate_removed",
+    "sha256": "67bbcc0b89fdaddc030eb0cf7a1a07868dd88316d1492214687b6e1d1af74f43"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_filtered_core_tasks_complete_2026_plus_pangaea.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_filtered_core_tasks_complete_2026_plus_pangaea.tex",
+    "action": "moved",
+    "sha256": "67bbcc0b89fdaddc030eb0cf7a1a07868dd88316d1492214687b6e1d1af74f43"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_2023.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_master_2023.tex",
+    "action": "moved",
+    "sha256": "56b909f0b8fdfa380d2db06c2b07d379bc81bdaa93169a3dbb2e3b40b53b7ed6"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_2023_portrait.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_master_2023_portrait.tex",
+    "action": "moved",
+    "sha256": "cbeff6509cdef20ec45f42128d01672639a78c81a6ad57a2c60c3f8094b71dde"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_2024_index_no_source.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_master_2024_index_no_source.tex",
+    "action": "moved",
+    "sha256": "50d072a61787294ed367209dbbf5e19b5d96792eef814dca7ded948fb1ae8505"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_2026_09_15.csv",
+    "new_path": "reports/benchmarking/tables/eo_datasets_master_2026_09_15.csv",
+    "action": "moved",
+    "sha256": "18ef42ef0438e6aea9f27ef9a10cddde529eb4a3fb9fdd88a47a838ac5843d46"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_2026_multi_tilde_final.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_master_2026_multi_tilde_final.tex",
+    "action": "moved",
+    "sha256": "8e7ecac0393d6f63b84e8b05e4af4624e2ce5e215f6afea1e59b48fc09f5dbed"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_benchmark_audit_593 (1).pdf",
+    "new_path": "reports/benchmarking/exports/eo_datasets_master_benchmark_audit_593.pdf",
+    "action": "duplicate_removed",
+    "sha256": "7554ee0f7732407d2381e6ec41958f017ec7975d164879ba0688bc0efade6fde"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_benchmark_audit_593.pdf",
+    "new_path": "reports/benchmarking/exports/eo_datasets_master_benchmark_audit_593.pdf",
+    "action": "moved",
+    "sha256": "7554ee0f7732407d2381e6ec41958f017ec7975d164879ba0688bc0efade6fde"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_benchmark_flag_portrait.pdf",
+    "new_path": "reports/benchmarking/exports/eo_datasets_master_benchmark_flag_portrait.pdf",
+    "action": "moved",
+    "sha256": "2def9343bc2444168ef27548e91c043d86515f52729f130ec939c522de06f77e"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_benchmark_flag_portrait.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_master_benchmark_flag_portrait.tex",
+    "action": "moved",
+    "sha256": "2fb107c0388c8e0f838c652e6ff3566d0c53c8d0fd50c6a03b2d69856cf72ee0"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_benchmark_fmeval_evidence_portrait.pdf",
+    "new_path": "reports/benchmarking/exports/eo_datasets_master_benchmark_fmeval_evidence_portrait.pdf",
+    "action": "moved",
+    "sha256": "604a0148a9e046c6119c83a0b8a9a4857fe32cac60207d3173611186c742b436"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_benchmark_fmeval_evidence_portrait_595_v4.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_master_benchmark_fmeval_evidence_portrait_595_v4.tex",
+    "action": "moved",
+    "sha256": "9ff6e15d3d9578edf7755a3b70796226ddd955cdbf528878429c862ef9c7e5ed"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_external_links_singleline_header (1).pdf",
+    "new_path": "reports/benchmarking/exports/eo_datasets_master_external_links_singleline_header.pdf",
+    "action": "duplicate_removed",
+    "sha256": "f577e5b8cd49bc4fa0bf24ff091cb022096499d6f371a5ce020a1a8545bbd50b"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_external_links_singleline_header.pdf",
+    "new_path": "reports/benchmarking/exports/eo_datasets_master_external_links_singleline_header.pdf",
+    "action": "moved",
+    "sha256": "f577e5b8cd49bc4fa0bf24ff091cb022096499d6f371a5ce020a1a8545bbd50b"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_external_links_singleline_header.tex",
+    "new_path": "reports/benchmarking/sources/eo_datasets_master_external_links_singleline_header.tex",
+    "action": "moved",
+    "sha256": "32dea58beb65b4b8f3d5beb008424ca08a2e342c07470e9292f949ba1ed8762d"
+  },
+  {
+    "old_path": "benchmarking report/eo_datasets_master_updated_2026_09_15.csv",
+    "new_path": "reports/benchmarking/tables/eo_datasets_master_updated_2026_09_15.csv",
+    "action": "moved",
+    "sha256": "7c8a4b53c3371f380da7f61700880d78a429b86c532c25cfbf8591a3ec557d9b"
+  },
+  {
+    "old_path": "benchmarking report/EODatasets.pdf",
+    "new_path": "reports/benchmarking/exports/EODatasets.pdf",
+    "action": "moved",
+    "sha256": "0bf78c76cf4d80bb259e60b678655c8238d03fbab6631689f95e29a7103e00b6"
+  },
+  {
+    "old_path": "benchmarking report/Gini_benchmark.png",
+    "new_path": "reports/benchmarking/figures/Gini_benchmark.png",
+    "action": "moved",
+    "sha256": "8cd6727646c1cc5925e8b9fe9dd9cde69057d2b2614eba9291fea19ce7449ed5"
+  },
+  {
+    "old_path": "benchmarking report/overleaf_dataset_inventory_snippet.tex",
+    "new_path": "reports/benchmarking/sources/overleaf_dataset_inventory_snippet.tex",
+    "action": "moved",
+    "sha256": "c75266af6dcbf6a05dd809a1bc3d7f86e9e6bfd18769f895df55787176063202"
+  },
+  {
+    "old_path": "benchmarking report/SamExperimentDifferentNumber.png",
+    "new_path": "reports/benchmarking/figures/SamExperimentDifferentNumber.png",
+    "action": "moved",
+    "sha256": "298d132a9919b2135465d212fbeb86fbe9484486c27b22ebb16b8a27b766f9a2"
+  },
+  {
+    "old_path": "benchmarking report/Verifica Dataset E Ricerca Link.docx",
+    "new_path": "reports/benchmarking/notes/Verifica Dataset E Ricerca Link.docx",
+    "action": "moved",
+    "sha256": "62e5832d84e9e0b3d78422f0286542daad75b237805ae0a40dc186aee5c68219"
+  },
+  {
+    "old_path": "Bini_benchmarks.png",
+    "new_path": "reports/benchmarking/figures/Bini_benchmarks.png",
+    "action": "moved",
+    "sha256": "8e300acb054f8f29452d8cdaa1fe807bfe61c4b22e10576b7efffed8471fafaa",
+    "post_move_status": "Missing after successful move and initial hash verification; possible concurrent deletion preserved. Exact original recoverable from HEAD:Bini_benchmarks.png."
+  },
+  {
+    "old_path": "deep-research-report.md",
+    "new_path": "notes/benchmarking_protocols.md",
+    "action": "moved",
+    "sha256": "18560c25d40cc47aa632b5f9eca1000c68e6d498393ae1b75f85c48611074aa5"
+  },
+  {
+    "old_path": "deep-research-report_2.md",
+    "new_path": "notes/benchmarking_limitations.md",
+    "action": "moved",
+    "sha256": "51f76a266ffd2e7f9ca1254af9c6cc90e40d3585e5bc438812ed9333eb144363"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_full_corrected.tex",
+    "new_path": "reports/preliminary/sources/AI4EO_full_corrected.tex",
+    "action": "moved",
+    "sha256": "01873af7b53b943de6f810d0b0aeab7b0df28dfa75962c8ee7a56c3d3225b663"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_full_float_corrected.tex",
+    "new_path": "reports/preliminary/sources/AI4EO_full_float_corrected.tex",
+    "action": "moved",
+    "sha256": "b4088bd7ac149a9e2cc788b9a709346f59c7b62dde564bce98762384bae39215"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_Landscape_Overview_August_2026.md",
+    "new_path": "reports/preliminary/notes/AI4EO_Landscape_Overview_August_2026.md",
+    "action": "moved",
+    "sha256": "73b4ce94de57397b8e244eef53ca212aff99fdd1af1b89c9105447b31eaa632e"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_Landscape_Overview_August_2026.tex",
+    "new_path": "reports/preliminary/sources/AI4EO_Landscape_Overview_August_2026.tex",
+    "action": "moved",
+    "sha256": "8a2b3453c3ed00fad3f93155d73fb5839b7f13dc6589d254bb22f00d64e36ce5"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_professional_academic_template.tex",
+    "new_path": "reports/preliminary/sources/AI4EO_professional_academic_template.tex",
+    "action": "moved",
+    "sha256": "d56757c6caef295cff2ad8ff339ce8d2f7a0a5475cb3fd556cbd34045d65f616"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_professional_UNIGE_font.tex",
+    "new_path": "reports/preliminary/sources/AI4EO_professional_UNIGE_font.tex",
+    "action": "moved",
+    "sha256": "ff7e60d55f5cba08157d56511e0d4f96fe3660afb01ece90f7dd576c6b7aa73a"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_restructured_scoping_report.tex",
+    "new_path": "reports/preliminary/sources/AI4EO_restructured_scoping_report.tex",
+    "action": "moved",
+    "sha256": "773d4c852c9336634185b9110bf816066a5be55312beca2dbbd532426e9ea4bc"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_revised_full_code.tex",
+    "new_path": "reports/preliminary/sources/AI4EO_revised_full_code.tex",
+    "action": "moved",
+    "sha256": "8533c3238e606240a3c1654a55c9537e2fc3389f9180efba89ef1ca67a65aad4"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_same_content_professional_UNIGE_style.tex",
+    "new_path": "reports/preliminary/sources/AI4EO_same_content_professional_UNIGE_style.tex",
+    "action": "moved",
+    "sha256": "e966bd876bf4c19f28aa30669a4139e5a1f9a5ebe347860cbc297f594be075ff"
+  },
+  {
+    "old_path": "preliminary report/AI4EO_tasks_math_restored.tex",
+    "new_path": "reports/preliminary/sources/AI4EO_tasks_math_restored.tex",
+    "action": "moved",
+    "sha256": "478d2b207dbbb4af437f84461692ae36daba5ea61fd9938995d5cab505889a9c"
+  },
+  {
+    "old_path": "preliminary report/benchmarking_datasets.png",
+    "new_path": "reports/preliminary/figures/benchmarking_datasets.png",
+    "action": "moved",
+    "sha256": "f76455d9e81a1bb64388ed86f5d3a99eb509f493d9faa002111ef26a7994eba0"
+  },
+  {
+    "old_path": "preliminary report/dataset-cover.png",
+    "new_path": "reports/preliminary/figures/dataset-cover.png",
+    "action": "moved",
+    "sha256": "5523a3416b4d710821f9e4bd85286c8d759aa0ebdbde77ca15d2c3d2942b6d87"
+  },
+  {
+    "old_path": "preliminary report/embeddings.png",
+    "new_path": "reports/preliminary/figures/embeddings.png",
+    "action": "moved",
+    "sha256": "e977fe2376d5cd4193596a6406d234d25d6baa20232a41b09d032b18a5f84c58"
+  },
+  {
+    "old_path": "preliminary report/embeddings2.png",
+    "new_path": "reports/preliminary/figures/embeddings2.png",
+    "action": "moved",
+    "sha256": "755776d25b81c73598a22e84404800ce230f58ca3014be4b65d8e70a4053ab0a"
+  },
+  {
+    "old_path": "preliminary report/GEObench.png",
+    "new_path": "reports/preliminary/figures/GEObench.png",
+    "action": "moved",
+    "sha256": "ea301e475f8bff6042848484b431cda795af4e1d9ad24e66c4f4b1c7b6f0c9df"
+  },
+  {
+    "old_path": "preliminary report/Images/after_semantic_segmentation.png",
+    "new_path": "reports/preliminary/figures/after_semantic_segmentation.png",
+    "action": "moved",
+    "sha256": "a29b2f6ad2df32cb55a7099a202b2ce5ec02ca3769e64c0f107267187f86af59"
+  },
+  {
+    "old_path": "preliminary report/Images/before_semantic_segmantion.jpeg",
+    "new_path": "reports/preliminary/figures/before_semantic_segmantion.jpeg",
+    "action": "moved",
+    "sha256": "73e8f76f3ac2b95d2af572987eec327b97358e31bb96faf6645605dcc4541bfc"
+  },
+  {
+    "old_path": "preliminary report/Images/change_detection.png",
+    "new_path": "reports/preliminary/figures/change_detection.png",
+    "action": "moved",
+    "sha256": "ff00930fd13102d4ac29b96945af4076b9b8288fec7d11ecba5308f2dd99ed7c"
+  },
+  {
+    "old_path": "preliminary report/Images/change_detection_clean.png",
+    "new_path": "reports/preliminary/figures/change_detection_clean.png",
+    "action": "moved",
+    "sha256": "c5056447426586012f94d86d60d51639752dfa22dc02478ef190218177c6afda"
+  },
+  {
+    "old_path": "preliminary report/Images/classification.png",
+    "new_path": "reports/preliminary/figures/classification.png",
+    "action": "moved",
+    "sha256": "5f1bcad86091514a610f5683b1d4c8803b3ed311d2051cdea5201b346628cbfd"
+  },
+  {
+    "old_path": "preliminary report/Images/image_enhancement.png",
+    "new_path": "reports/preliminary/figures/image_enhancement.png",
+    "action": "moved",
+    "sha256": "08d8ea56d67df2694db03b41507890b9f15fc60ae9af62db453729ac0c5716ef"
+  },
+  {
+    "old_path": "preliminary report/Images/imagecaptioning.jpg",
+    "new_path": "reports/preliminary/figures/imagecaptioning.jpg",
+    "action": "moved",
+    "sha256": "025fcb2ef290b2f1901e8175fae39360f5cf904ea535e396f5469d623e631dbf"
+  },
+  {
+    "old_path": "preliminary report/Images/instance_segmentation.png",
+    "new_path": "reports/preliminary/figures/instance_segmentation.png",
+    "action": "moved",
+    "sha256": "b47595e61304e86e2afa2563bd468e841c3cf5bf228c50435dc562239f58c298"
+  },
+  {
+    "old_path": "preliminary report/Images/object_detection.jpg",
+    "new_path": "reports/preliminary/figures/object_detection.jpg",
+    "action": "moved",
+    "sha256": "fc5478e099b702804d2f7d875cb0980787438353d2940b1148528a431d344b7f"
+  },
+  {
+    "old_path": "preliminary report/Images/semantic_segmentation_side_by_side.png",
+    "new_path": "reports/preliminary/figures/semantic_segmentation_side_by_side.png",
+    "action": "moved",
+    "sha256": "df3fbcee4b8573ca4cef07870cd6459137459846c05cc4afaf2d8668afb9bfd1"
+  },
+  {
+    "old_path": "preliminary report/MLOps.png",
+    "new_path": "reports/preliminary/figures/MLOps.png",
+    "action": "moved",
+    "sha256": "e066b8f35fb31dd770f9456c4dffa4199b650b1c53974774310bb2e9871c86c5"
+  },
+  {
+    "old_path": "preliminary report/output.png",
+    "new_path": "reports/preliminary/figures/output.png",
+    "action": "moved",
+    "sha256": "1d075385a1b07784f72dc1dcc6a2af78ce76fe7412903aa76737c62d0690455a"
+  },
+  {
+    "old_path": "preliminary report/pretraining_datasets.png",
+    "new_path": "reports/preliminary/figures/pretraining_datasets.png",
+    "action": "moved",
+    "sha256": "dd4430bae132b2d61def0a987095039ff324fc3c7b7c81db9a7e947b72dfc0ab"
+  },
+  {
+    "old_path": "preliminary report/py/ai4eo_scientific_publications.pdf",
+    "new_path": "reports/preliminary/figures/ai4eo_scientific_publications.pdf",
+    "action": "moved",
+    "sha256": "1f76b20594741fd84abd53dbf049bfb475e61434d98eaf13f806c46198d61c4a"
+  },
+  {
+    "old_path": "preliminary report/py/ai4eo_scientific_publications.png",
+    "new_path": "reports/preliminary/figures/ai4eo_scientific_publications.png",
+    "action": "moved",
+    "sha256": "564caf2658e2f3724914bee85acb442431720ce8edf32e9d8631f13543901c7b"
+  },
+  {
+    "old_path": "preliminary report/py/ai4eo_temporal_references.pdf",
+    "new_path": "reports/preliminary/figures/ai4eo_temporal_references.pdf",
+    "action": "moved",
+    "sha256": "793aedbefbc5e3f2b7b9810b15041806d5481acd7c181a95460e932c50c4b831"
+  },
+  {
+    "old_path": "preliminary report/py/ai4eo_temporal_references.png",
+    "new_path": "reports/preliminary/figures/ai4eo_temporal_references.png",
+    "action": "moved",
+    "sha256": "9f3ba386cf51e78060eff94dde5d51ce1b9789914689912426849db6f48c9259"
+  },
+  {
+    "old_path": "preliminary report/py/references.ipynb",
+    "new_path": "notebooks/literature/references.ipynb",
+    "action": "moved",
+    "sha256": "dd6e2d745d3b5e4e926f9d38336307202630c1c3fdd70564aef14fdf8d3be258"
+  },
+  {
+    "old_path": "preliminary report/remoteSensingMethodologies.png",
+    "new_path": "reports/preliminary/figures/remoteSensingMethodologies.png",
+    "action": "moved",
+    "sha256": "0cc3704559b4086e480ccf0791447626cde1e4fa28036207e1a8d436efa2b8ce"
+  },
+  {
+    "old_path": "preliminary report/research_landscape.png",
+    "new_path": "reports/preliminary/figures/research_landscape.png",
+    "action": "moved",
+    "sha256": "1d1cd9e77c97ba629d589fb4ebe3b0e657cf661a7247000d6394f61cf7b23cc3"
+  },
+  {
+    "old_path": "preliminary report/sar_urban_example.jpg",
+    "new_path": "reports/preliminary/figures/sar_urban_example.jpg",
+    "action": "moved",
+    "sha256": "4fe9f4008f0e88e3cd6c0eae9d6599e58b75e4e9e8ed568599005bb5db48ff03"
+  },
+  {
+    "old_path": "preliminary report/satellite_temporal_spatial_resolution.png",
+    "new_path": "reports/preliminary/figures/satellite_temporal_spatial_resolution.png",
+    "action": "moved",
+    "sha256": "fc38ee78ae1b3d156ece9b3738d2ec3d24aabf2a862f1f77dce93379edab948a"
+  },
+  {
+    "old_path": "preliminary report/satellite_time_series.png",
+    "new_path": "reports/preliminary/figures/satellite_time_series.png",
+    "action": "moved",
+    "sha256": "b77413fa56a454f85025e1af03fc94f3fb2e57d62cb177639860e7cfa96746a0"
+  },
+  {
+    "old_path": "preliminary report/satellitecompanies.png",
+    "new_path": "reports/preliminary/figures/satellitecompanies.png",
+    "action": "moved",
+    "sha256": "a2179c7c8b08d977ab1dd5bb804825ac03b8331cc2b3c304ab5d3a7ab4450bc1"
+  },
+  {
+    "old_path": "preliminary report/torchGEO.png",
+    "new_path": "reports/preliminary/figures/torchGEO.png",
+    "action": "moved",
+    "sha256": "35fe8d719650d48a10d76f6f098e346a30e6a4a820b2fd9901612ffb1101a843"
+  },
+  {
+    "old_path": "Readings/2021_Bommasani_Opportunities_Risks_Foundation_Models.pdf",
+    "new_path": "literature/papers/2021_Bommasani_Opportunities_Risks_Foundation_Models.pdf",
+    "action": "moved",
+    "sha256": "05e867e3c710a3b0c0e13eb372d013c3511f2ee114bace5ca5c402d6341e92dd"
+  },
+  {
+    "old_path": "Readings/2022_Xiong_EarthNets_Empowering_AI_EO.pdf",
+    "new_path": "literature/papers/2022_Xiong_EarthNets_Empowering_AI_EO.pdf",
+    "action": "moved",
+    "sha256": "90341c9f5a3d29606fc4c00681c57a716d223296a602329c6e9f0a98bad8f7ac"
+  },
+  {
+    "old_path": "Readings/2023_Lacoste_GEO-Bench_Foundation_Models_Earth_Monitoring.pdf",
+    "new_path": "literature/datasets/2023_Lacoste_GEO-Bench_Foundation_Models_Earth_Monitoring.pdf",
+    "action": "duplicate_removed",
+    "sha256": "cfe0f82eafb59c680e8d91fef4dc832491f898f7ee56c14da19e953226d2b2ad"
+  },
+  {
+    "old_path": "Readings/2023_Mai_Opportunities_Challenges_Foundation_Models_GeoAI.pdf",
+    "new_path": "literature/papers/2023_Mai_Opportunities_Challenges_Foundation_Models_GeoAI.pdf",
+    "action": "moved",
+    "sha256": "9ec61f2565590a1024172c1deef67c7a14354fefd35632a8c4d5775ac6d898e8"
+  },
+  {
+    "old_path": "Readings/2023_Schmitt_There_Are_No_Data_Like_More_Data-_Datasets_DL.pdf",
+    "new_path": "literature/papers/2023_Schmitt_There_Are_No_Data_Like_More_Data-_Datasets_DL.pdf",
+    "action": "moved",
+    "sha256": "34b5b1494cfcc140b8534f93bf6526526be7c1633675652eb6f2ae97d162aec9"
+  },
+  {
+    "old_path": "Readings/2024_Dionelis_Evaluating_Benchmarking_Foundation_Models_EO_Geospatial_AI.pdf",
+    "new_path": "literature/papers/2024_Dionelis_Evaluating_Benchmarking_Foundation_Models_EO_Geospatial_AI.pdf",
+    "action": "moved",
+    "sha256": "f599e0ab278b1726fa5c599b25bf2f1b5d9604eb4ba29977ff522e55889d1739"
+  },
+  {
+    "old_path": "Readings/2024_Marsocci_PANGAEA_Global_Inclusive_Benchmark_GeoFMs.pdf",
+    "new_path": "literature/papers/2024_Marsocci_PANGAEA_Global_Inclusive_Benchmark_GeoFMs.pdf",
+    "action": "moved",
+    "sha256": "757b68383e726f549692ae2fea085f74227d371fa174f532fbf6a3bc24cd2dd3"
+  },
+  {
+    "old_path": "Readings/2025_Huang_Survey_Remote_Sensing_Foundation_Models_Vision_Multimodality.pdf",
+    "new_path": "literature/papers/2025_Huang_Survey_Remote_Sensing_Foundation_Models_Vision_Multimodality.pdf",
+    "action": "moved",
+    "sha256": "7fac992a91c456b68ed50c08d79ee1c2fd3d68ba094ca70d1610060b06f115e5"
+  },
+  {
+    "old_path": "Readings/2025_Li_REOBench_Benchmarking_Robustness_EOFMs.pdf",
+    "new_path": "literature/papers/2025_Li_REOBench_Benchmarking_Robustness_EOFMs.pdf",
+    "action": "moved",
+    "sha256": "127b80174a0172df6889d9e8bab5cbac61c4ae0f2fd96abb8d0f319c8c795458"
+  },
+  {
+    "old_path": "Readings/2025_Wang_Unified_Copernicus_Foundation_Model_Earth_Vision.pdf",
+    "new_path": "literature/papers/2025_Wang_Unified_Copernicus_Foundation_Model_Earth_Vision.pdf",
+    "action": "moved",
+    "sha256": "93fee4df2add587e7b642d60ad0d61f8838428b62de4381ff3e60a35f6802eef"
+  },
+  {
+    "old_path": "Readings/2025_Xiao_Foundation_Models_Remote_Sensing_EO_survey.pdf",
+    "new_path": "literature/papers/2025_Xiao_Foundation_Models_Remote_Sensing_EO_survey.pdf",
+    "action": "moved",
+    "sha256": "54e8403ccb5d55cb6d660406468d24e116655e7dde3ded601063c0094fc19229"
+  },
+  {
+    "old_path": "Readings/2026_Corley_No_One_Knows_SOTA_GeoFMs.pdf",
+    "new_path": "literature/papers/2026_Corley_No_One_Knows_SOTA_GeoFMs.pdf",
+    "action": "moved",
+    "sha256": "b052b157b93954c07633635713383a461c361c3ca74cc7ed7fcea29f17bab1bb"
+  },
+  {
+    "old_path": "Readings/2026_Corley_No_One_Knows_SOTA_GeoFMs_3.pdf",
+    "new_path": "literature/papers/2026_Corley_No_One_Knows_SOTA_GeoFMs_3.pdf",
+    "action": "moved",
+    "sha256": "3e85ee3fe2a28bccb1b751f065e40f26c2b9e1a80ca8fb1b9b7bab885018847e"
+  },
+  {
+    "old_path": "Readings/2026_Doerksen_EarthShift_benchmark_measuring_robustness_real-world_distribution_shifts_EO.pdf",
+    "new_path": "literature/papers/2026_Doerksen_EarthShift_benchmark_measuring_robustness_real-world_distribution_shifts_EO.pdf",
+    "action": "moved",
+    "sha256": "5a13705497a3efb119e0ce89db0c95ccff063135774ef6d0755e44283602d79b"
+  },
+  {
+    "old_path": "Readings/Datasets/10307_towards_the_creation_of_a_cana.pdf",
+    "new_path": "literature/datasets/10307_towards_the_creation_of_a_cana.pdf",
+    "action": "moved",
+    "sha256": "2b7d1327e349e9e7b153f138d56109fc7b330e511073707d75701d49f6db67de"
+  },
+  {
+    "old_path": "Readings/Datasets/2017_Christie_Functional_Map_World.pdf",
+    "new_path": "literature/datasets/2017_Christie_Functional_Map_World.pdf",
+    "action": "moved",
+    "sha256": "66b0ca080d8ee40088abca42a19c4cf2e574c81d086187e38bfaaf3a540dfe7c"
+  },
+  {
+    "old_path": "Readings/Datasets/2019_Gupta_xBD_Dataset_Assessing_Building_Damage_Satellite_Imagery.pdf",
+    "new_path": "literature/datasets/2019_Gupta_xBD_Dataset_Assessing_Building_Damage_Satellite_Imagery.pdf",
+    "action": "moved",
+    "sha256": "b55bf1a19309dc23b3f0b3aa5ccd57a5e32faabc3988bef8d47f62016d70da32"
+  },
+  {
+    "old_path": "Readings/Datasets/2019_Robinson_Large_Scale_High-Resolution_Land_Cover_Mapping_Multi-Resolution_Data.pdf",
+    "new_path": "literature/datasets/2019_Robinson_Large_Scale_High-Resolution_Land_Cover_Mapping_Multi-Resolution_Data.pdf",
+    "action": "moved",
+    "sha256": "ba004dc0f01016ba403a759ad3172c86834e714238fe7f350a37db8d41e6c023"
+  },
+  {
+    "old_path": "Readings/Datasets/2019_Schmitt_SEN12MS_--_Curated_Dataset_Georeferenced_Multi-Spectral_Sentinel-1_2_Imagery.pdf",
+    "new_path": "literature/datasets/2019_Schmitt_SEN12MS_--_Curated_Dataset_Georeferenced_Multi-Spectral_Sentinel-1_2_Imagery.pdf",
+    "action": "moved",
+    "sha256": "4f5482510da1bda2fe7aaffa9b9f04f3b3e80bfda7a1f660c6a550277402594f"
+  },
+  {
+    "old_path": "Readings/Datasets/2019_Zhu_So2Sat_LCZ42_Benchmark_Dataset_Global_Local_Climate_Zones_Classification.pdf",
+    "new_path": "literature/datasets/2019_Zhu_So2Sat_LCZ42_Benchmark_Dataset_Global_Local_Climate_Zones_Classification.pdf",
+    "action": "moved",
+    "sha256": "e9f682f31ca27b9b37278473237b92730097c339ce10c50895040b186c7621e0"
+  },
+  {
+    "old_path": "Readings/Datasets/2020_Bonafilia_Sen1Floods11_georeferenced_dataset_train_test_DL_flood_algorithms_Sentinel-1.pdf",
+    "new_path": "literature/datasets/2020_Bonafilia_Sen1Floods11_georeferenced_dataset_train_test_DL_flood_algorithms_Sentinel-1.pdf",
+    "action": "moved",
+    "sha256": "37dfa43a559a4d20c23a2404e2758eeeebe8cdac29fe585efd2e4cc9160913ba"
+  },
+  {
+    "old_path": "Readings/Datasets/2020_Koh_WILDS_Benchmark_in-the-Wild_Distribution_Shifts.pdf",
+    "new_path": "literature/datasets/2020_Koh_WILDS_Benchmark_in-the-Wild_Distribution_Shifts.pdf",
+    "action": "moved",
+    "sha256": "35e7bc2db39b1890ce60ffc1dec9ed6b83f87f2bcf6d8501610010442a52f581"
+  },
+  {
+    "old_path": "Readings/Datasets/2021_Garnot_Multi-Modal_Temporal_Attention_Models_Crop_Mapping_Satellite_Time_Series.pdf",
+    "new_path": "literature/datasets/2021_Garnot_Multi-Modal_Temporal_Attention_Models_Crop_Mapping_Satellite_Time_Series.pdf",
+    "action": "moved",
+    "sha256": "0fe0e4b24c143e47aba4dbb3e620910e42893a1ba27998318443bb8ddb644e16"
+  },
+  {
+    "old_path": "Readings/Datasets/2021_Van_Etten_Multi-Temporal_Urban_Development_SpaceNet_Dataset.pdf",
+    "new_path": "literature/datasets/2021_Van_Etten_Multi-Temporal_Urban_Development_SpaceNet_Dataset.pdf",
+    "action": "moved",
+    "sha256": "8cebbe7ba990caee2bf33c16b406001ab69ac7a207d4e810a316e702edc9c930"
+  },
+  {
+    "old_path": "Readings/Datasets/2021_Weikmann_TimeSen2Crop_Million_Labeled_Samples_Dataset_Sentinel_2_Image_Time.pdf",
+    "new_path": "literature/datasets/2021_Weikmann_TimeSen2Crop_Million_Labeled_Samples_Dataset_Sentinel_2_Image_Time.pdf",
+    "action": "moved",
+    "sha256": "4d8b49d441236d5eb4f494d3f0890bc727f6a920ec725a4fa6f23120c6a0a84a"
+  },
+  {
+    "old_path": "Readings/Datasets/2022_Aybar_CloudSEN12_global_dataset_semantic_understanding_cloud_cloud_shadow_Sentinel-2.pdf",
+    "new_path": "literature/datasets/2022_Aybar_CloudSEN12_global_dataset_semantic_understanding_cloud_cloud_shadow_Sentinel-2.pdf",
+    "action": "moved",
+    "sha256": "e88c02c6f5fd1b655529d3b362ada0ab80c209de930fab4374585f4da02b8639"
+  },
+  {
+    "old_path": "Readings/Datasets/2022_Cornebise_Open_High-Resolution_Satellite_Imagery_WorldStrat_Dataset_Application_Super-Resolution.pdf",
+    "new_path": "literature/datasets/2022_Cornebise_Open_High-Resolution_Satellite_Imagery_WorldStrat_Dataset_Application_Super-Resolution.pdf",
+    "action": "moved",
+    "sha256": "5f84021e597b414c488bb1174af90ca8e5778935b872c3b9517c3f57c13f72f2"
+  },
+  {
+    "old_path": "Readings/Datasets/2022_Ebel_SEN12MS-CR-TS_Remote_Sensing_Data_Set_Multi-modal_Multi-temporal_Cloud_Removal.pdf",
+    "new_path": "literature/datasets/2022_Ebel_SEN12MS-CR-TS_Remote_Sensing_Data_Set_Multi-modal_Multi-temporal_Cloud_Removal.pdf",
+    "action": "moved",
+    "sha256": "8f592c0c8c1b6b26545b91283250c78f5c77eb51f2fea9c9b56d27398a64b579"
+  },
+  {
+    "old_path": "Readings/Datasets/2022_Toker_DynamicEarthNet_Daily_Multi-Spectral_Satellite_Dataset_Semantic_Change_Segmentation.pdf",
+    "new_path": "literature/datasets/2022_Toker_DynamicEarthNet_Daily_Multi-Spectral_Satellite_Dataset_Semantic_Change_Segmentation.pdf",
+    "action": "moved",
+    "sha256": "5777778fdce31c4db7c83e76071835b04302acdea5a2d49008c187a73da239d3"
+  },
+  {
+    "old_path": "Readings/Datasets/2022_Tong_Enabling_Country-Scale_Land_Cover_Mapping_Meter-Resolution_Satellite_Imagery.pdf",
+    "new_path": "literature/datasets/2022_Tong_Enabling_Country-Scale_Land_Cover_Mapping_Meter-Resolution_Satellite_Imagery.pdf",
+    "action": "moved",
+    "sha256": "93120bf40f69e13db7a172145a0c71697ad23fb71f6deceb2fea8e0040c18079"
+  },
+  {
+    "old_path": "Readings/Datasets/2023_Ahlswede_i_TreeSatAI_Benchmark_Archive_i_multi-sensor_multi-label_dataset_tree.pdf",
+    "new_path": "literature/datasets/2023_Ahlswede_i_TreeSatAI_Benchmark_Archive_i_multi-sensor_multi-label_dataset_tree.pdf",
+    "action": "moved",
+    "sha256": "12575a07de7c9807790dd4e5f6627fe3d3fb5250889d8871cc7e8bd10b5b4b7d"
+  },
+  {
+    "old_path": "Readings/Datasets/2023_Karaman_DEFORESTATION_DETECTION_AMAZON_SENTINEL-1_SAR_IMAGE_TIME_SERIES.pdf",
+    "new_path": "literature/datasets/2023_Karaman_DEFORESTATION_DETECTION_AMAZON_SENTINEL-1_SAR_IMAGE_TIME_SERIES.pdf",
+    "action": "moved",
+    "sha256": "64ce9d8a759df3157855e995db71f02fea8ab30201d1bf19184a41cdf06f24a8"
+  },
+  {
+    "old_path": "Readings/Datasets/2023_Lacoste_GEO-Bench_Foundation_Models_Earth_Monitoring.pdf",
+    "new_path": "literature/datasets/2023_Lacoste_GEO-Bench_Foundation_Models_Earth_Monitoring.pdf",
+    "action": "moved",
+    "sha256": "cfe0f82eafb59c680e8d91fef4dc832491f898f7ee56c14da19e953226d2b2ad"
+  },
+  {
+    "old_path": "Readings/Datasets/2023_Nascetti_BioMassters_Benchmark_Dataset_Forest_Biomass_Estimation_using_Multi-modal_Satellite.pdf",
+    "new_path": "literature/datasets/2023_Nascetti_BioMassters_Benchmark_Dataset_Forest_Biomass_Estimation_using_Multi-modal_Satellite.pdf",
+    "action": "moved",
+    "sha256": "ea7ab47af86a63572db007c9dda25fffc07146a4056feda6d88560fadbba49e5"
+  },
+  {
+    "old_path": "Readings/Datasets/2023_Persello_AI4SmallFarms_Dataset_Crop_Field_Delineation_Southeast_Asian_Smallholder_Farms.pdf",
+    "new_path": "literature/datasets/2023_Persello_AI4SmallFarms_Dataset_Crop_Field_Delineation_Southeast_Asian_Smallholder_Farms.pdf",
+    "action": "moved",
+    "sha256": "7f797d9352003aeb4d3a9ac33f4abc9371729b0e125279f28ab85c5708edb3e2"
+  },
+  {
+    "old_path": "Readings/Datasets/2023_Sani_SICKLE_Multi-Sensor_Satellite_Imagery_Dataset_Annotated_Multiple_Key_Cropping.pdf",
+    "new_path": "literature/datasets/2023_Sani_SICKLE_Multi-Sensor_Satellite_Imagery_Dataset_Annotated_Multiple_Key_Cropping.pdf",
+    "action": "moved",
+    "sha256": "7c93a188b16a4b70daba15dc73efeb9bc092b31e3f121e2d9abf4a0008caf434"
+  },
+  {
+    "old_path": "Readings/Datasets/2024_Fogel_Open-Canopy_Very_High_Resolution_Forest_Monitoring.pdf",
+    "new_path": "literature/datasets/2024_Fogel_Open-Canopy_Very_High_Resolution_Forest_Monitoring.pdf",
+    "action": "moved",
+    "sha256": "57cc76a9da348b891efd45a4360c18335ba0544a343a012be31ea7f5fa3bc6b0"
+  },
+  {
+    "old_path": "Readings/Datasets/2024_Kerner_Fields_World_ML_Benchmark_Dataset_Global_Agricultural_Field_Boundary.pdf",
+    "new_path": "literature/datasets/2024_Kerner_Fields_World_ML_Benchmark_Dataset_Global_Agricultural_Field_Boundary.pdf",
+    "action": "moved",
+    "sha256": "17488a22077ddaf1e0d094a0cf0dc74be3d0935a1e1bafb0ccf997f5d10f8bc5"
+  },
+  {
+    "old_path": "Readings/Datasets/2024_Kikaki_Detecting_Marine_pollutants_Sea_Surface_features_DL_Sentinel-2_imagery.pdf",
+    "new_path": "literature/datasets/2024_Kikaki_Detecting_Marine_pollutants_Sea_Surface_features_DL_Sentinel-2_imagery.pdf",
+    "action": "moved",
+    "sha256": "86b6e3f6400482f6cdbcf418e6074ed9dd367639f663f7778f6518c8d3c126f4"
+  },
+  {
+    "old_path": "Readings/Datasets/CropHarvest.pdf",
+    "new_path": "literature/datasets/CropHarvest.pdf",
+    "action": "moved",
+    "sha256": "b73d85d96acff04910d5e7e0ac52bd23ba061fddc08ada80b2fb0ee77477af61"
+  },
+  {
+    "old_path": "Readings/NoOneKnows.docx",
+    "new_path": "notes/literature/NoOneKnows.docx",
+    "action": "moved",
+    "sha256": "54f5efee5f9a74699e0da7866a760c52c224819fa228778b063d01db930e8cd7"
+  },
+  {
+    "old_path": "Readings/NoOneKnowsRecap.pdf",
+    "new_path": "notes/literature/NoOneKnowsRecap.pdf",
+    "action": "moved",
+    "sha256": "45d02bbdc58cc73154bf519e85fda45d2440eb107e9fabee20e547e597055028"
+  },
+  {
+    "old_path": "TorchGeo/torchgeo.ipynb",
+    "new_path": "notebooks/torchgeo/torchgeo.ipynb",
+    "action": "moved",
+    "sha256": "9f7812f8074691904479ec8cd7ac68ac81c304913cd2ba751c978228b6ae2671"
+  },
+  {
+    "old_path": "CROMA/croma.ipynb",
+    "new_path": "notebooks/croma/croma.ipynb",
+    "action": "moved",
+    "sha256": "341e8862ce93ae87fab26e030e9b045005b533c1a860e625deec35c2daeaacc5"
+  },
+  {
+    "old_path": "CROMA/SAR_encoder.pdf",
+    "new_path": "notebooks/croma/figures/SAR_encoder.pdf",
+    "action": "moved",
+    "sha256": "22ef51286153326b882f5433176d7630064ea5ff933dd69b606c8ce99346262a"
+  }
+]

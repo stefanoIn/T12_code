@@ -1,0 +1,697 @@
+% Updated master inventory through 2024, including the 20 EOD entries supplied by the user.
+\newgeometry{top=1.35cm,bottom=1.55cm,left=0.22cm,right=0.22cm}
+\begingroup
+\fontsize{6.0}{7.05}\selectfont
+\setlength{\tabcolsep}{1.35pt}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\LTleft}{\fill}
+\setlength{\LTright}{\fill}
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.68cm}
+  >{\RaggedRight\arraybackslash}p{4.15cm}
+  >{\centering\arraybackslash}p{0.68cm}
+  >{\centering\arraybackslash}p{0.70cm}
+  >{\centering\arraybackslash}p{0.72cm}
+  >{\RaggedRight\arraybackslash}p{3.20cm}
+  >{\RaggedLeft\arraybackslash}p{1.25cm}
+  >{\centering\arraybackslash}p{1.55cm}
+  >{\centering\arraybackslash}p{1.42cm}
+  >{\RaggedLeft\arraybackslash}p{0.72cm}
+}
+\toprule
+\textbf{Index} & \textbf{Dataset} & \textbf{Year} & \textbf{Task} & \textbf{\# Cls.} & \textbf{Sensor / modality} & \textbf{\# Samples} & \textbf{Size (px)} & \textbf{Resolution (m)} & \textbf{GB}\\
+\midrule
+\endfirsthead
+\multicolumn{10}{l}{\itshape Table \thetable\ continued}\\
+\toprule
+\textbf{Index} & \textbf{Dataset} & \textbf{Year} & \textbf{Task} & \textbf{\# Cls.} & \textbf{Sensor / modality} & \textbf{\# Samples} & \textbf{Size (px)} & \textbf{Resolution (m)} & \textbf{GB}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{10}{r}{\itshape Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+1 & \href{https://www.eod-grss-ieee.com/dataset-search}{Okutama-Action} & 2017 & AE & 12 & RGB & 77K & 3.8K $\times$ 2.2K & UAV@10-45m & 25.9 \\
+\addlinespace[0.22em]
+2 & \href{https://www.eod-grss-ieee.com/dataset-search}{Paddy Rice Labeling South Korea} & 2022 & AG & -- & Sentinel-2 & -- & -- & -- & 0.0016 \\
+3 & \href{https://www.eod-grss-ieee.com/dataset-search}{Paddy Rice Maps South Korea} & 2022 & AG & -- & Sentinel-1 & 12.9K & 256 & 10 & 0.198 \\
+\addlinespace[0.22em]
+4 & \href{https://www.eod-grss-ieee.com/dataset-search}{Air Quality e-Reporting} & 2021 & AQ & -- & -- & -- & -- & -- & -- \\
+\addlinespace[0.22em]
+5 & \href{https://www.eod-grss-ieee.com/dataset-search}{Aerial Anomaly Detection} & 2022 & AD & 2 & RGB & -- & -- & UAV & 0 \\
+\addlinespace[0.22em]
+6 & \href{https://www.eod-grss-ieee.com/dataset-search}{Urban 3D Challenge} & 2017 & BLD & 2 & RGB & 157K & -- & 0.5 & -- \\
+\addlinespace[0.22em]
+7 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC09} & 2009 & D & -- & Multi & 2 & -- & -- & 0.098 \\
+8 & \href{https://www.eod-grss-ieee.com/dataset-search}{Abenberg ALS} & 2013 & D & -- & ALS & 5.4M & -- & 16 pts/m2 & 0.258 \\
+9 & \href{https://www.eod-grss-ieee.com/dataset-search}{Cross-sensor Bastrop} & 2015 & D & 2 & MS & 4 & 300--1.5K & 30--120 & -- \\
+10 & \href{https://github.com/gistairc/ABCDdataset}{AIST Building CD} & 2017 & D & 1 & Aerial & 16.9K & 160 & -- & 1.82 \\
+11 & \href{https://www.eod-grss-ieee.com/dataset-search}{AIST Building Change Detection} & 2017 & D & 2 & RGB & 16.9K & 160 & 0.4 & 17.8 \\
+12 & \href{https://www.eod-grss-ieee.com/dataset-search}{HSI CD \_} & 2017 & D & 5 & Hyperspectral (Multiple) & 3$\times$224 & 800 & -- & 1.7 \\
+13 & \href{https://www.eod-grss-ieee.com/dataset-search}{AICD} & 2018 & D & -- & Aerial & 1K & 800 & -- & 1.7 \\
+14 & \href{https://www.eod-grss-ieee.com/dataset-search}{CDD (season-varying)} & 2018 & D & 2 & RGB & 16K & 256 & 0.03--0.1 & 2.7 \\
+15 & \href{https://www.eod-grss-ieee.com/dataset-search}{GETNET dataset} & 2018 & D & 2 & Hyperspectral & 1 & 463 $\times$ 241 & 30 & 0.05 \\
+16 & \href{https://www.eod-grss-ieee.com/dataset-search}{Hermiston City Oregon} & 2018 & D & 5 & Hyperspectral & 1 & 390 $\times$ 200 & 30 & -- \\
+17 & \href{https://www.eod-grss-ieee.com/dataset-search}{Hyperspectral CD} & 2018 & D & 5 & Hyperspectral & 3 & 200--984 & 30 & 1.7 \\
+18 & \href{https://rcdaudt.github.io/oscd/}{Onera Satellite CD} & 2018 & D & 2 & Sentinel-2 & 24 & 600 & 10 & 0.48 \\
+19 & \href{https://rcdaudt.github.io/oscd/}{OneraCD} & 2018 & D & 2 & MS & 24 & 600 & -- & 0.489 \\
+20 & \href{https://www.eod-grss-ieee.com/dataset-search}{Synthetic \& Real} & 2018 & D & -- & Aerial & 16K & 256 & -- & 2.7 \\
+21 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU Building change detection} & 2018 & D & 2 & RGB & 2 & 15.4K $\times$ 32.5K & 0.075 & 5 \\
+22 & \href{https://xview2.org/}{xView2} & 2018 & D & 4 & RGB & 22.1K & 1024 & 0.5 & 51 \\
+23 & \href{https://www.eod-grss-ieee.com/dataset-search}{Flood California flood dataset} & 2019 & D & 2 & RGB, MS & 1 & 1.5K $\times$ 808 & 5--30 & 0.33 \\
+24 & \href{https://rcdaudt.github.io/hrscd/}{HRSCD} & 2019 & D & 7 & RGB & 582 & 10000 & 0.5 & 5.06 \\
+25 & \href{https://www.eod-grss-ieee.com/dataset-search}{MtS-WH} & 2019 & D & 1 & RGB-NIR & 190 & 150 & 1 & 0.459 \\
+26 & \href{https://www.eod-grss-ieee.com/dataset-search}{DSIFN} & 2020 & D & 1 & RGB & 394 & 512 & 10 & 0.454 \\
+27 & \href{https://www.eod-grss-ieee.com/dataset-search}{Google Data Set} & 2020 & D & 2 & RGB & 19 & 1K--5K & 0.55 & 0.6 \\
+28 & \href{https://www.eod-grss-ieee.com/dataset-search}{Hi-UCD} & 2020 & D & 9 & RGB & 1.3K & 1024 & 0.1 & -- \\
+29 & \href{https://justchenhao.github.io/LEVIR/}{LEVIR-CD} & 2020 & D & 1 & RGB & 637 & 1024 & 0.5 & 2.7 \\
+30 & \href{https://www.eod-grss-ieee.com/dataset-search}{S2MTcityPair} & 2020 & D & 1 & MS & 1.5K$\times$13 & 600 & -- & 10.6 \\
+31 & \href{https://www.eod-grss-ieee.com/dataset-search}{SECOND} & 2020 & D & 30 & RGB & 4.7K & 512 & 0.5--3 & 2.2 \\
+32 & \href{https://www.eod-grss-ieee.com/dataset-search}{Zhang et al. CD dataset} & 2020 & D & 2 & RGB,NIR & 4 & 458--1.4K & 2--5.8 & 0.1 \\
+33 & \href{https://www.eod-grss-ieee.com/dataset-search}{3D URB3DCD} & 2021 & D & 0.5 & -- & 50 & / 2 PointCloud & pm & 1.5 \\
+34 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC21-MSD} & 2021 & D & 15 & MS,MT & 2.2K$\times$9 & 4000 & 1--30 & 325 \\
+35 & \href{https://www.eod-grss-ieee.com/dataset-search}{Dynamic EarthNet Challenge} & 2021 & D & 7 & RGB & 22.5K & 1024 & 3 & -- \\
+36 & \href{https://www.eod-grss-ieee.com/dataset-search}{HTCD} & 2021 & D & 2 & RGB 0.5971m, & 2 & 1.04--15 & 0.074 & 1.74 \\
+37 & \href{https://www.eod-grss-ieee.com/dataset-search}{MUNO21} & 2021 & D & 1 & Aerial & 156 & 12000 & -- & 14.3 \\
+38 & \href{https://www.eod-grss-ieee.com/dataset-search}{RapidAI4EO} & 2021 & D & 44 & MS,RGB & 500K & -- & 3--10 & -- \\
+39 & \href{https://www.eod-grss-ieee.com/dataset-search}{Relative Radiometric Normalization} & 2021 & D & 2 & MS & 7 & 300--5K & 0.31--60 & 1 \\
+40 & \href{https://www.eod-grss-ieee.com/dataset-search}{S2Looking} & 2021 & D & 1 & RGB & 5K$\times$2 & 1024 & 0.5--0.8 & 10.2 \\
+41 & \href{https://www.eod-grss-ieee.com/dataset-search}{S2MTCP} & 2021 & D & -- & MS & 1.5K & 600 & 10 & 10.6 \\
+42 & \href{https://www.eod-grss-ieee.com/dataset-search}{SYSU-CD} & 2021 & D & 5 & RGB & 20K$\times$2 & 256 & 0.5 & 5.1 \\
+43 & \href{https://www.eod-grss-ieee.com/dataset-search}{WH-MAVS} & 2021 & D & 15 & RGB & 47.1K & 200 & 1.2 & -- \\
+44 & \href{https://www.eod-grss-ieee.com/dataset-search}{CropLand CropLand Change Dection (CLCD)} & 2022 & D & 2 & RGB 0.5--2 & 600 & 512 & m & 0.5 \\
+45 & \href{https://www.eod-grss-ieee.com/dataset-search}{Dynamic World} & 2022 & D & 9 & Sentinel-2 & -- & -- & 10 & -- \\
+46 & \href{https://www.eod-grss-ieee.com/dataset-search}{MSBC} & 2022 & D & 2 & RGB, SAR, MS & 3.8K & 256 & 2 & 3.9 \\
+47 & \href{https://www.eod-grss-ieee.com/dataset-search}{MSOSCD} & 2022 & D & 2 & RGB, SAR, MS & 5.1K & 256 & 10--60 & 2.7 \\
+48 & \href{https://www.eod-grss-ieee.com/dataset-search}{BANDON} & 2023 & D & 2 & RGB & 2.3K & 2K $\times$ 2K & 0.6 & 3.4 \\
+49 & \href{https://www.eod-grss-ieee.com/dataset-search}{ChangeNet} & 2024 & D & 6 & Multi-temporal RGB & -- & -- & 0.3 & -- \\
+\addlinespace[0.22em]
+50 & \href{https://www.eod-grss-ieee.com/dataset-search}{Seasonal Contrast} & 2021 & D,C & -- & MS & 200K$\times$5$\times$12 & 265 & -- & 36.3 \\
+\addlinespace[0.22em]
+51 & \href{https://www.eod-grss-ieee.com/dataset-search}{DynamicEarthNet} & 2022 & D,S & 7 & MS & 54.8K & 1024 & -- & 524 \\
+\addlinespace[0.22em]
+52 & \href{https://www.eod-grss-ieee.com/dataset-search}{Draper Satellite Image Chronology} & 2016 & CHR & -- & RGB & 1K & 3.1K $\times$ 2.3K & -- & 36 \\
+\addlinespace[0.22em]
+53 & \href{https://www.eod-grss-ieee.com/dataset-search}{Indian Pines} & 2000 & C & 16 & HS & 1 & 145 & 20 & 0.006 \\
+54 & \href{https://www.eod-grss-ieee.com/dataset-search}{Salinas} & 2000 & C & 16 & HS & 1 & 365 & 3.7 & 0.027 \\
+55 & \href{https://www.eod-grss-ieee.com/dataset-search}{Botswana} & 2005 & C & 14 & HS & 1 & 875 & 30 & 0.079 \\
+56 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kennedy Space Center} & 2005 & C & 13 & HS & 1 & 550 & 0.18 & 0.057 \\
+57 & \href{https://www.eod-grss-ieee.com/dataset-search}{Pavia Center} & 2009 & C & 9 & HS & 1 & 1096 & -- & 0.124 \\
+58 & \href{https://www.eod-grss-ieee.com/dataset-search}{Pavia University} & 2009 & C & 9 & HS & 1 & 610 & -- & 0.033 \\
+59 & \href{http://weegee.vision.ucmerced.edu/datasets/landuse.html}{UC Merced} & 2010 & C & 21 & RGB & 2.1K & 256 & 0.3 & 0.317 \\
+60 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU-RS19} & 2012 & C & 19 & RGB & 1K & 600 & 0.5 & 0.1 \\
+61 & \href{https://www.eod-grss-ieee.com/dataset-search}{ISPRS 3D Vaihingen} & 2014 & C & 9 & ALS & 780.9K & -- & 8 pts/m2 & -- \\
+62 & \href{https://www.eod-grss-ieee.com/dataset-search}{BCS} & 2015 & C & 2 & Optical & 2.9K & 64 & -- & 0.0045 \\
+63 & \href{http://www.patreo.dcc.ufmg.br/2017/11/12/brazilian-coffee-scenes-dataset/}{Brazilian Coffee Scene} & 2015 & C & 2 & RGB & 2.9K & 64 & 20 & 0.004 \\
+64 & \href{https://www.eod-grss-ieee.com/dataset-search}{NEWFOR} & 2015 & C & 4 & ALS & -- & -- & varies & 0.097 \\
+65 & \href{https://figshare.com/articles/dataset/RSSCN7\_Image\_dataset/7006946}{RSSCN7} & 2015 & C & 7 & RGB & 2.8K & 400 & -- & 0.086 \\
+66 & \href{http://csc.lsu.edu/~saikat/deepsat/}{SAT-4} & 2015 & C & 4 & RGB-NIR & 500K & 28 & 1--6 & 1.15 \\
+67 & \href{http://csc.lsu.edu/~saikat/deepsat/}{SAT-6} & 2015 & C & 6 & RGB-NIR & 405K & 28 & 1 & 1.15 \\
+68 & \href{https://www.eod-grss-ieee.com/dataset-search}{VEDAI} & 2015 & C & 9 & IRGB & 1.2K & 1024 & 0.125 & 3.99 \\
+69 & \href{http://www.patreo.dcc.ufmg.br/2017/11/12/brazilian-cerrado-savanna-scenes-dataset/}{BCSS} & 2016 & C & 4 & MS & 1.3K & 64 & -- & 0.011 \\
+70 & \href{http://www.patreo.dcc.ufmg.br/2017/11/12/brazilian-cerrado-savanna-scenes-dataset/}{Brazilian Cerrado-Savanna} & 2016 & C & 4 & MS & 1.3K & 64 & 5 & 0.011 \\
+71 & \href{https://github.com/tensorflow/datasets/blob/master/docs/catalog/resisc45.md}{NWPU-RESISC45} & 2016 & C & 45 & RGB & 31.5K & 256 & 0.2--30 & 0.405 \\
+72 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSC11} & 2016 & C & 11 & RGB & 1.2K & 512 & -- & -- \\
+73 & \href{https://www.eod-grss-ieee.com/dataset-search}{SIRI-WHU} & 2016 & C & 12 & RGB & 2.4K & 200 & 2 & 0.7 \\
+74 & \href{https://captain-whu.github.io/AID/}{AID} & 2017 & C & 30 & RGB & 10K & 600 & 3 & 2.44 \\
+75 & \href{https://www.eod-grss-ieee.com/dataset-search}{Austin Zoning} & 2017 & C & 5 & RGB & 3.7K & 773 $\times$ 961 & -- & 0.596 \\
+76 & \href{https://www.eod-grss-ieee.com/dataset-search}{Golf Course MUSIC4GC (Golf Course)} & 2017 & C & 2 & MS,Landsat & 83.4K & 16 & 30 & 0.37 \\
+77 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kag. Planet Forest} & 2017 & C & 12 & Optical & 150K & 256 & -- & 33 \\
+78 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSD46-WHU} & 2017 & C & 46 & RGB & 117K & 256 & 0.5--2 & -- \\
+79 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSI-CB128} & 2017 & C & 45 & RGB & 36K & 128 & 0.3--3 & 0.879 \\
+80 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSI-CB256} & 2017 & C & 35 & RGB & 24K & 256 & 0.3--3 & 2.24 \\
+81 & \href{https://www.eod-grss-ieee.com/dataset-search}{Ships in Satellite Imagery} & 2017 & C & 2 & RGB & 4K & 80 & 3 & 0.343 \\
+82 & \href{https://www.eod-grss-ieee.com/dataset-search}{Solar Power Plants MUSIC4P3} & 2017 & C & 2 & MS,Landsat & 1.3M & 16 & 30 & 4.6 \\
+83 & \href{https://www.eod-grss-ieee.com/dataset-search}{TiSeLaC} & 2017 & C & 9 & RGB-NIR,MT & 23 & 2.9K $\times$ 2.6K & 30 & -- \\
+84 & \href{https://www.eod-grss-ieee.com/dataset-search}{DeepGlobe-Road} & 2018 & C & 1 & Optical & 8.6K & 1024 & -- & 3.84 \\
+85 & \href{https://github.com/phelber/EuroSAT}{EuroSAT} & 2018 & C & 10 & Sentinel-2 & 27K$\times$13 & 64 & 10 & 1.92 \\
+86 & \href{https://github.com/fMoW/dataset}{FMoW} & 2018 & C & 63 & RGB, MS & 523.8K & -- & 0.3 & 3.5K \\
+87 & \href{https://x-ytong.github.io/project/GID.html}{Gaofen Image (GID)} & 2018 & C & 15 & RGB-NIR & 150 & 7200 & 4 & 47 \\
+88 & \href{https://www.iuii.ua.es/datasets/masati/}{MASATI-v2} & 2018 & C & 7 & RGB & 7.4K & 512 & 0.08--2 & 2.3 \\
+89 & \href{https://www.eod-grss-ieee.com/dataset-search}{MSLCC} & 2018 & C & 4 & SAR,MS & 2 & 5.6K--8.1K & 10 & 0.5 \\
+90 & \href{https://sites.google.com/view/zhouwx/dataset}{PatternNet} & 2018 & C & 38 & RGB & 30.4K & 256 & 0.062--4.693 & 1.3 \\
+91 & \href{https://www.eod-grss-ieee.com/dataset-search}{SanFranBay Ships Planet \_ \_} & 2018 & C & 1 & Optical & 4K & 80 & -- & 0.194 \\
+92 & \href{https://challenge.xviewdataset.org/welcome}{xView} & 2018 & C & 60 & RGB, MS & 1.4K & 3000 & 0.3 & 20 \\
+93 & \href{https://www.eod-grss-ieee.com/dataset-search}{AIDER} & 2019 & C & 4 & UAV & 2.6K & 240 & -- & 0.275 \\
+94 & \href{https://www.eod-grss-ieee.com/dataset-search}{BigEarthNet-MM} & 2019 & C & 19 & Sentinel-1/2 10m, 20m, & 590.3K$\times$12 & 120 & 60 & 121 \\
+95 & \href{https://github.com/DYH666/DSCR}{DSCR} & 2019 & C & 7 & RGB & 20.7K & 150--800 & -- & -- \\
+96 & \href{https://www.eod-grss-ieee.com/dataset-search}{HistAerial} & 2019 & C & 7 & Grayscale & 42K & 25--50.1K & -- & 7.6 \\
+97 & \href{https://www.eod-grss-ieee.com/dataset-search}{ICONES-HSI} & 2019 & C & 9 & HS & 468$\times$224 & 300 & -- & 11.5 \\
+98 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kag. Find a Car Park} & 2019 & C & 2 & RGB & 3.3K & 1296 & -- & 2.75 \\
+99 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kag. Satellite Hurricane Damage} & 2019 & C & -- & RGB & 16K & 128 & 1 & 0.064 \\
+100 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kaggle Cloud Detection} & 2019 & C & 4 & RGB & 9.2K & 1750 & -- & 6 \\
+101 & \href{https://www.eod-grss-ieee.com/dataset-search}{OPTIMAL-31} & 2019 & C & 31 & RGB & 1.9K & 256 & -- & 0.024 \\
+102 & \href{https://www.eod-grss-ieee.com/dataset-search}{Ship Classification} & 2019 & C & 7 & Optical & 2K & -- & -- & -- \\
+103 & \href{https://www.eod-grss-ieee.com/dataset-search}{Slovenia Land Cover} & 2019 & C & 10 & Sentinel-2 & 940 & 500 & 10 & 11.6 \\
+104 & \href{https://www.eod-grss-ieee.com/dataset-search}{SloveniaLandCover} & 2019 & C & 10 & MS & 940 & 500 & -- & 190 \\
+105 & \href{https://www.eod-grss-ieee.com/dataset-search}{So2Sat LCZ42} & 2019 & C & -- & Sentinel-1/2 & 400.7K & 32 & 10 & 51.8 \\
+106 & \href{https://www.eod-grss-ieee.com/dataset-search}{USTC SmokeRS \_} & 2019 & C & 6 & RGB & 6.2K & 256 & 1000 & 0.795 \\
+107 & \href{https://www.eod-grss-ieee.com/dataset-search}{WiDS Datathon 2019} & 2019 & C & 2 & RGB & 11K & 256 & 3 & 0.46 \\
+108 & \href{http://www.patreo.dcc.ufmg.br/2020/07/22/multi-view-datasets/}{AiRound} & 2020 & C & 11 & RGB,Sentinel-2,Ground,Aerial & 11.8K & 300 & -- & 33 \\
+109 & \href{https://www.eod-grss-ieee.com/dataset-search}{Airbus Wind Turbines Patches} & 2020 & C & 1 & RGB, MS & 358K & 128 & 1.5 & 1 \\
+110 & \href{https://www.eod-grss-ieee.com/dataset-search}{ArCH} & 2020 & C & 10 & Multiple & 136.1M & -- & varies & -- \\
+111 & \href{http://gpcv.whu.edu.cn/data/Bijie\_pages.html}{Bijie Landslide} & 2020 & C & 1 & RGB & 2.8K & 200 & 0.68 & 0.513 \\
+112 & \href{http://www.patreo.dcc.ufmg.br/2020/01/27/brazildam-dataset/}{BrazilDAM} & 2020 & C & 2 & RGB & 769 & 384 & 10--60 & 57 \\
+113 & \href{https://www.eod-grss-ieee.com/dataset-search}{BreizhCrops} & 2020 & C & 9 & Sentinel-2,MT & 610K & -- & 10--60 & -- \\
+114 & \href{https://www.eod-grss-ieee.com/dataset-search}{CLRS} & 2020 & C & 25 & RGB & 15K & 256 & 0.26--8.85 & 1.74 \\
+115 & \href{http://www.patreo.dcc.ufmg.br/2020/07/22/multi-view-datasets/}{CV-BrCT} & 2020 & C & 9 & RGB & 24K & 500 & -- & 9.2 \\
+116 & \href{https://www.eod-grss-ieee.com/dataset-search}{CV4A Kenya} & 2020 & C & 7 & Sentinel-2 & 8.8K & 2500 & 10 & 3.5 \\
+117 & \href{https://www.eod-grss-ieee.com/dataset-search}{CaneSat} & 2020 & C & 2 & Sentinel-2,MT & 1.6K & 10 & 10 & 0.006 \\
+118 & \href{https://www.eod-grss-ieee.com/dataset-search}{DND-SB} & 2020 & C & 7 & UAV & 5.6K & 7296 & -- & 49 \\
+119 & \href{https://www.eod-grss-ieee.com/dataset-search}{LandCoverNet Af} & 2020 & C & 7 & Multi & 2K & 256 & -- & 632 \\
+120 & \href{https://www.eod-grss-ieee.com/dataset-search}{LandCoverNet As} & 2020 & C & 7 & Multi & 2.8K & 256 & -- & 610 \\
+121 & \href{https://www.eod-grss-ieee.com/dataset-search}{LandCoverNet Au} & 2020 & C & 7 & Multi & 600 & 256 & -- & 126 \\
+122 & \href{https://www.eod-grss-ieee.com/dataset-search}{LandCoverNet Eu} & 2020 & C & 7 & Multi & 840 & 256 & -- & 249 \\
+123 & \href{https://www.eod-grss-ieee.com/dataset-search}{LandCoverNet NA} & 2020 & C & 7 & Multi & 1.6K & 256 & -- & 351 \\
+124 & \href{https://www.eod-grss-ieee.com/dataset-search}{LandCoverNet SA} & 2020 & C & 7 & Multi & 1.2K & 256 & -- & 215 \\
+125 & \href{https://www.eod-grss-ieee.com/dataset-search}{MLRSNet} & 2020 & C & 46 & RGB & 109.2K & 256 & 0.1--10 & 1.25 \\
+126 & \href{https://www.eod-grss-ieee.com/dataset-search}{OVERHEAD MNIST} & 2020 & C & 9 & Grayscale & 1K & 28 & -- & 0.018 \\
+127 & \href{https://www.eod-grss-ieee.com/dataset-search}{Rwanda Crop Type} & 2020 & C & 6 & UAV & 6.5K & 200 & -- & 56 \\
+128 & \href{https://www.eod-grss-ieee.com/dataset-search}{SAR-based Sea Ice Dataset} & 2020 & C & 6 & SAR & 98.8K & 28 & -- & 0.14 \\
+129 & \href{https://github.com/cloudtostreet/Sen1Floods11}{Sen1Floods11} & 2020 & C & 1 & Sentinel-1 & 4.8K & 512 & 10 & 14.3 \\
+130 & \href{https://www.eod-grss-ieee.com/dataset-search}{SenseEarth classify} & 2020 & C & 51 & RGB & 70K & 100--12.7K & 0.2--153 & 10.8 \\
+131 & \href{https://www.eod-grss-ieee.com/dataset-search}{2019 Mali CropType} & 2021 & C & 4 & MS & 33$\times$13$\times$41 & 256 & -- & 0.456 \\
+132 & \href{https://www.eod-grss-ieee.com/dataset-search}{CanCropland} & 2021 & C & 10 & MS & 78.5K$\times$15 & 64 & -- & -- \\
+133 & \href{https://www.eod-grss-ieee.com/dataset-search}{CropRotation} & 2021 & C & -- & MS & -- & -- & -- & 53.4 \\
+134 & \href{https://www.eod-grss-ieee.com/dataset-search}{DENETHOR} & 2021 & C & 9 & Sentinel-1/2 & 2$\times$(365 + 60$\times$14) & 8000 & 3 & 254 \\
+135 & \href{https://www.eod-grss-ieee.com/dataset-search}{FGSCR-42} & 2021 & C & 42 & RGB & 9.3K & 500 & -- & -- \\
+136 & \href{https://www.eod-grss-ieee.com/dataset-search}{MAFAT-Fine-Grained} & 2021 & C & 37 & RGB 0.05-- & 4.2K & -- & 0.15 & -- \\
+137 & \href{https://www.eod-grss-ieee.com/dataset-search}{Million AID} & 2021 & C & 28 & RGB & 1M & 150--550 & 0.5--153 & 134 \\
+138 & \href{https://www.eod-grss-ieee.com/dataset-search}{MultiScene} & 2021 & C & 36 & RGB & 100K & 512 & 0.3--0.6 & 6 \\
+139 & \href{https://www.eod-grss-ieee.com/dataset-search}{NaSC-TG2} & 2021 & C & 10 & RGB-NIR & 20K & 256 & 100 & -- \\
+140 & \href{https://www.eod-grss-ieee.com/dataset-search}{Satellite Image Classification} & 2021 & C & 4 & RGB & 5.6K & 256 & -- & 0.023 \\
+141 & \href{https://www.eod-grss-ieee.com/dataset-search}{SeaIceClassification} & 2021 & C & 8 & SAR & 6.4K & 256 & -- & 2.9 \\
+142 & \href{https://www.eod-grss-ieee.com/dataset-search}{South Africa Crop Type} & 2021 & C & 9 & Sentinel-1/2 & 122.7K & -- & -- & 82.8 \\
+143 & \href{https://www.eod-grss-ieee.com/dataset-search}{TG1HRSSC} & 2021 & C & 9 & Hyperspectral 5m, 10m, & 204 & 512 & 20 & 0.277 \\
+144 & \href{https://www.eod-grss-ieee.com/dataset-search}{Urban Village S2UC} & 2021 & C & 2 & RGB & 1.7K & 224 & 2 & 1.8 \\
+145 & \href{https://github.com/0zgur0/ZurichCrop}{ZueriCrop} & 2021 & C & 48 & Sentinel-2 & 28K$\times$71 & 24 & 10 & 38.5 \\
+146 & \href{https://www.eod-grss-ieee.com/dataset-search}{ADVANCE} & 2022 & C & 13 & Optical & 5.1K & 256 & -- & 4.4 \\
+147 & \href{https://www.eod-grss-ieee.com/dataset-search}{ARGO} & 2022 & C & 2 & MS & 1.8K & 1400 & -- & 14.3 \\
+148 & \href{https://www.eod-grss-ieee.com/dataset-search}{AgriFieldNet} & 2022 & C & 13 & MS & 1.2K$\times$12 & 256 & -- & 0.32 \\
+149 & \href{https://www.eod-grss-ieee.com/dataset-search}{Aircraft SAR-ACD} & 2022 & C & 20 & SAR & 4.3K & 64 & -- & -- \\
+150 & \href{https://www.eod-grss-ieee.com/dataset-search}{AnthroProtect} & 2022 & C & 2 & Optical & 23.9K & 256 & -- & 18.1 \\
+151 & \href{https://www.eod-grss-ieee.com/dataset-search}{Hot Area MUSIC4HA (Hot Area)} & 2022 & C & 6 & Sentinel-2 & 2.5K & 16 & 10 & 0.01 \\
+152 & \href{https://www.eod-grss-ieee.com/dataset-search}{OMBRIA} & 2022 & C & 2 & Sentinel-1/2 & 3.4K & 256 & 10 & 0.19 \\
+153 & \href{https://www.eod-grss-ieee.com/dataset-search}{S2-Agri} & 2022 & C & -- & MS & -- & 32 & -- & 10.8 \\
+154 & \href{https://www.eod-grss-ieee.com/dataset-search}{Space2Ground} & 2022 & C & 2 & Sentinel-1/2,RGB & 10.1K & 260 & 10--60 & 0.501 \\
+155 & \href{https://www.eod-grss-ieee.com/dataset-search}{SynthWakeSAR} & 2022 & C & 10 & SAR & 46.1K & 96000 & 3.3 & 4.3 \\
+156 & \href{https://www.eod-grss-ieee.com/dataset-search}{The Auto Arborist Dataset} & 2022 & C & 344 & RGB, MS & 2.6M & 1024 & -- & 24 \\
+157 & \href{https://www.eod-grss-ieee.com/dataset-search}{The Canadian Cropland} & 2022 & C & 10 & Sentinel-2 & 78.5K & 64 & 10 & 26 \\
+158 & \href{https://www.eod-grss-ieee.com/dataset-search}{TreeSatAI} & 2022 & C & 47 & Sentinel-1/2,RGB & 50.4K & 304 & 0.2--10 & 16.3 \\
+159 & \href{https://www.eod-grss-ieee.com/dataset-search}{XAI4SAR} & 2022 & C & -- & SAR & 5.9K & 256 & -- & 0.691 \\
+160 & \href{https://www.eod-grss-ieee.com/dataset-search}{FireRisk} & 2023 & C & 7 & Optical & 91.9K & -- & -- & 14 \\
+161 & \href{https://www.eod-grss-ieee.com/dataset-search}{MAR20} & 2023 & C & 20 & RGB & 3.8K & 800 $\times$ 800 & 1 & 1.1 \\
+162 & \href{https://www.eod-grss-ieee.com/dataset-search}{TalloS} & 2024 & C & 1160 & SAR,Multispectral & -- & -- & 10 & -- \\
+163 & \href{https://www.eod-grss-ieee.com/dataset-search}{TreeSatAI-TS} & 2024 & C & 20 & RGB,Multispectral,SAR & -- & -- & 0.2 & 30 \\
+\addlinespace[0.22em]
+164 & \href{https://www.eod-grss-ieee.com/dataset-search}{CropHarvest} & 2021 & C,O & -- & Sentinel-1/2,ERA5,DEM & 95.2K & -- & 10--60 & 22.7 \\
+\addlinespace[0.22em]
+165 & \href{https://www.eod-grss-ieee.com/dataset-search}{Earth Surface Temperature} & 2017 & CL & -- & Climate variables & 16 & -- & -- & 0.09 \\
+166 & \href{https://www.eod-grss-ieee.com/dataset-search}{Greenhouse Gas} & 2017 & CL & -- & Gas emission & -- & -- & -- & 0.0001 \\
+\addlinespace[0.22em]
+167 & \href{https://mediatum.ub.tum.de/1554803}{SEN12MS-CR} & 2020 & CR & -- & MS, SAR & 122.2K & 256 & 10 & 272 \\
+168 & \href{https://www.eod-grss-ieee.com/dataset-search}{SEN12MS-CR-TS} & 2021 & CR & -- & MS, SAR & 53 & 4000 & 10 & 649 \\
+169 & \href{https://www.eod-grss-ieee.com/dataset-search}{Planet-CR (M3R-CR)} & 2022 & CR & -- & Multi & 63K & 300 & -- & -- \\
+\addlinespace[0.22em]
+170 & \href{https://www.eod-grss-ieee.com/dataset-search}{SateHaze1k} & 2017 & DH & -- & RGB & 1.2K & 512 & 3 & 1.2 \\
+\addlinespace[0.22em]
+171 & \href{https://www.eod-grss-ieee.com/dataset-search}{OpenGF} & 2021 & F & 3 & ALS & 542.1M & -- & 6 and 14 pts/m2 & 2.28 \\
+\addlinespace[0.22em]
+172 & \href{https://www.eod-grss-ieee.com/dataset-search}{Forest Canopy Height} & 2018 & FOR & -- & LiDAR & 1.1K & -- & 1 & 62.9 \\
+\addlinespace[0.22em]
+173 & \href{https://www.eod-grss-ieee.com/dataset-search}{CVUSA} & 2017 & GL & 0 & RGB & 44.4K & 750 $\times$ 750 & 0.3 & 15.7 \\
+174 & \href{https://www.eod-grss-ieee.com/dataset-search}{UCF Cross View Dataset} & 2017 & GL & 0 & RGB & 35.4K & 1.2K $\times$ 1.2K & -- & 59.5 \\
+175 & \href{https://www.eod-grss-ieee.com/dataset-search}{CVACT} & 2019 & GL & 0 & RGB & 128.3K & 1.2K $\times$ 1.2K & 0.5 & 153 \\
+176 & \href{https://www.eod-grss-ieee.com/dataset-search}{University-1652} & 2020 & GL & -- & RGB & 146.6K & -- & -- & -- \\
+177 & \href{https://www.eod-grss-ieee.com/dataset-search}{VIGOR} & 2021 & GL & 0 & RGB & 90.6K & 640 $\times$ 640 & 0.114 & 94.2 \\
+\addlinespace[0.22em]
+178 & \href{https://www.eod-grss-ieee.com/dataset-search}{TenGeoP-SARwv} & 2019 & GEO & 10 & SAR & 37K & -- & 5 & 31.7 \\
+\addlinespace[0.22em]
+179 & \href{https://www.eod-grss-ieee.com/dataset-search}{Sydney caption} & 2016 & IC & 7 & RGB & 613 & 500 & 0.5 & 0.298 \\
+180 & \href{https://www.eod-grss-ieee.com/dataset-search}{UCM caption} & 2016 & IC & 21 & RGB & 2.1K & 256 & 0.3 & 0.255 \\
+181 & \href{https://www.eod-grss-ieee.com/dataset-search}{LEVIR-CC} & 2022 & IC & -- & RGB & 10.1K & 512 & -- & -- \\
+182 & \href{https://www.eod-grss-ieee.com/dataset-search}{ChatEarthNet} & 2024 & IC & -- & Sentinel,Multispectral & -- & -- & 10 & -- \\
+183 & \href{https://www.eod-grss-ieee.com/dataset-search}{LHRS-Align} & 2024 & IC & -- & RGB & -- & -- & 0.5 & -- \\
+\addlinespace[0.22em]
+184 & \href{https://www.eod-grss-ieee.com/dataset-search}{LuojiaHOG} & 2024 & IC/IR & 131 & RGB,Google Map & -- & -- & 0.5 & -- \\
+\addlinespace[0.22em]
+185 & \href{https://www.eod-grss-ieee.com/dataset-search}{EuroSDR Image Matching} & 2014 & IM & -- & RGB & -- & -- & 6--13 & -- \\
+\addlinespace[0.22em]
+186 & \href{https://www.eod-grss-ieee.com/dataset-search}{Dataset of thermal and visible} & 2019 & IR & 0 & RGB, Thermal & 110 & 336--4K & -- & 0.31 \\
+\addlinespace[0.22em]
+187 & \href{https://www.eod-grss-ieee.com/dataset-search}{Aerial to Map (Pixel2Pixel)} & 2017 & IT & -- & RGB & 2.2K & 600 & -- & 0.239 \\
+188 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU-SEN-City} & 2019 & IT & -- & Sentinel-1/2 & 18.5K & 256 & 10 & 4.3 \\
+\addlinespace[0.22em]
+189 & \href{https://www.eod-grss-ieee.com/dataset-search}{GlobalMLBuildingFootprints} & 2024 & I & 2 & Aerial RGB & -- & -- & 0.5 & -- \\
+\addlinespace[0.22em]
+190 & \href{https://www.eod-grss-ieee.com/dataset-search}{The IARPA Multi-View Stereo 3D} & 2017 & M3D & -- & MS, LiDAR & -- & -- & 0.3 & 75 \\
+191 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU MVS/Stereo Dataset} & 2020 & M3D & -- & RGB & 1.8K & 5376 & 0.1 & 95.7 \\
+192 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU Multi-View Dataset} & 2020 & M3D & -- & RGB & 28.4K & 768 & 0.1 & 12.3 \\
+193 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU Stereo Dataset} & 2020 & M3D & -- & RGB & 21.9K & 768 & 0.1 & 8.4 \\
+194 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU TCL SatMVS} & 2021 & M3D & -- & Panchromatic & 300 & 5120 & 2.1--2.5 & 29 \\
+\addlinespace[0.22em]
+195 & \href{https://www.eod-grss-ieee.com/dataset-search}{MSTAR} & 1996 & O & -- & SAR & -- & -- & 0.3 & -- \\
+196 & \href{https://www.eod-grss-ieee.com/dataset-search}{SAR Vehicle \_} & 2005 & O & 1 & SAR & 104 & -- & -- & 7.5 \\
+197 & \href{https://www.eod-grss-ieee.com/dataset-search}{VIVID - PETS2005} & 2007 & O & 1 & Aerial & 9.3K & 640 & -- & -- \\
+198 & \href{https://www.eod-grss-ieee.com/dataset-search}{TaS} & 2008 & O & 1 & RGB & 30 & 792 & 0.5 & 0.97 \\
+199 & \href{https://www.eod-grss-ieee.com/dataset-search}{OIRDS} & 2009 & O & 5 & RGB & 900 & 256--640 & 0.15 & 0.153 \\
+200 & \href{http://web.eee.sztaki.hu/remotesensing/airchange\_benchmark.html}{SZTAKI AirChange} & 2012 & O & 2 & RGB & 13 & 800 & 1.5 & 0.042 \\
+201 & \href{https://www.cs.toronto.edu/~vmnih/data/}{Massachusetts Roads} & 2013 & O & -- & RGB & 1.2K & 1500 & 1 & 7.55 \\
+202 & \href{https://github.com/chaozhong2010/VHR-10\_dataset\_coco}{NWPU-VHR10} & 2014 & O & 10 & RGB,IRRG & 800 & 1000 & 0.08--2 & 0.073 \\
+203 & \href{https://www.eod-grss-ieee.com/dataset-search}{UCAS\_AOD} & 2014 & O & 2 & RGB & 976 & 1000 & -- & 3.24 \\
+204 & \href{https://www.eod-grss-ieee.com/dataset-search}{PKLot} & 2015 & O & 1 & RGB & 12.4K & 1280 & UAV & 4.6 \\
+205 & \href{https://www.eod-grss-ieee.com/dataset-search}{CARPK} & 2016 & O & 1 & RGB & 1.4K & 1280 & UAV & 2 \\
+206 & \href{https://gdo152.llnl.gov/cowc/}{COWC} & 2016 & O & 1 & RGB & 388.4K & 256 & 0.15 & 64 \\
+207 & \href{https://www.eod-grss-ieee.com/dataset-search}{DLR3k/DLR-MVDA} & 2016 & O & 7 & RGB & 20 & 3744 & 0.13 & 0.162 \\
+208 & \href{https://www.eod-grss-ieee.com/dataset-search}{DSTL16B} & 2016 & O & 10 & MS & 1.4K & 3391 & -- & 7.3 \\
+209 & \href{https://www.eod-grss-ieee.com/dataset-search}{DSTL3B} & 2016 & O & 10 & Optical & 450 & 3391 & -- & 12.9 \\
+210 & \href{https://www.eod-grss-ieee.com/dataset-search}{HSI Vehicle \_} & 2016 & O & 1 & HS & 157 & -- & -- & -- \\
+211 & \href{https://www.eod-grss-ieee.com/dataset-search}{LEVIR} & 2016 & O & 3 & RGB & 22K & 800 & 0.5 & -- \\
+212 & \href{https://www.eod-grss-ieee.com/dataset-search}{Stanford Drone Dataset} & 2016 & O & 6 & RGB Video & -- & -- & 0.025 & 69 \\
+213 & \href{https://www.eod-grss-ieee.com/dataset-search}{HRSC2016} & 2017 & O & 26 & RGB & 1.1K & 1100 & 0.4--2 & 8 \\
+214 & \href{https://www.eod-grss-ieee.com/dataset-search}{Land Covers Dstl Satellite Imagery} & 2017 & O & 10 & RGB, MS & 57 & 3348 & 0.3 & 21.7 \\
+215 & \href{https://www.eod-grss-ieee.com/dataset-search}{NOAA Sea Lion Count} & 2017 & O & 4 & RGB & 950 & 4900 & -- & 96 \\
+216 & \href{https://www.eod-grss-ieee.com/dataset-search}{OpenSARShip} & 2017 & O & 17 & Sentinel-1 & 11.3K & -- & 10 & 0.87 \\
+217 & \href{https://www.eod-grss-ieee.com/dataset-search}{OpenSARShip 2.0} & 2017 & O & 17 & Sentinel-1 & 34.5K & 120 & 10 & 0.87 \\
+218 & \href{https://www.eod-grss-ieee.com/dataset-search}{PlanesNet} & 2017 & O & -- & Optical & 32K & 20 & -- & 0.39 \\
+219 & \href{https://github.com/RSIA-LIESMARS-WHU/RSOD-Dataset-}{RSOD} & 2017 & O & 4 & RGB & 946 & 1000 & 0.3--3 & 0.309 \\
+220 & \href{https://www.eod-grss-ieee.com/dataset-search}{SSDD} & 2017 & O & 1 & SAR & 1.2K & 500 & 1--15 & 0.995 \\
+221 & \href{https://www.eod-grss-ieee.com/dataset-search}{WAMI DIRSIG} & 2017 & O & 1 & HS & 55.2K & 64 & 0.3 & 0.327 \\
+222 & \href{https://captain-whu.github.io/DOTA/index.html}{DOTA v1.0} & 2018 & O & 15 & RGB & 2.8K & 4000 & -- & 18 \\
+223 & \href{https://www.eod-grss-ieee.com/dataset-search}{DeepGlobe (Building)} & 2018 & O & 2 & Panchromatic,RGB, MS & 24.6K & 650 & 0.5 & -- \\
+224 & \href{https://www.eod-grss-ieee.com/dataset-search}{EU Flood} & 2018 & O & 4 & Optical (Multiple) & 3.7K & 1280 & -- & 5.6 \\
+225 & \href{https://www.eod-grss-ieee.com/dataset-search}{HighD} & 2018 & O & 2 & RGB & 110K & 4.1K $\times$ 2.2K & -- & -- \\
+226 & \href{https://www.eod-grss-ieee.com/dataset-search}{ITCVD} & 2018 & O & 1 & RGB & 173 & 5616 & 0.1 & 1.3 \\
+227 & \href{https://www.eod-grss-ieee.com/dataset-search}{Iceberg Detection} & 2018 & O & -- & SAR & 10K & 75 & -- & 0.29 \\
+228 & \href{https://www.kaggle.com/c/airbus-ship-detection}{Kag. Airbus Ship Detection} & 2018 & O & -- & RGB & 192.6K & 768 & -- & 30 \\
+229 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kaggle Airbus Ship} & 2018 & O & -- & -- & 192.6K & 768 2 & 1.5 & 31.4 \\
+230 & \href{https://www.eod-grss-ieee.com/dataset-search}{Map Challenge} & 2018 & O & 2 & RGB & 341.1K & 300 & -- & -- \\
+231 & \href{https://www.eod-grss-ieee.com/dataset-search}{Ships in Google Earth} & 2018 & O & 2 & RGB & 794 & 2000 & -- & 2 \\
+232 & \href{https://spacenet.ai/off-nadir-building-detection/}{SpaceNet-4} & 2018 & O & -- & MS,WorldView2 & 60K & 900 & 0.3 & 186 \\
+233 & \href{https://www.eod-grss-ieee.com/dataset-search}{TBF} & 2018 & O & 2 & RGB & 13 & 40000 & -- & -- \\
+234 & \href{http://gpcv.whu.edu.cn/data/building\_dataset.html}{WHU Building} & 2018 & O & 1 & RGB & 25.6K & 512 & 0.3 & 25 \\
+235 & \href{https://www.eod-grss-ieee.com/dataset-search}{AIR-SARShip-1.0} & 2019 & O & 1 & SAR & 31 & 3000 & 1--3 & 0.2 \\
+236 & \href{https://www.eod-grss-ieee.com/dataset-search}{ALCD} & 2019 & O & -- & MS,Sentinel-2 & 38 & 1830 & 10--60 & 0.234 \\
+237 & \href{http://www.patreo.dcc.ufmg.br/2019/07/10/bridge-dataset/}{Bridges} & 2019 & O & 1 & RGB & 500 & 3822 & 0.5 & 1.45 \\
+238 & \href{https://www.eod-grss-ieee.com/dataset-search}{DLR-ACD} & 2019 & O & 1 & Aerial & 33 & 4458 & -- & -- \\
+239 & \href{https://captain-whu.github.io/DOTA/index.html}{DOTA v1.5} & 2019 & O & 16 & RGB & 2.8K & 4000 & -- & 18 \\
+240 & \href{https://www.eod-grss-ieee.com/dataset-search}{Interaction Dataset} & 2019 & O & 1 & RGB & 10.9K & -- & -- & -- \\
+241 & \href{https://www.eod-grss-ieee.com/dataset-search}{MTARSI} & 2019 & O & 1 & RGB & 9.4K & 256 & -- & 0.48 \\
+242 & \href{https://www.eod-grss-ieee.com/dataset-search}{Microsoft Building (Australia)} & 2019 & O & -- & -- & 11.3M & / 2 & -- & 6.4 \\
+243 & \href{https://www.eod-grss-ieee.com/dataset-search}{NYCPlanimetric} & 2019 & O & 24 & Aerial & 2.1K & 5000 & -- & 2 \\
+244 & \href{https://www.eod-grss-ieee.com/dataset-search}{Oil Palm Plant} & 2019 & O & 2 & RGB & 20K & -- & 3 & 0.5 \\
+245 & \href{https://www.kaggle.com/towardsentropy/oil-storage-tanks}{Oil Storage Tanks} & 2019 & O & 1 & RGB & 10K & 512 & 0.5 & 3 \\
+246 & \href{https://github.com/CAESAR-Radi/SAR-Ship-Dataset}{SAR Ship Detection} & 2019 & O & 1 & SAR 3m, 5m, & 43.8K & 256 & 8--10 & 0.407 \\
+247 & \href{https://www.eod-grss-ieee.com/dataset-search}{SAR VD \_} & 2019 & O & 1 & SAR & 104 & 980 & -- & 7.5 \\
+248 & \href{https://www.eod-grss-ieee.com/dataset-search}{SIMD} & 2019 & O & 15 & RGB & 5K & 1024 & UAV@150m & 1 \\
+249 & \href{https://www.eod-grss-ieee.com/dataset-search}{Swimming pool/car} & 2019 & O & 2 & RGB & 3.8K & 224 & -- & 0.12 \\
+250 & \href{https://www.eod-grss-ieee.com/dataset-search}{VisDrone2019-DET} & 2019 & O & 10 & RGB & 10.2K & 2K $\times$ 1.5K & UAV & 2 \\
+251 & \href{https://www.eod-grss-ieee.com/dataset-search}{VisDrone2019-MOT} & 2019 & O & 5 & RGB Video & 40K & 3.8K $\times$ 2.2K & UAV & 14 \\
+252 & \href{https://www.eod-grss-ieee.com/dataset-search}{VisDrone2019-SOT} & 2019 & O & 3 & RGB Video & 139.3K & 3.8K $\times$ 2.2K & UAV & 68 \\
+253 & \href{https://www.eod-grss-ieee.com/dataset-search}{VisDrone2019-VID} & 2019 & O & 5 & RGB & 40K & 3.8K $\times$ 2.2K & UAV & 14 \\
+254 & \href{https://www.eod-grss-ieee.com/dataset-search}{built-structure-count} & 2019 & O & -- & RGB & 5.4K & 512 & 0.3 & 2 \\
+255 & \href{https://www.eod-grss-ieee.com/dataset-search}{AI-TOD} & 2020 & O & -- & RGB & 28K & -- & 0.3 & 22 \\
+256 & \href{http://radars.ie.ac.cn/web/data/getData?dataType=SARDataset}{AIR-SARShip-2} & 2020 & O & 1 & SAR & 300 & 1000 & 1--3 & 0.224 \\
+257 & \href{https://bozcani.github.io/auairdataset}{AU-AIR} & 2020 & O & 8 & RGB & 32.8K & 1920 & UAV@30m & 2.2 \\
+258 & \href{https://www.eod-grss-ieee.com/dataset-search}{Aerial Maritime Drone} & 2020 & O & 5 & RGB & 508 & 800 $\times$ 600 & -- & 0.038 \\
+259 & \href{https://www.agriculture-vision.com/}{Agriculture-Vision} & 2020 & O & 6 & HS & 95K & 512 & 0.463 & 4.39 \\
+260 & \href{https://sites.google.com/view/elizabethbondi/dataset}{BIRDSAI} & 2020 & O & -- & Thermal & 162K & 640 & UAV@60-120m & 43.2 \\
+261 & \href{https://captain-whu.github.io/DOTA/index.html}{DOTA v2.0} & 2020 & O & 18 & RGB & 11.3K & 4000 & 0.1-0.81 & 34.3 \\
+262 & \href{https://www.eod-grss-ieee.com/dataset-search}{DroneRGBT} & 2020 & O & 1 & Multi & 3.6K & 640 & -- & -- \\
+263 & \href{https://www.eod-grss-ieee.com/dataset-search}{EAGLE} & 2020 & O & -- & RGB & 8.8K & 936 & 0.05--0.45 & -- \\
+264 & \href{https://www.eod-grss-ieee.com/dataset-search}{EoC} & 2020 & O & 14 & Aerial & 2.8K & 256 & -- & 0.217 \\
+265 & \href{https://www.eod-grss-ieee.com/dataset-search}{FAIR1M} & 2020 & O & 37 & Optical & 15.3K & 5000 & -- & 120 \\
+266 & \href{https://www.eod-grss-ieee.com/dataset-search}{FGSD} & 2020 & O & 43 & Optical & 4.7K & 930 & -- & -- \\
+267 & \href{https://github.com/chaozhong2010/HRSID}{HRSID} & 2020 & O & 1 & Sentinel-1,SAR & 5.6K & 800 & 0.5--3 & 0.581 \\
+268 & \href{https://www.eod-grss-ieee.com/dataset-search}{Intersection Drone} & 2020 & O & 5 & RGB & 11.5K & 4.1K $\times$ 2.2K & -- & -- \\
+269 & \href{https://github.com/TianwenZhang0825/LS-SSDD-v1.0-OPEN}{LS-SSDD} & 2020 & O & 1 & SAR & 15 & 20000 & 1--15 & 7.8 \\
+270 & \href{https://www.eod-grss-ieee.com/dataset-search}{MOR-UAV} & 2020 & O & 2 & RGB & 10.9K & 608 & UAV & -- \\
+271 & \href{https://www.eod-grss-ieee.com/dataset-search}{Oil and Gas Tank (OGST)} & 2020 & O & 2 & RGB & 10K & 512 & 0.3 & 1.87 \\
+272 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSOC} & 2020 & O & 4 & RGB & 3.1K & 2500 & -- & -- \\
+273 & \href{https://spacenet.ai/rareplanes/}{RarePlanes} & 2020 & O & 110 & MS,WorldView3 & 713.3K & 512 & 0.3--1.5 & 318 \\
+274 & \href{https://www.eod-grss-ieee.com/dataset-search}{Roundabouts Drone} & 2020 & O & 8 & RGB & 13.7K & 4.1K $\times$ 2.2K & -- & -- \\
+275 & \href{https://www.eod-grss-ieee.com/dataset-search}{TGRS-HRRSD} & 2020 & O & 13 & RGB 0.15--1.2 & 21.8K & 930 & m & 9 \\
+276 & \href{https://www.eod-grss-ieee.com/dataset-search}{Tree NEON Tree Crowns} & 2020 & O & 2 & RGB & 11K & 100 million trees & -- & 27.4 \\
+277 & \href{http://aiskyeye.com/}{VisDrone} & 2020 & O & -- & RGB & 275.4K & 1400 & UAV & 85 \\
+278 & \href{https://www.eod-grss-ieee.com/dataset-search}{AFO} & 2021 & O & 2 & RGB & 3.6K & 3840 & -- & 5 \\
+279 & \href{https://www.eod-grss-ieee.com/dataset-search}{AMD} & 2021 & O & 5 & UAV & 508 & 800 & -- & 0.037 \\
+280 & \href{https://www.eod-grss-ieee.com/dataset-search}{Airbus Aircraft Detection} & 2021 & O & 1 & RGB & 103 & 2560 & 0.5 & 0.092 \\
+281 & \href{https://www.eod-grss-ieee.com/dataset-search}{Airbus Oil Storage Detection} & 2021 & O & 1 & MS & 98 & 2560 & 1.2 & 0.101 \\
+282 & \href{https://www.eod-grss-ieee.com/dataset-search}{AnimalDrone} & 2021 & O & -- & UAV & 53.6K & -- & -- & -- \\
+283 & \href{https://www.eod-grss-ieee.com/dataset-search}{ArcticSeals} & 2021 & O & 1 & Multispectral (Aerial) & 88K & 6576 & -- & 1K \\
+284 & \href{https://www.eod-grss-ieee.com/dataset-search}{ArtifiVe-Potsdam} & 2021 & O & 1 & MS & 4.8K & 600 & 0.05 & 15.6 \\
+285 & \href{https://www.eod-grss-ieee.com/dataset-search}{CASIA-Ship} & 2021 & O & 2 & RGB & 1.1K & 1680 & -- & -- \\
+286 & \href{https://www.eod-grss-ieee.com/dataset-search}{CASIA-aircraft} & 2021 & O & 2 & RGB & 58.1K & 399 & -- & -- \\
+287 & \href{https://www.eod-grss-ieee.com/dataset-search}{CGI Planes} & 2021 & O & 2 & RGB & 500 & -- & -- & 0.7 \\
+288 & \href{https://www.eod-grss-ieee.com/dataset-search}{DSSDD} & 2021 & O & 1 & SAR & 1.2K & 256 & -- & 1.27 \\
+289 & \href{https://www.eod-grss-ieee.com/dataset-search}{DroneVehicle} & 2021 & O & 5 & RGB-Infrared & 56.9K & 840 & UAV@100m & -- \\
+290 & \href{https://www.eod-grss-ieee.com/dataset-search}{Flying Airplanes} & 2021 & O & 1 & Optical & 8K & -- & -- & 491 \\
+291 & \href{https://www.eod-grss-ieee.com/dataset-search}{Forest Damages} & 2021 & O & 5 & RGB & 1.5K & 1500 & UAV & 3.3 \\
+292 & \href{https://www.eod-grss-ieee.com/dataset-search}{LEVIR-Ship} & 2021 & O & 1 & Optical & 3.9K & 512 & -- & 0.821 \\
+293 & \href{https://www.eod-grss-ieee.com/dataset-search}{MultiDrone} & 2021 & O & 9 & UAV & 259.8K & 1280 & -- & -- \\
+294 & \href{https://www.eod-grss-ieee.com/dataset-search}{NASAdebris} & 2021 & O & 1 & Optical & 707 & 256 & -- & 0.073 \\
+295 & \href{https://www.eod-grss-ieee.com/dataset-search}{SRSDD-v1.0} & 2021 & O & 6 & SAR & 666 & 1024 & -- & 0.713 \\
+296 & \href{https://www.eod-grss-ieee.com/dataset-search}{SWIM} & 2021 & O & 1 & RGB & 14.6K & 768 & 0.5--2.5 & 12 \\
+297 & \href{https://www.eod-grss-ieee.com/dataset-search}{SaRNet} & 2021 & O & 1 & Optical & 2.6K & 1000 & -- & 0.894 \\
+298 & \href{https://www.eod-grss-ieee.com/dataset-search}{SeabirdsDetection} & 2021 & O & 1 & Aerial & 1 & 28814 & -- & 2.2 \\
+299 & \href{https://www.eod-grss-ieee.com/dataset-search}{Search/Rescue Search And Rescue} & 2021 & O & 1 & RGB & 2.6K & 1000 & 0.5 & -- \\
+300 & \href{https://www.eod-grss-ieee.com/dataset-search}{ShipRSImageNet} & 2021 & O & 1 & Optical & 3.4K & 930 & -- & 4.3 \\
+301 & \href{https://www.eod-grss-ieee.com/dataset-search}{TopoBoundary} & 2021 & O & 8 & Aerial & 25.3K & 1000 & -- & 20 \\
+302 & \href{https://www.eod-grss-ieee.com/dataset-search}{Urban Tree Crown Detection} & 2021 & O & 1 & Aerial & 220 & 512 & -- & 0.2 \\
+303 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHUS2-CD+} & 2021 & O & -- & Sentinel-2 & 36 & 10980 & 10 & 27.8 \\
+304 & \href{https://www.eod-grss-ieee.com/dataset-search}{Yosemite Tree} & 2021 & O & 1 & Aerial & 1 & 38400 & -- & 2.7 \\
+305 & \href{https://www.eod-grss-ieee.com/dataset-search}{xView3-SAR} & 2021 & O & 2 & Sentinel-1 & 991$\times$2 & 27000 & 10 & 2K \\
+306 & \href{https://www.eod-grss-ieee.com/dataset-search}{AISD} & 2022 & O & -- & RGB & -- & -- & -- & -- \\
+307 & \href{https://www.eod-grss-ieee.com/dataset-search}{BONAI} & 2022 & O & 1 & RGB & 3.3K & 1024 & 0.3 & 4.86 \\
+308 & \href{https://www.eod-grss-ieee.com/dataset-search}{Buildings Containers Cranes \_ \_} & 2022 & O & 3 & Optical & -- & 2500 & -- & 3 \\
+309 & \href{https://www.eod-grss-ieee.com/dataset-search}{DroneCrowd} & 2022 & O & 1 & UAV & 33.6K & 1920 & -- & 10.4 \\
+310 & \href{https://www.eod-grss-ieee.com/dataset-search}{HRPlanesv2} & 2022 & O & 1 & Optical & 2.1K & 4800 & -- & 8.1 \\
+311 & \href{https://www.eod-grss-ieee.com/dataset-search}{MSAR} & 2022 & O & 4 & SAR & 28.4K & 256 & -- & 2.5 \\
+312 & \href{https://www.eod-grss-ieee.com/dataset-search}{OnlyPlanes} & 2022 & O & 1 & Optical & 12.5K & 1024 & -- & 15 \\
+313 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSDD-SAR} & 2022 & O & -- & SAR & 7K & 512 & -- & -- \\
+314 & \href{https://www.eod-grss-ieee.com/dataset-search}{RampBuilding} & 2022 & O & 1 & Optical & 96.3K & 256 & -- & 24.8 \\
+315 & \href{https://www.eod-grss-ieee.com/dataset-search}{SADD} & 2022 & O & 1 & SAR & 3K & 224 & -- & -- \\
+316 & \href{https://www.eod-grss-ieee.com/dataset-search}{SAR Aircraft} & 2022 & O & 2 & SAR & 3K & 224 & 0.5 & 0.18 \\
+317 & \href{https://www.eod-grss-ieee.com/dataset-search}{SODA-A} & 2022 & O & 9 & RGB & 2.5K & 4.8K $\times$ 2.8K & -- & -- \\
+318 & \href{https://www.eod-grss-ieee.com/dataset-search}{Satellite Pool Detection} & 2022 & O & 1 & Optical & 14.9K & 512 & -- & 3.7 \\
+319 & \href{https://www.eod-grss-ieee.com/dataset-search}{SeaDronesSee} & 2022 & O & 6 & RGB & 5.6K & 3.8K--5.5K & -- & 60.3 \\
+320 & \href{https://www.eod-grss-ieee.com/dataset-search}{UAVOD-10} & 2022 & O & 10 & UAV & 844 & 4800 & -- & 0.902 \\
+321 & \href{https://www.eod-grss-ieee.com/dataset-search}{UAVOD10} & 2022 & O & 10 & RGB & 844 & 1K--4.8K & 0.15 & 0.9 \\
+322 & \href{https://www.eod-grss-ieee.com/dataset-search}{Urban Building Classification} & 2022 & O & 61 & RGB & 800 & 600 & 0.5--0.8 & 0.675 \\
+323 & \href{https://www.eod-grss-ieee.com/dataset-search}{VISO} & 2022 & O & 4 & Optical & 15.5K & 12000 & -- & 8.6 \\
+324 & \href{https://www.eod-grss-ieee.com/dataset-search}{Volcanoes Hephaestus} & 2022 & O & 6 & InSAR & 216.1K & 224 & -- & 93.7 \\
+325 & \href{https://www.eod-grss-ieee.com/dataset-search}{MDMT} & 2023 & O & -- & UAV & 39.7K & -- & -- & 25.8 \\
+326 & \href{https://www.eod-grss-ieee.com/dataset-search}{DIOR} & -- & O & 20 & RGB 0.5--30 & 23.5K & 800 & m & -- \\
+327 & \href{https://www.eod-grss-ieee.com/dataset-search}{MSDS900} & -- & O & 1 & Optical & 3K & 900 & -- & -- \\
+328 & \href{https://www.eod-grss-ieee.com/dataset-search}{MSDSfull} & -- & O & 1 & Optical & 200 & 4800 & -- & -- \\
+329 & \href{https://www.eod-grss-ieee.com/dataset-search}{PSDS} & -- & O & 1 & Optical & 1.3K & 900 & -- & -- \\
+330 & \href{https://www.eod-grss-ieee.com/dataset-search}{SMCDD} & -- & O & -- & SAR & -- & -- & -- & -- \\
+\addlinespace[0.22em]
+331 & \href{https://www.eod-grss-ieee.com/dataset-search}{NOAA Sea Lion} & 2017 & O,C & 4 & RGB & 950 & 4900 & -- & 96 \\
+332 & \href{https://www.eod-grss-ieee.com/dataset-search}{Humpback Whale Identification} & 2018 & O,C & -- & Optical (Multiple) & 25.5K & 1050 & -- & 0.7 \\
+333 & \href{https://www.eod-grss-ieee.com/dataset-search}{FUSAR-Ship} & 2020 & O,C & 113 & SAR & 5K & 512 & -- & -- \\
+334 & \href{https://www.eod-grss-ieee.com/dataset-search}{IDTReeS} & 2020 & O,C & 33 & Multi & 591$\times$369 & 20 & -- & 0.28 \\
+335 & \href{https://www.eod-grss-ieee.com/dataset-search}{Forest Damages -- Larch Casebearer} & 2021 & O,C & 4 & RGB & 1.5K & 1500 & UAV & 3.3 \\
+336 & \href{https://www.eod-grss-ieee.com/dataset-search}{ReforesTree} & 2022 & O,C & 6 & UAV & 100 & 4000 & -- & 7.5 \\
+\addlinespace[0.22em]
+337 & \href{https://www.eod-grss-ieee.com/dataset-search}{NEON Tree Dataset} & 2021 & O,Other & 1 & Multi & 2.2K$\times$426 & 40 & -- & 8.4 \\
+\addlinespace[0.22em]
+338 & \href{https://www.eod-grss-ieee.com/dataset-search}{VALID} & 2020 & O,S & 30 & RGBD & 6.7K & 1024 & -- & 15.7 \\
+339 & \href{http://gpcv.whu.edu.cn/data/WHU\_Cloud\_Dataset.html}{WHU Cloud} & 2020 & O,S & 1 & MS & 859 & 512 & -- & 3.65 \\
+340 & \href{https://www.eod-grss-ieee.com/dataset-search}{LiSurveying} & 2021 & O,S & 54 & TLS & 2450M & -- & varies & -- \\
+\addlinespace[0.22em]
+341 & \href{https://www.eod-grss-ieee.com/dataset-search}{HighDenseMatching} & 2014 & Other & -- & Aerial & 186 & 15000 & -- & 72 \\
+342 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC16} & 2016 & Other & -- & Optical & -- & -- & -- & -- \\
+343 & \href{https://www.eod-grss-ieee.com/dataset-search}{SPARCS} & 2016 & Other & -- & MS,Landsat & 80 & 1000 & 30 & 1.4 \\
+344 & \href{https://www.eod-grss-ieee.com/dataset-search}{GTA BEV SVA \_ \_} & 2017 & Other & -- & Optical & 1M & 1920 & -- & 350 \\
+345 & \href{https://github.com/201528014227051/RSICD\_optimal}{RSICD} & 2017 & Other & -- & Optical & 10.9K & 224 & -- & 0.459 \\
+346 & \href{https://www.eod-grss-ieee.com/dataset-search}{RoadTracer} & 2017 & Other & 1 & RGB & 40 & 8150 & 0.6 & 0.083 \\
+347 & \href{https://www.eod-grss-ieee.com/dataset-search}{RoofN3D} & 2018 & Other & 3 & ALS & 118.1K & -- & 4.72 pts/m2 & -- \\
+348 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC19} & 2019 & Other & -- & MS,LiDAR & -- & -- & 0.3--1.3 & -- \\
+349 & \href{https://www.eod-grss-ieee.com/dataset-search}{ForestCanopyHeight} & 2019 & Other & -- & Multi & 1.1K & -- & -- & 62.9 \\
+350 & \href{https://www.eod-grss-ieee.com/dataset-search}{MidAir} & 2019 & Other & -- & RGBD,Odometry & 420K & 1024 & -- & 1K \\
+351 & \href{https://www.eod-grss-ieee.com/dataset-search}{SPEED} & 2019 & Other & -- & RGB & 15.3K & 1920 & 0.5 & 4.9 \\
+352 & \href{https://engineering.purdue.edu/RVL/Database/SatStereo/index.html}{SatStereo} & 2019 & Other & -- & Optical & 144 & -- & -- & 127 \\
+353 & \href{https://www.eod-grss-ieee.com/dataset-search}{ALPACA} & 2020 & Other & -- & Hyperspectral (Drone) & -- & -- & -- & 37 \\
+354 & \href{https://www.eod-grss-ieee.com/dataset-search}{CloudCast} & 2020 & Other & -- & NWP & 70.1K & 1229 & 3km & 328 \\
+355 & \href{https://lcmou.github.io/ERA\_Dataset/}{ERA} & 2020 & Other & -- & RGB Video & 343.7K & 640 & -- & 6.3 \\
+356 & \href{https://www.eod-grss-ieee.com/dataset-search}{GeoLifeCLEF} & 2020 & Other & -- & RGB-IR,MS,LC,DEM & 6.7M & 256 & 0.1--1 & 840 \\
+357 & \href{https://www.eod-grss-ieee.com/dataset-search}{GeoLifeCLEF 2022} & 2020 & Other & -- & Multi & -- & -- & -- & -- \\
+358 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSVQA-HR} & 2020 & Other & -- & Aerial & 10.7K & 512 & -- & 14.4 \\
+359 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSVQA-LR} & 2020 & Other & -- & Optical & 772 & 256 & -- & 0.15 \\
+360 & \href{https://www.eod-grss-ieee.com/dataset-search}{Satellite Pose Estimation} & 2020 & Other & -- & Optical & 15.3K & 1920 & -- & 4.6 \\
+361 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU MVS/Stereo} & 2020 & Other & -- & Aerial & 1.8K & 5376 & -- & 98 \\
+362 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU Multi-View} & 2020 & Other & -- & Aerial & 28.4K & 768 & -- & 12.6 \\
+363 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU Stereo} & 2020 & Other & -- & Aerial & 21.9K & 768 & -- & 8.6 \\
+364 & \href{https://www.eod-grss-ieee.com/dataset-search}{Africa MiniCubes} & 2021 & Other & -- & -- & -- & -- & -- & 47 \\
+365 & \href{https://www.eod-grss-ieee.com/dataset-search}{DLR-HySU} & 2021 & Other & -- & HS & 1$\times$135 & 123 & -- & 0.005 \\
+366 & \href{https://www.eod-grss-ieee.com/dataset-search}{DREAM} & 2021 & Other & -- & Multi & -- & 1024 & -- & 68 \\
+367 & \href{https://www.eod-grss-ieee.com/dataset-search}{DenseMatchAerial} & 2021 & Other & -- & Aerial & 1.1K$\times$2 & 1024 & -- & 3.3 \\
+368 & \href{https://www.eod-grss-ieee.com/dataset-search}{EarthNet2021} & 2021 & Other & -- & MS & 32K & 128 & -- & 600 \\
+369 & \href{https://www.eod-grss-ieee.com/dataset-search}{ExtremeEarth} & 2021 & Other & -- & -- & -- & -- & -- & 0.246 \\
+370 & \href{https://www.eod-grss-ieee.com/dataset-search}{GeoLifeCLEF 2021} & 2021 & Other & -- & RGB-IR,MS,LC,DEM & -- & -- & 0.1--1 & -- \\
+371 & \href{https://www.eod-grss-ieee.com/dataset-search}{Hurricane Wind Speed} & 2021 & Other & -- & MS & 114.6K & 366 & -- & 1.5 \\
+372 & \href{https://www.eod-grss-ieee.com/dataset-search}{MultimodalSupCD} & 2021 & Other & -- & Multi & -- & 96 & -- & 0.66 \\
+373 & \href{https://www.eod-grss-ieee.com/dataset-search}{QXS-SAROPT} & 2021 & Other & -- & Multi & 40K & 256 & -- & 2.7 \\
+374 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSITMD} & 2021 & Other & -- & Optical & 4.7K & -- & -- & 0.568 \\
+375 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSVQAxBEN} & 2021 & Other & -- & Optical & 590.3K & 120 & -- & 28.6 \\
+376 & \href{https://www.eod-grss-ieee.com/dataset-search}{SPYSTUF} & 2021 & Other & -- & HS & 1$\times$128 & 16000 & -- & 29 \\
+377 & \href{https://www.eod-grss-ieee.com/dataset-search}{SeaIceContent} & 2021 & Other & -- & SAR & 6 & 25600 & -- & 0.245 \\
+378 & \href{https://www.eod-grss-ieee.com/dataset-search}{SustainBench} & 2021 & Other & -- & Multi & -- & -- & RGB,Time-seris & 302 \\
+379 & \href{https://www.eod-grss-ieee.com/dataset-search}{TIRMSS} & 2021 & Other & -- & MS & 16K & 192 & -- & 8.45 \\
+380 & \href{https://www.eod-grss-ieee.com/dataset-search}{AI4Arctic Sea Ice} & 2022 & Other & -- & SAR & -- & -- & -- & -- \\
+381 & \href{https://www.eod-grss-ieee.com/dataset-search}{Hephaestus} & 2022 & Other & -- & InSAR & 110.6K & 224 & -- & 105 \\
+382 & \href{https://www.eod-grss-ieee.com/dataset-search}{MDAS} & 2022 & Other & -- & Multi & -- & -- & -- & 35 \\
+383 & \href{https://www.eod-grss-ieee.com/dataset-search}{PLP} & 2022 & Other & -- & Multi & -- & -- & -- & 160 \\
+384 & \href{https://www.eod-grss-ieee.com/dataset-search}{Phenology} & 2022 & Other & -- & Optical & 114$\times$24$\times$5 & 3333 & -- & 56 \\
+385 & \href{https://www.eod-grss-ieee.com/dataset-search}{SAR2Opt} & 2022 & Other & -- & Multi & -- & 600 & -- & 0.691 \\
+386 & \href{https://mediatum.ub.tum.de/1660427}{SSL4EO-S12} & 2022 & Other & -- & Multi & 251.1K & 264 & -- & 1.5K \\
+387 & \href{https://www.eod-grss-ieee.com/dataset-search}{SyntCities} & 2022 & Other & 13 & Optical (Multiple) & 16.2K & 1024 & -- & 38.2 \\
+388 & \href{https://www.eod-grss-ieee.com/dataset-search}{UAE-RS} & 2022 & Other & -- & Optical (Multiple) & 6K & 500 & -- & 1.01 \\
+389 & \href{https://www.eod-grss-ieee.com/dataset-search}{SEN12TP} & 2023 & Other & -- & Multi & 2.3K & -- & -- & 222 \\
+390 & \href{https://www.eod-grss-ieee.com/dataset-search}{mesogeos} & 2023 & Other & -- & -- & -- & -- & -- & -- \\
+391 & \href{https://www.eod-grss-ieee.com/dataset-search}{MAFAT Challenge} & -- & Other & -- & -- & -- & -- & -- & -- \\
+392 & \href{https://www.eod-grss-ieee.com/dataset-search}{Olive tree} & -- & Other & -- & -- & 10 & 4000 & -- & -- \\
+393 & \href{https://www.eod-grss-ieee.com/dataset-search}{So2Sat POP} & -- & Other & -- & -- & -- & -- & -- & 40 \\
+\addlinespace[0.22em]
+394 & \href{https://www.eod-grss-ieee.com/dataset-search}{Cactus Aerial Photos} & 2018 & PT & 2 & RGB & 24K & 32 & -- & 0.053 \\
+395 & \href{https://www.eod-grss-ieee.com/dataset-search}{Urban Tree Detection Data} & 2020 & PT & 2 & RGB-NIR & 60 & 256 & 0.6 & 0.114 \\
+\addlinespace[0.22em]
+396 & \href{https://www.eod-grss-ieee.com/dataset-search}{So2Sat Population} & 2022 & POP & -- & DEM, Sentinel-2 & -- & -- & 10 & -- \\
+\addlinespace[0.22em]
+397 & \href{https://www.eod-grss-ieee.com/dataset-search}{Poverty in Africa} & 2020 & POV & -- & RGB & 32.8K & 256 & -- & 5.58 \\
+\addlinespace[0.22em]
+398 & \href{https://www.drivendata.org/competitions/72/predict-wind-speeds/}{Tropical Cyclone} & 2020 & R & -- & GOES 8--16 MSI & 108.1K & 256 $\times$ 256 & 4K--8K & -- \\
+399 & \href{https://docs.torchgeo.org/en/stable/api/datasets/usavars.html}{USAVars} & 2021 & R & -- & NAIP RGB+NIR & 100K & -- & 4 & -- \\
+\addlinespace[0.22em]
+400 & \href{https://www.eod-grss-ieee.com/dataset-search}{SeCo} & 2021 & SSL & -- & Sentinel-2 & 2.4K0x5 & 264 & 10 & 43.6 \\
+401 & \href{https://www.eod-grss-ieee.com/dataset-search}{DOFA-data (Metadataset)} & 2024 & SSL & -- & RGB,SAR,Multispectral & -- & -- & 0.5 & 12K \\
+402 & \href{https://www.eod-grss-ieee.com/dataset-search}{FoMo-Bench (Metadataset)} & 2024 & SSL & -- & RGB,Multispectral,SAR & -- & -- & 0.5 & -- \\
+403 & \href{https://www.eod-grss-ieee.com/dataset-search}{GRAFT} & 2024 & SSL & -- & RGB,Multispectral & -- & -- & -- & -- \\
+404 & \href{https://www.eod-grss-ieee.com/dataset-search}{MMEarth} & 2024 & SSL & -- & RGB,Multispectral,SAR & -- & -- & 10 & -- \\
+405 & \href{https://www.eod-grss-ieee.com/dataset-search}{Satellogic (EarthView)} & 2024 & SSL & -- & RGB,Multispectral,SAR & -- & -- & 1 & -- \\
+406 & \href{https://www.eod-grss-ieee.com/dataset-search}{SkySense} & 2024 & SSL & -- & RGB,SAR,Multispectral & -- & -- & 0.31 & -- \\
+\addlinespace[0.22em]
+407 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC07} & 2007 & S & -- & Multi & 1 & 787 & -- & 0.019 \\
+408 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC08} & 2008 & S & 5 & HS & -- & -- & -- & 0.194 \\
+409 & \href{https://www.eod-grss-ieee.com/dataset-search}{ISPRS 2D - Potsdam} & 2011 & S & 6 & RGB, nDSM & 38 & 6000 & 0.05 & 16 \\
+410 & \href{https://www.eod-grss-ieee.com/dataset-search}{ISPRS 2D - Vaihingen} & 2011 & S & 6 & RGB, nDSM & 33 & 2200 & 0.09 & 17 \\
+411 & \href{https://www.eod-grss-ieee.com/dataset-search}{Aerial Image Segmentation} & 2013 & S & -- & RGB & 80 & 512 & 0.3--1 & 0.007 \\
+412 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC13} & 2013 & S & 16 & Multi & 145 & -- & -- & 1 \\
+413 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC14} & 2014 & S & 7 & Multi & -- & -- & -- & -- \\
+414 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC15} & 2015 & S & -- & Multi & 7 & 10000 & -- & -- \\
+415 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC2015 Zeebruges} & 2015 & S & 8 & RGB, DSM, LiDAR & 7 & 100000 & 0.05 & 0.0024 \\
+416 & \href{https://www.eod-grss-ieee.com/dataset-search}{ERM PAIW} & 2015 & S & 2 & RGB & 41 & 4000 & 0.3 & 0.635 \\
+417 & \href{https://sites.google.com/site/michelevolpiresearch/data/zurich-dataset}{Zurich Summer} & 2015 & S & -- & RGB-NIR & 20 & 1000 & 0.61 & 0.132 \\
+418 & \href{https://www.eod-grss-ieee.com/dataset-search}{Biome: L8 Cloud Cover} & 2016 & S & 4 & RGB & 96 & -- & 30 & 96 \\
+419 & \href{https://www.eod-grss-ieee.com/dataset-search}{Chikusei} & 2016 & S & 19 & HS & 1$\times$128 & 2517 & -- & 1.4 \\
+420 & \href{https://www.eod-grss-ieee.com/dataset-search}{HD-Maps} & 2016 & S & 5 & RGB & 20 & 4000 & 0.3 & 0.146 \\
+421 & \href{https://spacenet.ai/spacenet-buildings-dataset-v1/}{SpaceNet-1} & 2016 & S & 1 & RGB, MS & 9.7K & 650 & 0.5--1 & 31 \\
+422 & \href{https://www.eod-grss-ieee.com/dataset-search}{AIS From Online Maps} & 2017 & S & 2 & RGB & 1.7K & 3000 & 0.5 & 23.8 \\
+423 & \href{https://www.eod-grss-ieee.com/dataset-search}{CITY-OSM} & 2017 & S & -- & Aerial & 21 & 2500 & -- & 23.8 \\
+424 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC17} & 2017 & S & 17 & Multi & -- & -- & -- & -- \\
+425 & \href{https://www.eod-grss-ieee.com/dataset-search}{EvLab-SS} & 2017 & S & 11 & RGB & 60 & 4500 & 0.1--0.25 & -- \\
+426 & \href{https://project.inria.fr/aerialimagelabeling/}{INRIA} & 2017 & S & 1 & RGB & 360 & 1500 & 0.3 & 19.5 \\
+427 & \href{https://www.eod-grss-ieee.com/dataset-search}{Semantic 3D} & 2017 & S & 8 & TLS & 4000M & -- & -- & 23.9 \\
+428 & \href{https://spacenet.ai/spacenet-buildings-dataset-v2/}{SpaceNet-2} & 2017 & S & 1 & RGB, MS & 24.6K & 650 & 0.3 & 182 \\
+429 & \href{https://spacenet.ai/spacenet-roads-dataset/}{SpaceNet-3} & 2017 & S & 1 & Panchromatic,RGB, MS & 3.7K & 1300 & 0.3--1.24 & 182 \\
+430 & \href{https://www.kaggle.com/sorour/38cloud-cloud-segmentation-in-satellite-images}{38-Cloud} & 2018 & S & 1 & RGB & 17.6K & 384 & 30 & 16 \\
+431 & \href{https://www.eod-grss-ieee.com/dataset-search}{AerialLanes18} & 2018 & S & -- & RGB & 20 & 5616 & 0.125 & -- \\
+432 & \href{https://www.eod-grss-ieee.com/dataset-search}{Aeroscapes} & 2018 & S & 11 & RGB & 3.3K & 1280 & UAV@5-50m & 0.752 \\
+433 & \href{https://www.eod-grss-ieee.com/dataset-search}{Agricultural Crop Cover} & 2018 & S & 2 & MS & 40 & -- & 30 & 4.4 \\
+434 & \href{https://www.aicrowd.com/challenges/mapping-challenge\#datasets}{CrowdAI Mapping} & 2018 & S & 1 & RGB & 401.8K & 300 & -- & 5.33 \\
+435 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC18} & 2018 & S & 20 & MS,Hyperspectral,RGB & 1 & -- & 0.05--1 & 19.8 \\
+436 & \href{https://www.eod-grss-ieee.com/dataset-search}{DLRSD} & 2018 & S & 21 & RGB & 2.1K & 256 & 0.3 & 0.004 \\
+437 & \href{https://www.eod-grss-ieee.com/dataset-search}{DeepGlobe-LandCover} & 2018 & S & 7 & RGB & 1.1K & 2448 & 0.5 & 2.75 \\
+438 & \href{https://www.eod-grss-ieee.com/dataset-search}{HyRANK} & 2018 & S & 14 & Hyperspectral & 5 & 1000 & 30 & 0.4 \\
+439 & \href{https://www.eod-grss-ieee.com/dataset-search}{RIT-18} & 2018 & S & -- & MS & 1 & 9300 & 0.047 & 1.5 \\
+440 & \href{https://www.eod-grss-ieee.com/dataset-search}{RoadNet} & 2018 & S & 2 & RGB & 20 & -- & 0.21 & 0.905 \\
+441 & \href{https://www.eod-grss-ieee.com/dataset-search}{SEN1-2} & 2018 & S & -- & Multi & 282.4K & 256 & -- & 43.7 \\
+442 & \href{https://www.eod-grss-ieee.com/dataset-search}{SynthAer} & 2018 & S & 8 & RGB & 765 & 1280 & -- & 1 \\
+443 & \href{https://www.eod-grss-ieee.com/dataset-search}{Urban Drone Dataset (UDD)} & 2018 & S & 6 & RGB & 301 & 4096 & UAV & 1.1 \\
+444 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHDLD} & 2018 & S & 6 & RGB & 4.9K & 256 & 2 & 0.102 \\
+445 & \href{https://www.airs-dataset.com/}{AIRS} & 2019 & S & 1 & RGB & 1K & 10000 & 0.075 & 17.6 \\
+446 & \href{https://www.eod-grss-ieee.com/dataset-search}{AeroRIT} & 2019 & S & -- & RGB,Hyperspectral & 1 & 3900 & 0.4 & 1.8 \\
+447 & \href{https://www.eod-grss-ieee.com/dataset-search}{Chesapeake Land Cover} & 2019 & S & 16 & RGB, MS & 250K & 240 & 1 & 140 \\
+448 & \href{https://www.eod-grss-ieee.com/dataset-search}{DLR-SkyScapes} & 2019 & S & 31 & RGB & 16 & 4680 & 0.13 & -- \\
+449 & \href{https://www.eod-grss-ieee.com/dataset-search}{DroneDeploy} & 2019 & S & 7 & RGB & 55 & 6000 & 0.1 & -- \\
+450 & \href{https://www.eod-grss-ieee.com/dataset-search}{GF2 Dataset for 3DFGC} & 2019 & S & 5 & RGB-NIR & 11 & 2652 & 4 & 0.056 \\
+451 & \href{https://www.eod-grss-ieee.com/dataset-search}{HRC\_WHU} & 2019 & S & 2 & RGB & 150 & 1.3K $\times$ 720 & 30 & 3.56 \\
+452 & \href{https://www.eod-grss-ieee.com/dataset-search}{ManipalUAVid} & 2019 & S & 4 & UAV & 711 & 1280 & -- & 1.05 \\
+453 & \href{https://www.eod-grss-ieee.com/dataset-search}{Open AI Challenge: Caribbean} & 2019 & S & 5 & RGB & 7 & 52318 & 0.04 & -- \\
+454 & \href{https://www.eod-grss-ieee.com/dataset-search}{PolSF} & 2019 & S & 6 & SAR & 5 & -- & -- & -- \\
+455 & \href{https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BSETKZ}{STGAN Cloud Removal} & 2019 & S & 1 & Optical & 217.2K & 256 & -- & 1.5 \\
+456 & \href{https://www.eod-grss-ieee.com/dataset-search}{Salient Objects ORSSD} & 2019 & S & 8 & RGB & 800 & 500 & -- & 0.026 \\
+457 & \href{https://www.eod-grss-ieee.com/dataset-search}{Semantic Drone} & 2019 & S & 20 & RGB & 400 & 5000 & -- & 4 \\
+458 & \href{https://www.eod-grss-ieee.com/dataset-search}{Semantic Drone Dataset-SemSeg} & 2019 & S & 20 & RGB & 400 & 5000 & -- & 3.91 \\
+459 & \href{https://spacenet.ai/sn5-challenge/}{SpaceNet-5} & 2019 & S & 1 & Panchromatic,RGB, MS & 2.4K & 1300 & 0.3 & 84.1 \\
+460 & \href{https://www.kaggle.com/sorour/95cloud-cloud-segmentation-on-satellite-images/version/1}{95-Cloud} & 2020 & S & 1 & RGB & 34.7K & 384 & 30 & 18 \\
+461 & \href{https://www.eod-grss-ieee.com/dataset-search}{AIR-CD} & 2020 & S & 1 & RGB-NIR & 34 & 7300 & 4 & 12 \\
+462 & \href{https://www.eod-grss-ieee.com/dataset-search}{ActiveFireL8} & 2020 & S & 1 & MS & 2M$\times$10 & 128 & -- & 546 \\
+463 & \href{https://www.eod-grss-ieee.com/dataset-search}{BDCI2020} & 2020 & S & 7 & RGB & 146K & 256 & 2 & 1.3 \\
+464 & \href{https://www.eod-grss-ieee.com/dataset-search}{BHPools\&WaterTanks} & 2020 & S & 1 & Aerial & 350 & 3000 & -- & 1.9 \\
+465 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC20} & 2020 & S & 17 & Sentinel-1/2 & 180.7K & -- & 10 & 19.2 \\
+466 & \href{https://www.eod-grss-ieee.com/dataset-search}{DubaiSemSeg} & 2020 & S & 6 & Optical & 72 & 800 & -- & 0.032 \\
+467 & \href{https://www.eod-grss-ieee.com/dataset-search}{EORSSD} & 2020 & S & 2 & RGB & 2K & 500 & -- & 0.06 \\
+468 & \href{https://www.eod-grss-ieee.com/dataset-search}{FUSAR-Map} & 2020 & S & 4 & SAR & 610 & 1024 & -- & -- \\
+469 & \href{https://www.eod-grss-ieee.com/dataset-search}{GTA-V SID} & 2020 & S & -- & Optical & 121 & 500 & -- & 0.1 \\
+470 & \href{https://www.eod-grss-ieee.com/dataset-search}{Ghana Crop Type} & 2020 & S & 5 & Sentinel-1/2,Planet & 2.9K$\times$14$\times$25 & 64 & 3--10 & 312 \\
+471 & \href{https://www.eod-grss-ieee.com/dataset-search}{HKH Glacier Mapping} & 2020 & S & 2 & MS & 14.2K$\times$15 & 512 & -- & 29.4 \\
+472 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kag. Massachusetts Buildings} & 2020 & S & 1 & RGB & 151 & 1500 & 1 & 3 \\
+473 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kag. Satellite Buildings} & 2020 & S & 1 & Optical & 6K & 256 & -- & 0.878 \\
+474 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kag. Satellite Water Bodies} & 2020 & S & 1 & MS & 2.8K & 1000 & -- & 0.274 \\
+475 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kaggle aerial segmentation} & 2020 & S & 6 & RGB & 72 & 800 & -- & 0.033 \\
+476 & \href{https://www.eod-grss-ieee.com/dataset-search}{Kaggle buildings segmentation} & 2020 & S & 2 & RGB & 6K & 256 & -- & 0.899 \\
+477 & \href{https://www.kaggle.com/datasets/warcoder/kenya-crop-type-detection}{Kenya Crop Type} & 2020 & S & 7 & Sentinel-2 MSI & 4.7K & 3K $\times$ 2K & 10 & -- \\
+478 & \href{https://www.eod-grss-ieee.com/dataset-search}{LandCoverAI} & 2020 & S & -- & RGB & 41 & 9000 & 0.25--0.5 & 1.4 \\
+479 & \href{https://www.eod-grss-ieee.com/dataset-search}{Open Cities AI Challenge} & 2020 & S & 2 & RGB & 11K & 1024 & 0.03--0.2 & 81.5 \\
+480 & \href{https://www.eod-grss-ieee.com/dataset-search}{OpenSARUrban} & 2020 & S & 10 & SAR & 33.4K & 100 & -- & 2.2 \\
+481 & \href{https://www.eod-grss-ieee.com/dataset-search}{Parking APKLOT} & 2020 & S & 2 & RGB & 501 & -- & -- & 3 \\
+482 & \href{https://www.eod-grss-ieee.com/dataset-search}{Power TTPL} & 2020 & S & 3 & RGB & 1.1K & 3840 & UAV & 4.2 \\
+483 & \href{https://www.eod-grss-ieee.com/dataset-search}{Rwanda Built-Up} & 2020 & S & 1 & Optical & 787 & 256 & -- & 0.07 \\
+484 & \href{https://www.eod-grss-ieee.com/dataset-search}{SEN-12-FLOOD} & 2020 & S & 1 & RGB, SAR, MS & 336 & -- & 10 & 12.2 \\
+485 & \href{http://rs.ipb.uni-bonn.de/data/}{SemCity Toulouse} & 2020 & S & -- & MS & 16 & 3500 & 0.5--2 & 5.2 \\
+486 & \href{https://www.eod-grss-ieee.com/dataset-search}{South Sudan Crop Type} & 2020 & S & 5 & Multi & 687$\times$14$\times$25 & 64 & -- & 977 \\
+487 & \href{https://spacenet.ai/sn6-challenge/}{SpaceNet-6} & 2020 & S & 1 & SAR,RGB & 3.4K & 900 & 0.5 & 0.368 \\
+488 & \href{https://spacenet.ai/sn7-challenge/}{SpaceNet-7} & 2020 & S & 1 & MS,MT & 1.5K & 1024 & 4 & 20.6 \\
+489 & \href{https://www.eod-grss-ieee.com/dataset-search}{Synthinel-1} & 2020 & S & 1 & RGB & 2.1K & 572 & 0.3 & 1 \\
+490 & \href{https://www.eod-grss-ieee.com/dataset-search}{TTPLA} & 2020 & S & -- & Aerial & 1.1K & 3840 & -- & 4.2 \\
+491 & \href{https://github.com/MarcCoru/crop-type-mapping}{TimeSen2Crop} & 2020 & S & 16 & Sentinel-2 & 1M & 10980 & 10 & 1.1 \\
+492 & \href{https://www.eod-grss-ieee.com/dataset-search}{UAVid} & 2020 & S & -- & RGB & 420 & 4000 & UAV & 5.88 \\
+493 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU-Hi} & 2020 & S & 11 & Hyperspectral (Drone) & 3 & 1217 & 0.109 & 0.817 \\
+494 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU-Hi-HongHu} & 2020 & S & 22 & Hyperspectral & 1 & 940 $\times$ 475 & 0.043 & -- \\
+495 & \href{https://www.eod-grss-ieee.com/dataset-search}{Water Body Kaggle Water Bodies} & 2020 & S & 2 & RGB & 2.8K & 1000 & -- & 0.28 \\
+496 & \href{https://captain-whu.github.io/iSAID/index.html}{iSAID} & 2020 & S & 15 & RGB & 2.8K & 4000 & -- & 6.54 \\
+497 & \href{https://www.eod-grss-ieee.com/dataset-search}{Arctic Arctic Sea Ice Image Masking} & 2021 & S & 8 & RG-NIR & 3.4K & 357 $\times$ 306 & 10 & 0.092 \\
+498 & \href{https://zenodo.org/records/8008800}{Benin Cashews} & 2021 & S & 6 & Sentinel-2 (labels corrected with Pléiades) & 70 & 1.2K $\times$ 1.1K & 0.5--10 & -- \\
+499 & \href{https://www.eod-grss-ieee.com/dataset-search}{DALES Object} & 2021 & S & 8 & ALS & 492M & -- & 50 pts/m2 & 5 \\
+500 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC21-DSE} & 2021 & S & 4 & SAR,MS,Hyperspectral & 6K & 16 & 10--750 & 18 \\
+501 & \href{https://www.eod-grss-ieee.com/dataset-search}{DoriaNet} & 2021 & S & 3 & UAV & 2.4K & 1280 & -- & 0.067 \\
+502 & \href{https://www.eod-grss-ieee.com/dataset-search}{ETCI2021} & 2021 & S & 2 & SAR & 66.8K & 256 & -- & 5.3 \\
+503 & \href{https://www.eod-grss-ieee.com/dataset-search}{EuroCrops} & 2021 & S & 43 & Sentinel-2 & 805.4K & 0.5 ha & 10 & 8.6 \\
+504 & \href{https://www.eod-grss-ieee.com/dataset-search}{FloatingObjects} & 2021 & S & -- & MS & -- & -- & -- & 15.4 \\
+505 & \href{https://www.eod-grss-ieee.com/dataset-search}{FloodNet} & 2021 & S & 10 & RGB & 2.3K & 4000 & 0.015 & 12.1 \\
+506 & \href{https://www.eod-grss-ieee.com/dataset-search}{Hessigheim 3D} & 2021 & S & 11 & Drone & 73.9M & -- & 800 pts/m2 & 5.95 \\
+507 & \href{https://github.com/Junjue-Wang/LoveDA}{LoveDA} & 2021 & S & 7 & RGB & 6K & 1024 & 0.3 & 9.6 \\
+508 & \href{https://marine-debris.github.io/}{MARIDA} & 2021 & S & 15 & MS & 1.4K$\times$10 & 256 & -- & 1.2 \\
+509 & \href{https://www.eod-grss-ieee.com/dataset-search}{MUESLI} & 2021 & S & 41 & Multi & 1$\times$415 & 12800 & -- & 37.7 \\
+510 & \href{https://www.eod-grss-ieee.com/dataset-search}{Mini Inria Aerial Image Labeling Dataset} & 2021 & S & 2 & RGB & 32.5K & 512 & 0.3 & -- \\
+511 & \href{https://www.eod-grss-ieee.com/dataset-search}{MultimodalBen} & 2021 & S & 30 & Multi & 568 & 680 & -- & 0.489 \\
+512 & \href{https://github.com/VSainteuf/pastis-benchmark}{PASTIS} & 2021 & S & 18 & Sentinel-2 & 2.4K$\times$45$\times$10 & 128 & 10 & 29 \\
+513 & \href{https://github.com/VSainteuf/pastis-benchmark}{PASTIS-R} & 2021 & S & 18 & Multi & 2.4K & 128 & -- & 54 \\
+514 & \href{https://www.eod-grss-ieee.com/dataset-search}{RescueNet} & 2021 & S & 12 & UAV & 4.5K & 3500 & -- & 21.8 \\
+515 & \href{https://www.eod-grss-ieee.com/dataset-search}{S2-SHIPS} & 2021 & S & 3 & MS & 16$\times$16 & 1783 & -- & 2.9 \\
+516 & \href{https://www.eod-grss-ieee.com/dataset-search}{Sen4AgriNet} & 2021 & S & -- & Sentinel-2 & -- & -- & 10--60 & 262 \\
+517 & \href{https://www.eod-grss-ieee.com/dataset-search}{SmallholderPlant} & 2021 & S & 6 & MS & 70$\times$13 & 1180 & -- & 1 \\
+518 & \href{https://www.eod-grss-ieee.com/dataset-search}{The Azavea Cloud Dataset} & 2021 & S & 2 & Sentinel-2 & 32 & -- & 10 & -- \\
+519 & \href{https://www.eod-grss-ieee.com/dataset-search}{UOPNOA} & 2021 & S & -- & Multi & 36K & -- & -- & 9.7 \\
+520 & \href{https://www.eod-grss-ieee.com/dataset-search}{AIR-PolSAR-Seg} & 2022 & S & 6 & SAR & 2K & 512 & 8 & 0.609 \\
+521 & \href{https://www.eod-grss-ieee.com/dataset-search}{Burned Area Delineation} & 2022 & S & -- & Multi & -- & -- & -- & 14 \\
+522 & \href{https://www.eod-grss-ieee.com/dataset-search}{C2S-MS} & 2022 & S & 3 & Multi & 1.8K & 512 & -- & 12 \\
+523 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC22-SSL} & 2022 & S & 14 & Multi & 5K & 2000 & -- & 42 \\
+524 & \href{https://www.eod-grss-ieee.com/dataset-search}{FLAIR \#1} & 2022 & S & 13 & Aerial & 77.4K & 512 & -- & 70 \\
+525 & \href{https://www.eod-grss-ieee.com/dataset-search}{FireCube} & 2022 & S & 1 & Multi & 4.3K$\times$58 & 700 & -- & 23.5 \\
+526 & \href{https://www.eod-grss-ieee.com/dataset-search}{Five-Billion-Pixels} & 2022 & S & 24 & RGB, MS & 150 & 7.2K $\times$ 6.8K & 4 & 104 \\
+527 & \href{https://www.eod-grss-ieee.com/dataset-search}{GeoNRW} & 2022 & S & 10 & RGB, nDSM & 7.8K$\times$3 & 1000 & 1 & 30 \\
+528 & \href{https://www.eod-grss-ieee.com/dataset-search}{GrowliFlower} & 2022 & S & 4 & Multispectral (Drone) & 8.4K & 256 & -- & 11.7 \\
+529 & \href{https://www.eod-grss-ieee.com/dataset-search}{HOSD} & 2022 & S & 1 & HS & 18$\times$224 & 1700 & -- & 2.2 \\
+530 & \href{https://www.eod-grss-ieee.com/dataset-search}{HelixNet} & 2022 & S & 9 & MLS & 8850M & -- & -- & 236 \\
+531 & \href{https://www.eod-grss-ieee.com/dataset-search}{Landslide4Sense} & 2022 & S & 1 & Multi & 4.8K$\times$14 & 128 & -- & 2.4 \\
+532 & \href{https://www.eod-grss-ieee.com/dataset-search}{MMFlood} & 2022 & S & 1 & SAR & 1.7K$\times$2 & 2000 & -- & 11.3 \\
+533 & \href{https://www.eod-grss-ieee.com/dataset-search}{MapInWild} & 2022 & S & 11 & Multi & 1K$\times$8 & 1920 & -- & 365 \\
+534 & \href{https://www.eod-grss-ieee.com/dataset-search}{Microsoft RoadDetections} & 2022 & S & 1 & RGB & 20K & 1088 & 1 & 9.25 \\
+535 & \href{https://www.eod-grss-ieee.com/dataset-search}{MiniFrance} & 2022 & S & 12 & RGB & 2.1K & 10000 & 0.5 & 93.1 \\
+536 & \href{https://www.eod-grss-ieee.com/dataset-search}{MultiSenGE} & 2022 & S & 14 & Sentinel-1/2 & 1.1M$\times$12 & 256 & 10 & 530 \\
+537 & \href{https://www.eod-grss-ieee.com/dataset-search}{NASA-Harvest} & 2022 & S & 1 & MS & 70 & 256 & -- & 0.3 \\
+538 & \href{https://www.eod-grss-ieee.com/dataset-search}{NDWS} & 2022 & S & 1 & Multi & 18.4K$\times$12 & 64 & -- & 2 \\
+539 & \href{https://www.eod-grss-ieee.com/dataset-search}{OnCloudN} & 2022 & S & 1 & Optical & 22.7K & 512 & -- & 50 \\
+540 & \href{https://open-earth-map.org/}{OpenEarthMap} & 2022 & S & 8 & Optical (Multiple) & 5K & 1024 & -- & 9.1 \\
+541 & \href{https://www.eod-grss-ieee.com/dataset-search}{OpenSentinelMap} & 2022 & S & 15 & RGB,Sentinel-2 & 137K & 192 & 10 & 445 \\
+542 & \href{https://www.eod-grss-ieee.com/dataset-search}{RDCME} & 2022 & S & 1 & Optical & 775 & 256 & -- & -- \\
+543 & \href{https://www.eod-grss-ieee.com/dataset-search}{RID} & 2022 & S & 16 & RGB & 2K & -- & 0.1 & 1.5 \\
+544 & \href{https://www.eod-grss-ieee.com/dataset-search}{S12 ScotInd Cloud \_ \_} & 2022 & S & 1 & Multi & -- & -- & -- & 0.96 \\
+545 & \href{https://www.eod-grss-ieee.com/dataset-search}{STPLS3D} & 2022 & S & 20 & Photogrammetry & -- & -- & -- & 36.6 \\
+546 & \href{https://www.eod-grss-ieee.com/dataset-search}{Sat Burn Area \_ \_} & 2022 & S & 1 & MS & 73$\times$14 & 1500 & -- & 14 \\
+547 & \href{https://github.com/MarcCoru/SeasoNet}{SeasoNet} & 2022 & S & 33 & Sentinel-2 & 1.8M & 120 & 10 & 229 \\
+548 & \href{https://www.eod-grss-ieee.com/dataset-search}{Sentinel-2 Cloud Cover} & 2022 & S & 2 & MS & 22.7K & -- & 10 & 51.2 \\
+549 & \href{https://www.eod-grss-ieee.com/dataset-search}{SpaceNet-8} & 2022 & S & 2 & Panchromatic,RGB & 1.2K$\times$2 & 1200 & 0.3--0.8 & 6.8 \\
+550 & \href{https://www.eod-grss-ieee.com/dataset-search}{TimeSpec4LULC} & 2022 & S & 29 & MS,MT & -- & 262 months & 500 & 60 \\
+551 & \href{https://www.eod-grss-ieee.com/dataset-search}{UBC} & 2022 & S & 61 & Optical & 800 & 600 & -- & 0.675 \\
+552 & \href{https://www.eod-grss-ieee.com/dataset-search}{WHU-OHS} & 2022 & S & 24 & Hyperspectral & 7.8K & 512 & 10 & 94.9 \\
+553 & \href{https://www.eod-grss-ieee.com/dataset-search}{WildForest3D} & 2022 & S & 6 & Drone & 7M & -- & 60 pts/m2 & 0.081 \\
+554 & \href{https://www.eod-grss-ieee.com/dataset-search}{WildfireDanger} & 2022 & S & 1 & Multi & -- & -- & -- & 17 \\
+555 & \href{https://www.eod-grss-ieee.com/dataset-search}{GAMUS} & 2023 & S & 6 & RGB, nDSM & 9.3K & 1024 & 0.33 & 48 \\
+556 & \href{https://www.eod-grss-ieee.com/dataset-search}{Luojia-HSSR} & 2023 & S & 23 & RGB & 6.4K & 256 & 0.75 & -- \\
+557 & \href{https://www.eod-grss-ieee.com/dataset-search}{Chesapeake Roads} & 2024 & S & 1 & RGBN & -- & -- & 1 & 28.3 \\
+558 & \href{https://www.eod-grss-ieee.com/dataset-search}{GAMUS} & 2024 & S & 7 & RGB, nDSM & -- & -- & 1 & 10 \\
+559 & \href{https://www.eod-grss-ieee.com/dataset-search}{PhilEO (Metadataset)} & 2024 & S & 11 & RGB,Multispectral & -- & -- & 10 & 400 \\
+560 & \href{https://www.eod-grss-ieee.com/dataset-search}{QuickQuakeBuildings} & 2024 & S & 2 & RGB,SAR & -- & -- & 0.3 & -- \\
+561 & \href{https://www.eod-grss-ieee.com/dataset-search}{Ticino} & 2024 & S & 10 & RGB,DTM,Panchromatic,Hyperspectral & -- & -- & 1.86 & -- \\
+562 & \href{https://www.eod-grss-ieee.com/dataset-search}{WALD5Dplus} & 2024 & S & -- & RGB,SAR & -- & -- & 10 & -- \\
+\addlinespace[0.22em]
+563 & \href{https://www.eod-grss-ieee.com/dataset-search}{DeepGlobe-Bldng} & 2018 & S,C & 1 & Optical & 24.6K & 650 & -- & -- \\
+564 & \href{https://mediatum.ub.tum.de/1474000}{SEN12MS} & 2019 & S,C & -- & MS, SAR & 180.7K & 256 & 10 & 510 \\
+565 & \href{https://www.eod-grss-ieee.com/dataset-search}{FLAME} & 2020 & S,C & 2 & Multispectral (Drone) & 48K & 3840 & -- & 43.7 \\
+566 & \href{https://www.eod-grss-ieee.com/dataset-search}{S2 Cloud Mask Catalogue} & 2020 & S,C & 25 & Sentinel-2 & 513$\times$13 & 1022 & 20 & 15.4 \\
+567 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC23} & 2023 & S,C & 12 & Multi & -- & -- & -- & -- \\
+\addlinespace[0.22em]
+568 & \href{https://www.eod-grss-ieee.com/dataset-search}{PASTIS-HD} & 2024 & S,C,I & 20 & RGB,Multispectral,SAR & -- & -- & 1 & -- \\
+\addlinespace[0.22em]
+569 & \href{https://www.eod-grss-ieee.com/dataset-search}{Hyperview Challenge} & 2022 & SP & -- & Hyperspectral & 2.9K & 11--250 & 2 & 1.85 \\
+\addlinespace[0.22em]
+570 & \href{https://doi.org/10.5281/zenodo.6514159}{SEN2VENmuS} & 2022 & SR & -- & Sentinel-1/2 & 133K & 256 & 10--20 & 87 \\
+571 & \href{https://doi.org/10.5281/zenodo.6810792}{The WorldStrat} & 2022 & SR & 8 & MS, Sentinel-2, RGB & 3.4K & 1054 & 1.5--60 & 110 \\
+\addlinespace[0.22em]
+572 & \href{https://www.eod-grss-ieee.com/dataset-search}{DFC06} & 2006 & SR/PS & -- & Multispectral (Aerial) & 6 & 5000 & -- & 0.39 \\
+573 & \href{https://doi.org/10.5281/zenodo.6327426}{Proba-V Super Resolution} & 2018 & SR/PS & -- & MS & 1.2K & 384 & -- & 0.692 \\
+574 & \href{https://github.com/achrafdjerida/Alsat-2B}{ALSAT-2B} & 2021 & SR/PS & -- & Optical & 5.5K & 256 & -- & 0.07 \\
+575 & \href{https://www.eod-grss-ieee.com/dataset-search}{PAirMAX (Airbus)} & 2021 & SR/PS & -- & MS & 14 & -- & -- & 0.153 \\
+576 & \href{https://www.eod-grss-ieee.com/dataset-search}{PushFrameSR} & 2021 & SR/PS & -- & Optical & 960$\times$15 & 256 & -- & 1.1 \\
+577 & \href{https://www.eod-grss-ieee.com/dataset-search}{Jilin1 VidSR \_} & 2022 & SR/PS & -- & Optical & 6.2K & 3000 & -- & 19.4 \\
+578 & \href{https://www.eod-grss-ieee.com/dataset-search}{Mu-S2} & 2022 & SR/PS & -- & MS & 1.3K & 100 & -- & 2.8 \\
+579 & \href{https://www.eod-grss-ieee.com/dataset-search}{MultiExposureSR} & 2022 & SR/PS & -- & Optical & -- & -- & -- & 0.743 \\
+580 & \href{https://www.eod-grss-ieee.com/dataset-search}{PRISMA Pan Sharp} & 2022 & SR/PS & -- & HS & 4 & 2400 & -- & 1.7 \\
+581 & \href{https://doi.org/10.5281/zenodo.6514159}{SEN2VEN$\mu$S} & 2022 & SR/PS & -- & MS & 133K & 256 & -- & 85 \\
+582 & \href{https://www.eod-grss-ieee.com/dataset-search}{WorldStrat} & 2022 & SR/PS & -- & Optical & 3.9K & 1054 & -- & 107 \\
+\addlinespace[0.22em]
+583 & \href{https://www.eod-grss-ieee.com/dataset-search}{Oakland 3-D PointCloud} & 2009 & 3D & 5 & PointCloud & 1.6M & 1.5 km & -- & 0.033 \\
+584 & \href{https://www.eod-grss-ieee.com/dataset-search}{Paris-rue-Madame} & 2014 & 3D & 26 & PointCloud & 20M & 1 km & -- & -- \\
+585 & \href{https://www.eod-grss-ieee.com/dataset-search}{District of Columbia LiDAR 2015} & 2015 & 3D & 8 & PointCloud & -- & -- & -- & 34.4 \\
+586 & \href{https://www.eod-grss-ieee.com/dataset-search}{Paris-Lille-3D} & 2017 & 3D & 50 & PointCloud & 143M & 1.94 km2 & -- & 19.9 \\
+587 & \href{https://www.eod-grss-ieee.com/dataset-search}{Semantic3D.net} & 2017 & 3D & 8 & PointCloud & 4000M & -- & -- & 24.5 \\
+588 & \href{https://www.eod-grss-ieee.com/dataset-search}{CORE3D} & 2018 & 3D & -- & Panchromatic, MS, PointCloud & -- & -- & -- & -- \\
+589 & \href{https://www.eod-grss-ieee.com/dataset-search}{District of Columbia LiDAR 2018} & 2018 & 3D & 11 & PointCloud & -- & -- & -- & 280 \\
+590 & \href{https://www.eod-grss-ieee.com/dataset-search}{DublinCity} & 2019 & 3D & 13 & PointCloud & 260M & 2.0 km2 & -- & 167 \\
+591 & \href{https://www.eod-grss-ieee.com/dataset-search}{SemanticKITTI} & 2019 & 3D & 25 & PointCloud & 4549M & 39.2 km2 & -- & 80.2 \\
+592 & \href{https://www.eod-grss-ieee.com/dataset-search}{Campus3D} & 2020 & 3D & 14 & PointCloud & 937.1M & 1.58 km2 & UAV & -- \\
+593 & \href{https://www.eod-grss-ieee.com/dataset-search}{DALES} & 2020 & 3D & 8 & PointCloud & 505.3M & 10.0 km2 & -- & -- \\
+594 & \href{https://www.eod-grss-ieee.com/dataset-search}{LASDU} & 2020 & 3D & 5 & PointCloud & 3.12M & 1.02 km2 & 1200 & -- \\
+595 & \href{https://www.eod-grss-ieee.com/dataset-search}{SensatUrban} & 2020 & 3D & 13 & PointCloud & 2847.1M & 6 km2 & UAV & 20.6 \\
+596 & \href{https://www.eod-grss-ieee.com/dataset-search}{Swiss3DCities} & 2020 & 3D & 5 & PointCloud & 226M & 2.7 km2 & -- & -- \\
+597 & \href{https://www.eod-grss-ieee.com/dataset-search}{Toronto3D} & 2020 & 3D & 8 & PointCloud & 78.3M & 1.0 km2 & -- & 1.1 \\
+598 & \href{https://www.eod-grss-ieee.com/dataset-search}{Heisenheim3D} & 2021 & 3D & 11 & PointCloud & 125.7M & 0.19 km2 & -- & 58.8 \\
+599 & \href{https://www.eod-grss-ieee.com/dataset-search}{SUM-Helsinki} & 2021 & 3D & 6 & Mesh & 19M & 4 km2 & 0.075 & 8.35 \\
+600 & \href{https://www.eod-grss-ieee.com/dataset-search}{benchmark\_ISPRS2021} & 2021 & 3D & -- & RGB & 20 & 1024 & 0.08 & 3.22 \\
+\addlinespace[0.22em]
+601 & \href{https://www.eod-grss-ieee.com/dataset-search}{RSIVQA} & 2021 & VQA & 864 & RGB & 37.3K & 256--4K & 0.1--8 & 29.5 \\
+\addlinespace[0.22em]
+602 & \href{https://www.eod-grss-ieee.com/dataset-search}{CDVQA} & 2022 & VQA,D & 19 & RGB & 3K & 512 & 0.5--3 & -- \\
+\addlinespace[0.22em]
+603 & \href{https://www.eod-grss-ieee.com/dataset-search}{AM3D-Real} & 2022 & V & 2 & RGB, PointCloud & 1K & 720 $\times$ 480 & 0.25 & -- \\
+\addlinespace[0.22em]
+604 & \href{https://www.eod-grss-ieee.com/dataset-search}{Forel-Ule Index global inland waters} & 2021 & WB & -- & MS & -- & -- & 500 & 0.004 \\
+\addlinespace[0.22em]
+605 & \href{https://www.eod-grss-ieee.com/dataset-search}{Historical Hourly Weather} & 2017 & W & -- & Weather attributes & -- & -- & -- & 0.075 \\
+606 & \href{https://www.eod-grss-ieee.com/dataset-search}{ClimateNet} & 2020 & W & 9 & NC variables & 459 & 16--1.2K & -- & 28 \\
+607 & \href{https://www.eod-grss-ieee.com/dataset-search}{DeepWeather} & 2020 & W & 9 & Weather attributes & 20 & -- & -- & 3K \\
+\end{longtable}
+\vspace{-0.3em}
+\begin{center}
+\begin{minipage}{0.988\textwidth}
+\fontsize{5.7}{6.8}\selectfont
+C = classification, R = regression, S = semantic segmentation, O = object detection, I = instance segmentation, T = time series, D = change detection, IC = image captioning, SSL = self-supervised pretraining. K = thousand and M = million. Multiple image sizes and spatial resolutions are reported as min--max ranges.
+\end{minipage}
+\end{center}
+\endgroup
+\restoregeometry

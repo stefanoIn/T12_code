@@ -23,8 +23,8 @@ __pycache__/
 *.ckpt
 
 # Large datasets
-data/
-datasets/
+/data/
+/datasets/
 
 # Temporary files
 *.tmp
@@ -33,5 +33,22 @@ datasets/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
-CROMA/
+# Local upstream checkout (keep notebooks outside it)
+/CROMA/CROMA/
+
+# LaTeX build intermediates; keep source PDFs and report exports
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+/build/
