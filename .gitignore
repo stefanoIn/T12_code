@@ -37,6 +37,7 @@ desktop.ini
 
 # Local upstream checkout (keep notebooks outside it)
 /CROMA/CROMA/
+CROMA
 
 # LaTeX build intermediates; keep source PDFs and report exports
 *.aux
