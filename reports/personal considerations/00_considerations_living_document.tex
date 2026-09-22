@@ -1,0 +1,386 @@
+
+\documentclass[11pt,a4paper]{article}
+
+% -------------------------------------------------
+% Encoding and typography
+% -------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% -------------------------------------------------
+% Page layout and tables
+% -------------------------------------------------
+\usepackage[
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.7cm,
+    right=2.7cm
+]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+
+% -------------------------------------------------
+% Links
+% -------------------------------------------------
+\usepackage[hidelinks]{hyperref}
+
+% -------------------------------------------------
+% Paragraph formatting
+% -------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+
+\begin{document}
+
+% =================================================
+% Header
+% =================================================
+\begin{flushleft}
+
+    {\LARGE\textbf{Geospatial Foundation Models Benchmarking}}\\[0.3em]
+
+    {\large\color{black!65}
+    Research Reflections and Open Methodological Questions
+    }\\[1.1em]
+
+    \textbf{Stefano Infusini}
+    \hfill
+    University of Genoa -- DIBRIS\\[-0.1em]
+
+    {\small\color{black!65}
+    MSc Computer Science -- Artificial Intelligence
+    }
+    \hfill
+    {\small September 2026}
+
+\end{flushleft}
+
+\vspace{-0.6em}
+\rule{\textwidth}{0.4pt}
+\vspace{1.0em}
+
+\section*{Purpose}
+
+This is a living document for short methodological observations that may become useful for the thesis.
+The goal is not to produce a final methodology here, but to preserve the strongest ideas in a form
+that can be reviewed quickly and progressively verified against primary sources.
+
+A benchmark score should not be interpreted as a property of the architecture alone. In practice,
+
+\[
+\begin{aligned}
+S=f(&\text{pretraining data, sensor, bands, resolution, task,}\\
+    &\text{geography, adaptation, decoder, training regime}).
+\end{aligned}
+\]
+
+Therefore, a leaderboard compares complete pretrained systems under particular conditions; it does
+not by itself identify which component caused the performance difference.
+
+% =================================================
+\section{1. PANGAEA: GFMs do not dominate every downstream task}
+
+PANGAEA shows that pretrained GFMs are not uniformly better than supervised task-specific baselines.
+On HLS Burn Scars, using 100\% of the downstream labels, the reported mIoU values include:
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Model & HLS Burn Scars mIoU (\%) \\
+\midrule
+UNet baseline & 84.51 \\
+Prithvi & 83.62 \\
+CROMA & 82.42 \\
+S12-MAE & 81.91 \\
+S12-DINO & 81.72 \\
+Scale-MAE & 76.68 \\
+RemoteCLIP & 76.59 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+UNet is also among the top two models on six of the eleven datasets in PANGAEA Table 5
+\cite{pangaea}. This is important because ``foundation model'' should not be interpreted as
+``universally superior model.''
+
+A more useful question is whether pretraining helps under specific conditions, especially when labels
+are scarce or the downstream distribution differs from the training geography.
+
+PANGAEA also reports 10\%, 50\% and 100\% label regimes. On HLS Burn Scars, for example,
+SpectralGPT reaches 83.35 mIoU with 10\% of the labels, while UNet reaches 79.46
+\cite{pangaea}. This suggests that the value of pretraining should be studied as a function of
+label availability rather than only at full supervision.
+
+\textbf{Thesis implication.}
+A central comparison should be how performance degrades as the amount of geographically independent
+supervision decreases.
+
+% =================================================
+\section{2. mIoU can hide the behaviour of the target class}
+
+For class \(c\),
+
+\[
+\mathrm{IoU}_c=\frac{TP_c}{TP_c+FP_c+FN_c},
+\]
+
+and
+
+\[
+\mathrm{mIoU}=\frac{1}{C}\sum_{c=1}^{C}\mathrm{IoU}_c.
+\]
+
+For binary segmentation,
+
+\[
+\mathrm{mIoU}=
+\frac{\mathrm{IoU}_{\mathrm{background}}+\mathrm{IoU}_{\mathrm{foreground}}}{2}.
+\]
+
+mIoU is much less sensitive to class imbalance than pixel accuracy because each class receives the
+same weight. However, in applications such as burn-scar or flood mapping, the foreground class is
+usually the scientifically important one. A high and stable background IoU can compress changes in
+foreground performance.
+
+A reported mIoU alone is therefore insufficient to reconstruct the foreground IoU. For binary EO
+segmentation, the thesis should preferably report at least:
+
+\[
+\mathrm{mIoU},\qquad
+\mathrm{IoU}_{\mathrm{foreground}},\qquad
+\mathrm{IoU}_{\mathrm{background}},
+\]
+
+and, where useful, foreground precision, recall and F1/Dice.
+
+% =================================================
+\section{3. Benchmark fairness depends on what information each model can use}
+
+Different GFMs expect different sensors and spectral bands. PANGAEA adapts downstream data to each
+encoder: RGB-pretrained models may use only RGB channels from a multispectral dataset, while missing
+expected bands can be zero-padded \cite{pangaea}. Supervised baselines can instead be trained from
+scratch on all available downstream bands.
+
+Therefore,
+
+\[
+\text{same benchmark dataset} \neq \text{same effective input information}.
+\]
+
+A performance difference may reflect both representation quality and access to different spectral
+information.
+
+For every model--dataset pair, the evaluation should record:
+
+\begin{itemize}
+    \item native or adapted input;
+    \item sensor match with pretraining;
+    \item spectral-band overlap;
+    \item GSD/resolution similarity;
+    \item temporal compatibility;
+    \item required preprocessing or zero-padding.
+\end{itemize}
+
+A useful compatibility taxonomy is:
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}
+                >{\raggedright\arraybackslash}p{9.0cm}}
+\toprule
+Native-compatible & Only ordinary normalization/resizing is required. \\
+Deterministically adaptable & A transparent fixed transformation is required, e.g. band selection. \\
+Substantial adaptation & Missing channels/modalities or major transformations alter the model interface. \\
+Not meaningful & Adaptation is so severe that the result no longer tests the released representation fairly. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% =================================================
+\section{4. Pretraining alignment is different from pretraining exposure}
+
+\textbf{Pretraining--downstream alignment} means that pretraining and downstream data are similar in
+sensor, bands, resolution, geography or acquisition conditions. This can legitimately improve transfer.
+PANGAEA itself notes that Prithvi, pretrained on HLS imagery, performs strongly on HLS Burn Scars
+\cite{pangaea}.
+
+This is not automatically leakage.
+
+\textbf{Pretraining exposure} is a stronger issue: the pretraining corpus may contain the same images,
+locations, dates or near-duplicates as the downstream benchmark,
+
+\[
+D_{\mathrm{pretrain}}\cap D_{\mathrm{benchmark}}\neq\varnothing.
+\]
+
+Even without downstream labels, such exposure can complicate claims about geographic generalization.
+
+For each selected model and benchmark, it would be useful to audit, where possible:
+
+\begin{itemize}
+    \item exact dataset overlap;
+    \item geographic overlap;
+    \item temporal overlap;
+    \item sensor/spectral overlap;
+    \item resolution similarity.
+\end{itemize}
+
+This should be treated as something to verify, not something to assume.
+
+% =================================================
+\section{5. So2Sat LCZ42: why it is interesting for classification}
+
+So2Sat LCZ42 is a 17-class patch-classification benchmark for Local Climate Zones, with 10 built
+classes and seven natural classes. The original benchmark contains 400,673 paired Sentinel-1/Sentinel-2
+samples. Each sample is \(32\times32\) pixels at 10\,m, i.e. approximately \(320\times320\) m
+\cite{so2sat}.
+
+Its labels originate from manually delineated LCZ polygons. A Landsat-8 Random Forest is used during
+annotation to produce a dense LCZ map and flag potentially inconsistent or missing training regions.
+It is best interpreted as an annotation-debugging tool, not as independent ground truth. Final label
+quality is further checked by human review and by a relabeling experiment involving ten remote-sensing
+experts \cite{so2sat}.
+
+The original split trains on 32 main cities plus ten add-on areas and evaluates on ten other cities.
+Validation and test are geographically separated within those same held-out cities
+\cite{so2sat}. This is useful for cross-city evaluation, but validation and test still share city-level
+domains; a stricter protocol could use disjoint training, validation and test cities.
+
+% =================================================
+\section{6. So2Sat is difficult, but not close to random}
+
+An overall accuracy of 50--60\% on So2Sat should not be interpreted like 50\% accuracy in balanced
+binary classification.
+
+For two balanced classes,
+
+\[
+P(\mathrm{correct})=\frac{1}{2}=50\%.
+\]
+
+For 17 equally likely classes,
+
+\[
+P(\mathrm{correct})=\frac{1}{17}\approx5.9\%.
+\]
+
+So historical So2Sat accuracies around 50--60\% are far above uniform random guessing. A majority-class
+baseline should also be reported because the real class distribution is not perfectly balanced.
+
+The dataset is difficult because several LCZ classes are semantically close, human experts themselves
+show non-negligible disagreement, and the benchmark includes geographic transfer to unseen cities.
+
+This difficulty is potentially useful. A benchmark saturated at 98--99\% has little power to distinguish
+models or label-efficiency regimes. Conversely, a benchmark where all models collapse would suffer from
+a floor effect. The useful regime is intermediate: difficult enough to preserve headroom, but not so
+difficult that all models become indistinguishable.
+
+Before fixing So2Sat as the final classification benchmark, modern GFMs should therefore be tested under
+a consistent protocol to verify that it lies in this informative regime.
+
+% =================================================
+\section{7. So2Sat is not natively compatible with every multimodal GFM}
+
+So2Sat supplies eight derived Sentinel-1 channels and ten Sentinel-2 bands \cite{so2sat}. The released
+CROMA implementation expects two Sentinel-1 channels and twelve Sentinel-2 channels \cite{croma}.
+
+Thus So2Sat may be a good classification benchmark while still being non-native for CROMA.
+
+A deterministic adaptation could select the So2Sat SAR channels most closely corresponding to VV/VH
+intensity/backscatter and explicitly handle missing optical bands. Such a result should be labelled as
+an adapted setting rather than native CROMA input.
+
+This motivates a broader rule: a benchmark should not force every model onto every dataset if the required
+adaptation makes the comparison scientifically difficult to interpret.
+
+% =================================================
+\section{8. How to interpret cross-model results}
+
+If
+
+\[
+FM_A > FM_B
+\]
+
+on one benchmark, the safe interpretation is:
+
+\begin{quote}
+Under this sensor, task, domain and adaptation configuration, \(FM_A\) transfers better than \(FM_B\).
+\end{quote}
+
+It does not automatically mean that \(FM_A\) has a better architecture or universally better
+representations.
+
+A useful experimental summary would combine performance with compatibility metadata:
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+ & Classification & Segmentation & Regression & Change detection \\
+\midrule
+CROMA  & ? & ? & ? & ? \\
+DOFA   & ? & ? & ? & ? \\
+Prithvi& ? & ? & ? & ? \\
+Clay   & ? & ? & ? & ? \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For each result, record whether input is native, sensor/bands match pretraining, GSD is similar,
+geographic exposure is known, and adaptation is required.
+
+This contextual information may be more informative than a single global leaderboard.
+
+% =================================================
+\section{9. Current thesis-level questions}
+
+\begin{enumerate}
+    \item Does GFM sample efficiency survive when spatial leakage is removed and training labels are
+    geographically independent?
+
+    \item How much of cross-model performance can be explained by pretraining--downstream alignment?
+
+    \item Are model rankings stable when analysis is restricted to native-compatible model--dataset pairs?
+
+    \item For binary segmentation, do foreground-only metrics change the conclusions obtained from mIoU?
+
+    \item Does geographic OOD performance change when validation and test cities are also disjoint?
+
+    \item Can pretraining exposure be audited well enough to distinguish transfer to unseen geographies
+    from transfer to locations already encountered during pretraining?
+\end{enumerate}
+
+% =================================================
+\section*{Working rule}
+
+The objective should not be only to ask \emph{which GFM is best?}, but rather:
+
+\emph{Under which data, supervision and geographic conditions does each pretrained system transfer well?}
+
+% =================================================
+\begin{thebibliography}{9}
+
+\bibitem{pangaea}
+V. Marsocci et al.,
+\textit{PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models},
+arXiv:2412.04204, 2024.
+\href{https://arxiv.org/abs/2412.04204}{arXiv link}.
+
+\bibitem{so2sat}
+X. X. Zhu et al.,
+\textit{So2Sat LCZ42: A Benchmark Data Set for the Classification of Global Local Climate Zones},
+IEEE Geoscience and Remote Sensing Magazine, 8(3), 76--89, 2020.
+DOI: 10.1109/MGRS.2020.2964708.
+
+\bibitem{croma}
+A. Fuller, K. Millard, and J. R. Green,
+\textit{CROMA: Remote Sensing Representations with Contrastive Radar-Optical Masked Autoencoders},
+NeurIPS, 2023.
+\href{https://github.com/antofuller/CROMA}{Official repository}.
+
+\end{thebibliography}
+
+\end{document}
