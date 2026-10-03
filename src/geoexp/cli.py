@@ -25,7 +25,7 @@ def parser():
         s.add_argument("preset")
         s.add_argument("action" if name == "submit" else "file")
         s.add_argument("overrides", nargs="*")
-        s.add_argument("--device", choices=["auto", "cuda", "mps", "cpu"], default="auto")
+        s.add_argument("--device", choices=["auto", "cuda", "cpu"], default="auto")
     sub.add_parser("stop")
     sub.add_parser("runs")
     s = sub.add_parser("status")

@@ -25,7 +25,7 @@ Research on how geospatial foundation models generalise geographically across se
 - [Benchmark shortlist](reports/shortlist/sources/shortlisted_benchmark_datasets_portrait_cover.tex)
 - [Sen1Floods11 baseline setup](experiments/sen1floods11/README.md)
 - [Experiment and result conventions](experiments/README.md)
-- [Windows/macOS SSH experiment runner](docs/geoexp.md)
+- [Windows SSH experiment runner](docs/geoexp.md)
 - [38 benchmark candidates, v4](reports/benchmarking/sources/eo_benchmark_candidate_table_clean_38_v4.tex)
 - [191 confirmed benchmark datasets, v4](reports/benchmarking/sources/eo_confirmed_benchmark_datasets_191_v4.tex)
 - [595-dataset evidence table, v4](reports/benchmarking/sources/eo_datasets_master_benchmark_fmeval_evidence_portrait_595_v4.tex)
@@ -52,7 +52,7 @@ Five figure assets were already missing from preliminary drafts. Their exact ref
 
 Start notebook kernels from the repository root or a directory inside it. The Sen1Floods11 baseline and literature notebooks locate the root automatically. The baseline uses relative paths without changing the working directory. Remote kernels resolve those paths on the remote host, where the dataset and environment must be installed. Literature plots save to `reports/preliminary/figures/`.
 
-The baseline now lives under `experiments/sen1floods11/`. Its data remains under `datasets/Sen1Floods11/v1.1/`, and its existing checkpoints remain under `experiments/sen1floods11/runs/`. See the [cross-platform experiment runner](docs/geoexp.md) for SSH execution on Windows and macOS. Saved notebook outputs are retained; clear them before publishing if they contain machine-specific information.
+The baseline now lives under `experiments/sen1floods11/`. Its data remains under `datasets/Sen1Floods11/v1.1/`, and its existing checkpoints remain under `experiments/sen1floods11/runs/`. See the [Windows experiment runner](docs/geoexp.md) for asynchronous execution over SSH. Saved notebook outputs are retained; clear them before publishing if they contain machine-specific information.
 
 Use the Python environment appropriate to each experiment; `.venv/` is preserved locally. The paper renamer imports `pymupdf`, `requests`, and `watchdog`; the literature notebook uses `pandas` and `matplotlib`. Model notebooks also require their imported ML packages and model files.
 

@@ -50,10 +50,10 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(DatasetRef("Sen1Floods11", "v1.1").resolve(ROOT), ROOT / "datasets/Sen1Floods11/v1.1")
         self.assertRaises(ValueError, DatasetRef("../secret", "v1").resolve, ROOT)
         self.assertRaises(ValueError, contained, ROOT, "../elsewhere")
-        self.assertEqual(select_device(("mps", "cpu"), ["cpu", "mps"]), "mps")
-        self.assertEqual(select_device(("cuda", "mps"), ["cuda", "mps"]), "cuda")
-        self.assertRaises(ValueError, select_device, ("cuda",), ["mps", "cpu"])
-        self.assertRaises(ValueError, select_device, ("cuda", "cpu"), ["cuda", "cpu"], "mps")
+        self.assertEqual(select_device(("cuda", "cpu"), ["cpu", "cuda"]), "cuda")
+        self.assertEqual(select_device(("cpu",), ["cpu"]), "cpu")
+        self.assertRaises(ValueError, select_device, ("cuda",), ["cpu"])
+        self.assertRaises(ValueError, select_device, ("cuda", "cpu"), ["cuda", "cpu"], "tpu")
 
     def test_checkpoint_compatibility_without_loading_weights(self):
         notebook = json.loads((ROOT / "experiments/sen1floods11/Sen1Floods11_FCNN_Baselines.ipynb").read_text(encoding="utf-8"))
@@ -115,9 +115,11 @@ class ContractTests(unittest.TestCase):
             "if($errors.Count){$errors|ForEach-Object{Write-Error $_}; exit 1}"],
             input=script, text=True, capture_output=True)
         self.assertEqual(result.returncode, 0, result.stderr)
-        agent = hosts.launch_agent(ROOT, state)
-        self.assertEqual(agent["ProgramArguments"][3], "_worker")
-        self.assertEqual(agent["WorkingDirectory"], str(ROOT))
+        with patch("geoexp.hosts.platform.system", return_value="Linux"):
+            self.assertRaises(ValueError, hosts.require_windows)
+        with patch("geoexp.storage.platform.system", return_value="Linux"):
+            from geoexp.storage import host_directory
+            self.assertRaises(ValueError, host_directory)
 
     def test_prepare_requires_lock_and_no_sync_on_submit(self):
         with tempfile.TemporaryDirectory(dir=ROOT / ".geoexp-validation") as directory:
@@ -210,7 +212,7 @@ class WorkerTests(unittest.TestCase):
         self.assertIn("revision", provenance["git"])
         self.assertTrue((first / "metrics.jsonl").exists())
         self.assertRaises(ValueError, self._submit)
-        second_state = Path(self.sandbox.name) / "mac"
+        second_state = Path(self.sandbox.name) / "other_windows_host"
         second_state.mkdir()
         atomic_json(second_state / "host.json", {"repository": str(ROOT)})
         second = self._submit(state=second_state)

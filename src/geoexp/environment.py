@@ -11,7 +11,7 @@ from .storage import atomic_json, digest, read_json, utc_now
 
 
 def uv() -> str:
-    candidate = Path(sys.executable).parent / ("uv.exe" if os.name == "nt" else "uv")
+    candidate = Path(sys.executable).parent / "uv.exe"
     found = str(candidate) if candidate.is_file() else shutil.which("uv")
     if not found:
         raise ValueError("Install uv and put it on PATH before preparing or submitting experiments.")
@@ -19,7 +19,7 @@ def uv() -> str:
 
 
 def python(preset: Path) -> Path:
-    return preset / ".venv" / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
+    return preset / ".venv" / "Scripts/python.exe"
 
 
 def isolated_env(preset: Path) -> dict:
@@ -65,7 +65,7 @@ def select_device(supported: tuple[str, ...], available: list[str], requested: s
         if requested not in supported or requested not in available:
             raise ValueError(f"Device {requested} unavailable: preset supports {supported}, host has {available}")
         return requested
-    for candidate in ("cuda", "mps", "cpu"):
+    for candidate in ("cuda", "cpu"):
         if candidate in supported and candidate in available:
             return candidate
     raise ValueError(f"No supported device: preset supports {supported}, host has {available}")
@@ -82,8 +82,6 @@ if importlib.util.find_spec("torch"):
     if torch.cuda.is_available():
         devices.append("cuda")
         details["gpu"] = torch.cuda.get_device_name(0)
-    if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
-        devices.append("mps")
 details["available_devices"] = devices
 print(json.dumps(details))'''
     result = subprocess.run([str(python(preset)), "-c", code], env=isolated_env(preset),

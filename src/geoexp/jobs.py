@@ -1,8 +1,6 @@
 from __future__ import annotations
 
 import dataclasses
-import os
-import platform
 import subprocess
 import time
 from pathlib import Path
@@ -135,7 +133,7 @@ def work_once(root: Path, state: Path) -> bool:
         if status["state"] != "queued":
             return False
         request = read_json(run / "request.json")
-        out = err = child = inhibitor = None
+        out = err = child = None
         try:
             contained(root, run)
             preset = preset_path(root, request["preset"])
@@ -156,12 +154,8 @@ def work_once(root: Path, state: Path) -> bool:
                        GEOEXP_CONFIG=str(run / "config.json"))
             child = subprocess.Popen(environment.command(root, preset, run), cwd=root, env=env,
                                      stdout=out, stderr=err,
-                                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,
-                                     start_new_session=os.name != "nt")
+                                     creationflags=subprocess.CREATE_NO_WINDOW)
             process = identity(child.pid)
-            if platform.system() == "Darwin":
-                inhibitor = subprocess.Popen(["/usr/bin/caffeinate", "-i", "-s", "-w", str(child.pid)],
-                                             stdout=out, stderr=err)
             transition(run, "running", process=process)
         except Exception as exc:
             if child is not None:
@@ -185,9 +179,6 @@ def work_once(root: Path, state: Path) -> bool:
             if active_run(state) == run:
                 (state / "active.json").unlink(missing_ok=True)
     finally:
-        if inhibitor is not None and inhibitor.poll() is None:
-            inhibitor.terminate()
-            inhibitor.wait()
         out.close()
         err.close()
     return True

@@ -1,10 +1,10 @@
-# Running experiments on Windows and macOS
+# Running experiments asynchronously on Windows
 
-`geoexp` discovers studies in `experiments/<preset>/`. After SSH login, use the same command on either host. Each host runs one job at a time; Windows and Mac queues are independent. Each host needs its own checkout and local data and weights. The Mac user must stay logged into a graphical session for the user LaunchAgent; both hosts must stay awake. Installing the CLI or service does not start training.
+`geoexp` runs a thesis experiment on the Windows workstation after SSH disconnects. It discovers studies in `experiments/<preset>/` and permits one active job. The Windows workstation holds the checkout, datasets, weights and generated results. Installing the CLI or scheduled task does not start training.
 
-## One-time setup on each host
+## Connect by SSH
 
-Setup belongs to the computer that runs the experiment, not the computer you connect from. You can connect to the same Windows workstation from a Mac, another PC, or another SSH client and use its existing installation, datasets and jobs. Use the same remote user account: host services and their state are per user. A different execution host needs its own setup, checkout and data. Changing the connecting computer does not require reinstalling anything on the execution host.
+The connecting computer can be a Mac, Windows PC or any SSH client. Execution always happens on the Windows workstation. Use the same remote Windows account because the scheduled task and job state belong to that user. Changing the computer from which you connect does not require reinstalling anything.
 
 Connect from your local terminal, replacing the placeholders with the execution computer's login and hostname or IP address:
 
@@ -12,14 +12,16 @@ Connect from your local terminal, replacing the placeholders with the execution 
 ssh <remote-user>@<remote-host>
 ```
 
-On the current Windows workstation, enter PowerShell if the SSH session opens another shell, then enter the checkout:
+After connecting, enter PowerShell if SSH opens another shell, then enter the checkout:
 
 ```powershell
 powershell
 cd D:\UNI\THESIS
 ```
 
-On the Mac, enter its own checkout with `cd /path/to/THESIS`. These paths are examples of where you navigate after connecting; the runner discovers the repository from the working directory. SSH access must already be configured on the execution computer.
+SSH access must already be configured on the Windows workstation.
+
+## One-time Windows setup
 
 Install Python 3.11+ and [uv](https://docs.astral.sh/uv/getting-started/installation/). In the checkout, install the CLI into an isolated tool environment:
 
@@ -40,13 +42,13 @@ On the current Windows checkout, uv is also available in the ignored development
 
 Reconnect SSH, return to the checkout, and run `geoexp host migrate` to replace the old Windows task, or `geoexp host install` for a fresh host. The development-tools folder is local and is not included in a fresh Git clone; on other computers, install uv using the linked instructions first.
 
-After moving the checkout, run `uv tool install --force --editable .` from its new location, then `geoexp host install`. Also rerun host installation after changing the CLI's interpreter. On Windows this registers the `GeoExpWorker` scheduled task. It runs under the current interactive user and survives closing SSH or locking the desktop; signing out ends the session. On macOS it installs `org.geoexp.worker` in the user's LaunchAgents and uses `caffeinate` while a job is active. It survives closing SSH while the graphical user remains logged in. If the service does not start, run `geoexp doctor` and inspect the local worker logs in the host state directory it prints.
+After moving the checkout, run `uv tool install --force --editable .` from its new location, then `geoexp host install`. Also rerun host installation after changing the CLI's interpreter. This registers the `GeoExpWorker` Windows scheduled task. It runs under the current interactive user and survives closing SSH or locking the desktop; signing out ends the session. If the service does not start, run `geoexp doctor` and inspect the local worker logs in the host state directory it prints.
 
 To remove the old Windows `Sen1Floods11-Training` task and install the generic worker explicitly, use `geoexp host migrate`. It refuses while the legacy task is running. A checkout or `prepare` does not modify registered OS services.
 
 ## Prepare and submit
 
-After the initial host setup, each new SSH session only needs a connection and `cd` into the checkout before using `geoexp`. Prepare each preset once on that execution host, then repeat preparation when its dependency manifest or lock changes. You do not need to prepare again just because you disconnected or switched your connecting computer.
+After the initial Windows setup, each new SSH session only needs a connection and `cd` into the checkout before using `geoexp`. Prepare each preset once, then repeat preparation when its dependency manifest or lock changes. You do not need to prepare again because you disconnected or switched the computer from which you connect.
 
 Each preset owns `experiment.py`, `pyproject.toml`, and `uv.lock`. After changing dependencies, regenerate the lock intentionally with `uv lock --project experiments/<preset>/`, review it, then commit it. `geoexp prepare <preset>` runs `uv sync --locked` in that preset's `.venv`. It checks the lock and cannot run while a job is active. `submit` requires the prepared lock and environment, then invokes uv with `--offline --frozen --no-sync --no-python-downloads`.
 
@@ -63,7 +65,7 @@ geoexp runs
 geoexp stop
 ```
 
-`geoexp status --follow` streams the most recently submitted job until it finishes; interrupting the display leaves the job running. `geoexp stop` stops the active process tree on the current host. A second submission on that host is rejected while one is active. `geoexp describe <preset>` shows typed defaults, actions, datasets, devices, and protocol. Use `--device cuda|mps|cpu` to request a specific accelerator. The default selects CUDA, MPS, then CPU among devices allowed by the preset. Unsupported hardware is rejected.
+`geoexp status --follow` streams the most recently submitted job until it finishes; interrupting the display leaves the job running. `geoexp stop` stops the active process tree. A second submission is rejected while one is active. `geoexp describe <preset>` shows typed defaults, actions, datasets, devices and protocol. Use `--device cuda|cpu` to request a specific device. The default selects CUDA and then CPU among devices allowed by the preset. Unsupported hardware is rejected.
 
 An exploratory file uses the same prepared environment:
 
@@ -85,7 +87,7 @@ geoexp submit sen1floods11-fcnn train variant=permanent_water
 geoexp submit sen1floods11-fcnn train variant=hand_labeled resume=true
 ```
 
-Valid variants are `hand_labeled`, `s1_weak`, `s2_weak`, and `permanent_water`. `resume=true` and `preflight=true` are notebook defaults. The original notebook remains editable and runnable in Jupyter. Runs of the same variant share the historical checkpoint directory, so never copy another run's checkpoint into it during a job. The adapter writes logs and an executed notebook to its own run directory and copies curated result JSONs into that directory on success. It records the legacy checkpoint path and split CSV hashes. Resuming uses the notebook's existing filename based compatibility for moved Windows/POSIX checkpoint references. The baseline retains its historical unseeded behavior; a `seed` override is unavailable until RNG and data loading behavior are adapted and validated. Its CUDA code does not run on the Mac's MPS device.
+Valid variants are `hand_labeled`, `s1_weak`, `s2_weak`, and `permanent_water`. `resume=true` and `preflight=true` are notebook defaults. The original notebook remains editable and runnable in Jupyter. Runs of the same variant share the historical checkpoint directory, so never copy another run's checkpoint into it during a job. The adapter writes logs and an executed notebook to its own run directory and copies curated result JSONs into that directory on success. It records the legacy checkpoint path and split CSV hashes. Resuming uses the notebook's existing filename based compatibility for moved checkpoint references. The baseline retains its historical unseeded behavior; a `seed` override is unavailable until RNG and data loading behavior are adapted and validated.
 
 ## Records and new presets
 

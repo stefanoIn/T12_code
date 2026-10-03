@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "geoexp"
 version = "0.1.0"
-description = "Local, cross-platform thesis experiment runner"
+description = "Asynchronous Windows thesis experiment runner"
 requires-python = ">=3.11"
 dependencies = ["psutil>=7,<8", "papermill>=2.6,<3", "uv>=0.8,<1"]
 

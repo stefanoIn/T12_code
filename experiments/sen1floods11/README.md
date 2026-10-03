@@ -41,7 +41,7 @@ Start the kernel from the repository root or any directory inside it. The notebo
 
 In remote-connected VS Code, select the kernel on the remote host. Paths refer to that host's filesystem. Choose `EXPERIMENT` in the notebook and run the cells in order. The retained selection is `permanent_water`; the other choices are `hand_labeled`, `s1_weak`, and `s2_weak`.
 
-For SSH execution on Windows or macOS, follow the [geoexp runner setup](../../docs/geoexp.md). The `sen1floods11-fcnn` preset supports CUDA and exposes the four existing variants as validated overrides. For direct headless execution from the repository root, use a kernel installed on the execution host:
+For asynchronous execution over SSH on Windows, follow the [geoexp runner setup](../../docs/geoexp.md). The `sen1floods11-fcnn` preset supports CUDA and exposes the four existing variants as validated overrides. For direct headless execution from the repository root, use a kernel installed on the execution host:
 
 ```text
 jupyter nbconvert --to notebook --execute experiments/sen1floods11/Sen1Floods11_FCNN_Baselines.ipynb --output Sen1Floods11_executed --output-dir experiments/sen1floods11/runs/headless/executed --ExecutePreprocessor.kernel_name=thesis-d-cuda --ExecutePreprocessor.timeout=-1

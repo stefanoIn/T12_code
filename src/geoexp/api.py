@@ -110,5 +110,5 @@ class ExperimentSpec:
             raise ValueError("Provide at least one callable action")
         for action in self.actions:
             component(action)
-        if not self.supported_devices or set(self.supported_devices) - {"cuda", "mps", "cpu"}:
-            raise ValueError("supported_devices must contain cuda, mps and/or cpu")
+        if not self.supported_devices or set(self.supported_devices) - {"cuda", "cpu"}:
+            raise ValueError("supported_devices must contain cuda and/or cpu")

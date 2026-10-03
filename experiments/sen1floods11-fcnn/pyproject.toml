@@ -10,7 +10,7 @@ dependencies = [
 
 [tool.uv]
 package = false
-environments = ["sys_platform == 'win32' and platform_machine == 'AMD64'", "sys_platform == 'linux' and platform_machine == 'x86_64'"]
+environments = ["sys_platform == 'win32' and platform_machine == 'AMD64'"]
 
 [tool.uv.sources]
 geoexp = { path = "../..", editable = true }

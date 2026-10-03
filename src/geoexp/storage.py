@@ -51,12 +51,12 @@ def digest(path: Path) -> str:
 
 
 def host_directory() -> Path:
+    if platform.system() != "Windows":
+        raise ValueError("geoexp host execution is supported on Windows only.")
     # Override is useful for isolated development/tests. Services inherit an explicit path.
     if os.environ.get("GEOEXP_STATE_DIR"):
         return Path(os.environ["GEOEXP_STATE_DIR"]).expanduser().resolve()
-    if platform.system() == "Windows":
-        return Path(os.environ["LOCALAPPDATA"]) / "GeoExp"
-    return Path.home() / "Library" / "Application Support" / "GeoExp"
+    return Path(os.environ["LOCALAPPDATA"]) / "GeoExp"
 
 
 @contextlib.contextmanager

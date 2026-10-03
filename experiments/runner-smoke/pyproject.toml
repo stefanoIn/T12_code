@@ -6,6 +6,7 @@ dependencies = ["geoexp", "ipykernel>=6.29,<8"]
 
 [tool.uv]
 package = false
+environments = ["sys_platform == 'win32' and platform_machine == 'AMD64'"]
 
 [tool.uv.sources]
 geoexp = { path = "../..", editable = true }
