@@ -1,0 +1,11 @@
+﻿{
+    "status":  "failed",
+    "started_at":  "2026-10-02T19:14:21.1816657+02:00",
+    "notebook":  "D:\\UNI\\THESIS\\datasets\\Sen1Floods11_FCNN_Baselines_PW.ipynb",
+    "stdout_log":  "D:\\UNI\\THESIS\\Sen1Floods11_runs\\headless\\logs\\training_20261002_191421.out.log",
+    "stderr_log":  "D:\\UNI\\THESIS\\Sen1Floods11_runs\\headless\\logs\\training_20261002_191421.err.log",
+    "executed_notebook":  "D:\\UNI\\THESIS\\Sen1Floods11_runs\\headless\\executed\\Sen1Floods11_executed_20261002_191421.ipynb",
+    "child_pid":  804,
+    "exit_code":  null,
+    "finished_at":  "2026-10-02T19:17:10.2970719+02:00"
+}

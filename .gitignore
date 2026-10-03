@@ -53,3 +53,11 @@ CROMA
 *.synctex.gz
 *.toc
 /build/
+
+/Sen1Floods11_runs/checkpoints/
+
+/sen1floods11_runs/headless
+
+/datasets/Main_Training_Stuff.ipynb
+/datasets/Test_Models.ipynb
+/datasets/Test_original.ipynb
