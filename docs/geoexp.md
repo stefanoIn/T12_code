@@ -4,6 +4,23 @@
 
 ## One-time setup on each host
 
+Setup belongs to the computer that runs the experiment, not the computer you connect from. You can connect to the same Windows workstation from a Mac, another PC, or another SSH client and use its existing installation, datasets and jobs. Use the same remote user account: host services and their state are per user. A different execution host needs its own setup, checkout and data. Changing the connecting computer does not require reinstalling anything on the execution host.
+
+Connect from your local terminal, replacing the placeholders with the execution computer's login and hostname or IP address:
+
+```text
+ssh <remote-user>@<remote-host>
+```
+
+On the current Windows workstation, enter PowerShell if the SSH session opens another shell, then enter the checkout:
+
+```powershell
+powershell
+cd D:\UNI\THESIS
+```
+
+On the Mac, enter its own checkout with `cd /path/to/THESIS`. These paths are examples of where you navigate after connecting; the runner discovers the repository from the working directory. SSH access must already be configured on the execution computer.
+
 Install Python 3.11+ and [uv](https://docs.astral.sh/uv/getting-started/installation/). In the checkout, install the CLI into an isolated tool environment:
 
 ```text
@@ -12,11 +29,24 @@ geoexp list
 geoexp host install
 ```
 
+If `geoexp` is not found after installation, run `uv tool update-shell`, reconnect SSH, and return to the repository.
+
+On the current Windows checkout, uv is also available in the ignored development-tools folder created during validation. You can use it for the initial installation:
+
+```powershell
+.\.geoexp-devtools\bin\uv.exe tool install --editable . --python 3.12
+.\.geoexp-devtools\bin\uv.exe tool update-shell
+```
+
+Reconnect SSH, return to the checkout, and run `geoexp host migrate` to replace the old Windows task, or `geoexp host install` for a fresh host. The development-tools folder is local and is not included in a fresh Git clone; on other computers, install uv using the linked instructions first.
+
 After moving the checkout, run `uv tool install --force --editable .` from its new location, then `geoexp host install`. Also rerun host installation after changing the CLI's interpreter. On Windows this registers the `GeoExpWorker` scheduled task. It runs under the current interactive user and survives closing SSH or locking the desktop; signing out ends the session. On macOS it installs `org.geoexp.worker` in the user's LaunchAgents and uses `caffeinate` while a job is active. It survives closing SSH while the graphical user remains logged in. If the service does not start, run `geoexp doctor` and inspect the local worker logs in the host state directory it prints.
 
 To remove the old Windows `Sen1Floods11-Training` task and install the generic worker explicitly, use `geoexp host migrate`. It refuses while the legacy task is running. A checkout or `prepare` does not modify registered OS services.
 
 ## Prepare and submit
+
+After the initial host setup, each new SSH session only needs a connection and `cd` into the checkout before using `geoexp`. Prepare each preset once on that execution host, then repeat preparation when its dependency manifest or lock changes. You do not need to prepare again just because you disconnected or switched your connecting computer.
 
 Each preset owns `experiment.py`, `pyproject.toml`, and `uv.lock`. After changing dependencies, regenerate the lock intentionally with `uv lock --project experiments/<preset>/`, review it, then commit it. `geoexp prepare <preset>` runs `uv sync --locked` in that preset's `.venv`. It checks the lock and cannot run while a job is active. `submit` requires the prepared lock and environment, then invokes uv with `--offline --frozen --no-sync --no-python-downloads`.
 
