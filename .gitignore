@@ -4,6 +4,11 @@ venv/
 env/
 
 # Python cache
+/.geoexp-devtools/
+/.geoexp-test-state/
+/.geoexp-validation/
+*.egg-info/
+dist/
 __pycache__/
 *.py[cod]
 
@@ -21,6 +26,7 @@ __pycache__/
 *.pt
 *.pth
 *.ckpt
+*.cp
 
 # Large datasets
 /data/
@@ -34,10 +40,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# Local upstream checkout (keep notebooks outside it)
-/CROMA/CROMA/
-CROMA
 
 # LaTeX build intermediates; keep source PDFs and report exports
 *.aux
@@ -54,9 +56,27 @@ CROMA
 *.toc
 /build/
 
-/Sen1Floods11_runs/checkpoints/
 
-/sen1floods11_runs/headless
+/remote_training/training.pid
+/remote_training/training_state.json
+/remote_training/gpu_test.txt
+/Sen1Floods11_remote_training_control.zip
+
+# Per-preset uv environments and generated jobs
+/experiments/*/.venv/
+/experiments/*/runs/jobs/
+
+# Generated artifacts stay beside each study and are ignored by default.
+/experiments/*/runs/
+# Publish only the baseline's curated metric/history JSONs.
+!/experiments/sen1floods11/runs/
+/experiments/sen1floods11/runs/*
+!/experiments/sen1floods11/runs/results/
+/experiments/sen1floods11/runs/results/*
+!/experiments/sen1floods11/runs/results/*/
+/experiments/sen1floods11/runs/results/*/*
+!/experiments/sen1floods11/runs/results/*/common_test_results.json
+!/experiments/sen1floods11/runs/results/*/training_history.json
 
 /datasets/Main_Training_Stuff.ipynb
 /datasets/Test_Models.ipynb

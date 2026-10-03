@@ -1,6 +1,6 @@
 # Earth observation thesis
 
-Research papers, benchmark inventories, report drafts, and exploratory notebooks for the thesis on Earth observation foundation models.
+Research on how geospatial foundation models generalise geographically across several datasets. The thesis focuses on reproducible model comparisons, explicit geographic splits, and reliable evaluation protocols. Sen1Floods11 FCN training is one baseline experiment in this broader programme.
 
 ## Where things live
 
@@ -12,14 +12,20 @@ Research papers, benchmark inventories, report drafts, and exploratory notebooks
 | [literature/papers](literature/papers) | Foundation model, survey, and benchmark papers |
 | [literature/datasets](literature/datasets) | Dataset papers, including the single retained GEO-Bench paper |
 | [notes](notes) | Benchmarking research notes and paper recaps |
-| [notebooks](notebooks) | CROMA, TorchGeo, and literature plotting experiments |
+| [experiments](experiments) | Study-specific code, setup instructions, and experiment conventions |
+| [notebooks](notebooks) | TorchGeo exploration and literature plotting |
 | [scripts](scripts) | PDF renamer and local reference checker |
 | [docs](docs) | Reorganization record and known missing assets |
-| `CROMA/CROMA/` | Existing nested upstream checkout and local model files |
+| `datasets/` | Local downloaded data and historical notebooks; ignored by Git |
+| `experiments/sen1floods11/runs/` | Existing baseline artifacts; selected metric/history JSONs are tracked |
+| `experiments/<study>/runs/` | Generated artifacts alongside each study; ignored by default |
 
 ## Starting points
 
 - [Benchmark shortlist](reports/shortlist/sources/shortlisted_benchmark_datasets_portrait_cover.tex)
+- [Sen1Floods11 baseline setup](experiments/sen1floods11/README.md)
+- [Experiment and result conventions](experiments/README.md)
+- [Windows/macOS SSH experiment runner](docs/geoexp.md)
 - [38 benchmark candidates, v4](reports/benchmarking/sources/eo_benchmark_candidate_table_clean_38_v4.tex)
 - [191 confirmed benchmark datasets, v4](reports/benchmarking/sources/eo_confirmed_benchmark_datasets_191_v4.tex)
 - [595-dataset evidence table, v4](reports/benchmarking/sources/eo_datasets_master_benchmark_fmeval_evidence_portrait_595_v4.tex)
@@ -44,13 +50,9 @@ Five figure assets were already missing from preliminary drafts. Their exact ref
 
 ## Notebooks and scripts
 
-Open notebooks from the repository root or any directory inside it. The CROMA and literature notebooks locate the root automatically. Literature plots save to `reports/preliminary/figures/`. Modified notebook outputs were cleared to remove stale paths and results.
+Start notebook kernels from the repository root or a directory inside it. The Sen1Floods11 baseline and literature notebooks locate the root automatically. The baseline uses relative paths without changing the working directory. Remote kernels resolve those paths on the remote host, where the dataset and environment must be installed. Literature plots save to `reports/preliminary/figures/`.
 
-The CROMA notebook uses `CROMA/CROMA/use_croma.py` and the existing checkpoint directory. The nested checkout was preserved in place. It is recorded as a gitlink in the parent repository but has no `.gitmodules` entry, so a fresh clone does not automatically populate it. If absent, clone the upstream project into that exact location:
-
-```powershell
-git clone https://github.com/antofuller/CROMA.git CROMA/CROMA
-```
+The baseline now lives under `experiments/sen1floods11/`. Its data remains under `datasets/Sen1Floods11/v1.1/`, and its existing checkpoints remain under `experiments/sen1floods11/runs/`. See the [cross-platform experiment runner](docs/geoexp.md) for SSH execution on Windows and macOS. Saved notebook outputs are retained; clear them before publishing if they contain machine-specific information.
 
 Use the Python environment appropriate to each experiment; `.venv/` is preserved locally. The paper renamer imports `pymupdf`, `requests`, and `watchdog`; the literature notebook uses `pandas` and `matplotlib`. Model notebooks also require their imported ML packages and model files.
 
@@ -69,7 +71,7 @@ python scripts/check_references.py
 python scripts/check_references.py --strict
 ```
 
-The offline checker validates local Markdown links, LaTeX figure/input references (including filename case), Python syntax, and notebook code syntax. The default command fails on newly broken references or syntax errors and reports the documented missing assets. `--strict` fails on any missing asset. It does not validate remote URLs, execute notebooks, or compile LaTeX.
+The offline checker validates local Markdown links, LaTeX figure/input references (including filename case), Python syntax, and notebook code syntax, including experiment notebooks and IPython commands such as `%pip`. It requires IPython when notebooks contain IPython syntax. The default command fails on undocumented broken references or syntax errors and reports the documented missing assets. `--strict` fails on any missing asset. It does not validate remote URLs, execute notebooks, or compile LaTeX.
 
 Keep downloaded datasets under root `data/` or `datasets/`, which are ignored. Literature PDFs under `literature/datasets/` are tracked. Put new report material in its topic folder, and retain distinct versions until their contents have been reviewed.
 

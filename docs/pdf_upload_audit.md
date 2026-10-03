@@ -106,7 +106,7 @@ These are not classified as third-party papers. Their appearance in your project
 | [38_candidates](../reports/shortlist/intermediate/38_candidates.pdf) | Appears to be a project-authored report/table, recap, or locally generated figure based on its title, author line, metadata and repository context. This is an inference, not a verified copyright ownership claim. |
 | [595](../reports/shortlist/intermediate/595.pdf) | Appears to be a project-authored report/table, recap, or locally generated figure based on its title, author line, metadata and repository context. This is an inference, not a verified copyright ownership claim. |
 | [NoOneKnowsRecap](../notes/literature/NoOneKnowsRecap.pdf) | Appears to be a project-authored report/table, recap, or locally generated figure based on its title, author line, metadata and repository context. This is an inference, not a verified copyright ownership claim. |
-| [SAR_encoder](../notebooks/croma/figures/SAR_encoder.pdf) | Appears to be a project-authored report/table, recap, or locally generated figure based on its title, author line, metadata and repository context. This is an inference, not a verified copyright ownership claim. Model architecture diagram consistent with the local CROMA notebook. |
+| SAR_encoder (removed with CROMA on 2026-10-03) | Historical audit entry for the former `notebooks/croma/figures/SAR_encoder.pdf`. Appeared to be a locally generated model architecture diagram consistent with the former CROMA notebook. The file and notebook were subsequently removed at the user's request. |
 
 ## Audit files and limits
 

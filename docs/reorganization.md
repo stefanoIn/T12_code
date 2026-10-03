@@ -1,5 +1,7 @@
 # Repository reorganization
 
+This document retains earlier migration history. See the final section for the current experiment layout and the subsequent removal of CROMA.
+
 ## Layout changes
 
 | Previous location | New location |
@@ -54,3 +56,30 @@ These account for 15 source/target pairs in [missing_assets.json](missing_assets
 - Full notebook workloads and LaTeX builds were not run. Static reference validation does not establish that every historical draft compiles.
 
 After its move and initial hash verification, `reports/benchmarking/figures/Bini_benchmarks.png` disappeared in a separate change. This possible concurrent deletion was preserved rather than reverted. The original bytes are recoverable from `HEAD:Bini_benchmarks.png`, and their Git hash was checked against the manifest. No document references this image.
+
+## Experiment portability update — 2026-10-03
+
+- Moved the active Sen1Floods11 baseline from the ignored dataset folder to [experiments/sen1floods11](../experiments/sen1floods11/README.md). Updated the launcher and current instructions together. The notebook locates the repository using README.md and scripts/check_references.py and keeps relative filesystem paths without changing its working directory.
+- Kept datasets/v1.1 and Sen1Floods11_runs in place. Preserved training settings, computation, notebook outputs, and existing checkpoint files. New resume checkpoints use best-model filenames; old Windows/POSIX references resolve within the experiment checkpoint directory.
+- Made Windows control scripts derive the project root from their script location. Registered scheduled tasks were not changed. Task setup must be rerun after moving the repository.
+- Kept selected metric/history JSONs tracked. Added exclusions for machine metadata, runtime state, diagnostic output, checkpoints, executed notebooks and ZIP bundles; removed tracked generated artifacts from the index while retaining local files. Git history was not rewritten.
+- Removed the CROMA notebook, diagram, local checkout and downloaded weights at the user's explicit request. Earlier descriptions of CROMA in this historical record describe the prior layout, not the current repository.
+- Added experiment/setup documentation and extended the static checker to experiment code, notebook Markdown links, and IPython syntax. The pre-existing PDF-audit link to the absent Corley _3.pdf and the 15 documented references to five missing figures remain separate baseline issues.
+
+Future studies follow the [experiment conventions](../experiments/README.md). No shared benchmarking framework or new training protocol was introduced.
+
+## Dataset and run folder follow-up ? 2026-10-03
+
+Moved `datasets/v1.1/` to `datasets/Sen1Floods11/v1.1/` and `Sen1Floods11_runs/` to `experiments/sen1floods11/runs/`. The earlier sections describe the layout at the time of those migrations.
+
+Updated the active baseline, local legacy notebook path strings, launcher, status script, setup instructions, and Git exclusions. Dataset versions now live under their dataset name; generated runs live alongside their study code. The baseline's eight metric/history JSONs remain tracked in their new location. Existing run artifacts and saved outputs retain their historical contents. Resume loading resolves legacy best-model references by filename in the new checkpoint directory.
+
+Generated runs are excluded from source/reference checking. Training was not launched, and registered scheduled tasks were not changed.
+
+## Cross-platform experiment runner follow-up — 2026-10-03
+
+Added the `geoexp` Python CLI and native Windows Task Scheduler/macOS LaunchAgent adapters. Named presets now live under `experiments/<preset>/` with their own environment manifests. The CUDA-only `sen1floods11-fcnn` preset wraps the preserved baseline notebook; the CPU `runner-smoke` preset exercises scheduling and tracking. Notebook execution uses an isolated Papermill kernel and writes executed copies into per-run folders. The old Sen1-specific PowerShell controls were removed from source. Registered tasks and LaunchAgents were not changed; migration is an explicit `geoexp host migrate` command.
+
+The baseline notebook's install cell became a Papermill parameters cell. The existing variant selection, resume behavior, training computation, checkpoints, and saved outputs are otherwise retained. Its legacy best-checkpoint references still resolve by filename in the current checkpoint directory. The new job records capture environment, source and split identity without moving existing results.
+
+Automatic approval review initially rejected installing isolated test tools under the prior dependency-installation restriction. After the user directed continued implementation, uv and Papermill were installed only into an ignored development-tools folder. Genuine `uv.lock` files were generated and checked for both presets. The CPU smoke preset was prepared in its own `.venv`; real Python and Papermill notebook jobs completed, including expected failures. Twelve behavioral tests passed, including the live process stop test; future live tests are opt-in. The CUDA baseline environment, actual Windows scheduled task and Mac LaunchAgent were not installed or launched during this migration. The reference checker still reports the pre-existing Corley PDF-audit link and five documented missing figures.

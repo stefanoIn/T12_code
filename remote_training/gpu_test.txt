@@ -1,4 +1,0 @@
-Torch: 2.14.0+cu130
-CUDA runtime: 13.0
-CUDA available: True
-GPU: NVIDIA GeForce RTX 3070
