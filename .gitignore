@@ -7,6 +7,7 @@ env/
 /.geoexp-devtools/
 /.geoexp-test-state/
 /.geoexp-validation/
+/runtime/.geoexp-validation/
 *.egg-info/
 dist/
 __pycache__/
@@ -31,6 +32,8 @@ __pycache__/
 # Large datasets
 /data/
 /datasets/
+/runtime/data/
+/runtime/datasets/
 
 # Temporary files
 *.tmp
@@ -57,27 +60,25 @@ desktop.ini
 /build/
 
 
-/remote_training/training.pid
-/remote_training/training_state.json
-/remote_training/gpu_test.txt
+/runtime/legacy_remote_training/
 /Sen1Floods11_remote_training_control.zip
 
 # Per-preset uv environments and generated jobs
-/experiments/*/.venv/
-/experiments/*/runs/jobs/
+/runtime/experiments/*/.venv/
+/runtime/experiments/*/runs/jobs/
 
 # Generated artifacts stay beside each study and are ignored by default.
-/experiments/*/runs/
+/runtime/experiments/*/runs/
 # Publish only the baseline's curated metric/history JSONs.
-!/experiments/sen1floods11/runs/
-/experiments/sen1floods11/runs/*
-!/experiments/sen1floods11/runs/results/
-/experiments/sen1floods11/runs/results/*
-!/experiments/sen1floods11/runs/results/*/
-/experiments/sen1floods11/runs/results/*/*
-!/experiments/sen1floods11/runs/results/*/common_test_results.json
-!/experiments/sen1floods11/runs/results/*/training_history.json
+!/runtime/experiments/sen1floods11/runs/
+/runtime/experiments/sen1floods11/runs/*
+!/runtime/experiments/sen1floods11/runs/results/
+/runtime/experiments/sen1floods11/runs/results/*
+!/runtime/experiments/sen1floods11/runs/results/*/
+/runtime/experiments/sen1floods11/runs/results/*/*
+!/runtime/experiments/sen1floods11/runs/results/*/common_test_results.json
+!/runtime/experiments/sen1floods11/runs/results/*/training_history.json
 
-/datasets/Main_Training_Stuff.ipynb
-/datasets/Test_Models.ipynb
-/datasets/Test_original.ipynb
+/runtime/datasets/Main_Training_Stuff.ipynb
+/runtime/datasets/Test_Models.ipynb
+/runtime/datasets/Test_original.ipynb

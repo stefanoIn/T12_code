@@ -1,10 +1,10 @@
 # Thesis experiments
 
-The thesis compares geospatial foundation models across several datasets, with an emphasis on geographic generalisation and reproducible benchmarking. Each study belongs in `experiments/<study>/` and contains its code, configuration, and setup instructions. Exploratory notebooks can remain under `notebooks/`.
+The thesis compares geospatial foundation models across several datasets, with an emphasis on geographic generalisation and reproducible benchmarking. All paths below are relative to `runtime/`. Each study belongs in `experiments/<study>/` and contains its code, configuration, and setup instructions. Keep exploratory experiment notebooks with their study; literature plotting lives in `research/notebooks/` at the checkout root.
 
 The current [Sen1Floods11 FCN baseline](sen1floods11/README.md) reproduces an existing training procedure. Its original training settings are preserved; it does not yet implement a shared GeoFM benchmarking protocol.
 
-The Windows [geoexp runner](../docs/geoexp.md) discovers named presets in `experiments/<preset>/`. Each preset declares actions and typed settings in `experiment.py` and maintains its own uv project and lockfile. The [runner smoke preset](runner-smoke/experiment.py) is a small CPU example. The CUDA-only [Sen1Floods11 runner preset](sen1floods11-fcnn/experiment.py) wraps the preserved notebook and its existing result directories.
+The Windows [geoexp runner](../../docs/geoexp.md) discovers named presets in `experiments/<preset>/`. Each preset declares actions and typed settings in `experiment.py` and maintains its own uv project and lockfile. The [runner smoke preset](runner-smoke/experiment.py) is a small CPU example. The CUDA-only [Sen1Floods11 runner preset](sen1floods11-fcnn/experiment.py) wraps the preserved notebook and its existing result directories.
 
 ## Data, runs, and publication
 

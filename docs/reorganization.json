@@ -833,5 +833,82 @@
     "new_path": "notebooks/croma/figures/SAR_encoder.pdf",
     "action": "moved",
     "sha256": "22ef51286153326b882f5433176d7630064ea5ff933dd69b606c8ce99346262a"
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "literature",
+    "new_path": "research/literature",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "reports",
+    "new_path": "research/reports",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "notes",
+    "new_path": "research/notes",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "notebooks",
+    "new_path": "research/notebooks",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "experiments",
+    "new_path": "runtime/experiments",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "datasets",
+    "new_path": "runtime/datasets",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "scripts",
+    "new_path": "runtime/scripts",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "src",
+    "new_path": "runtime/src",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "tests",
+    "new_path": "runtime/tests",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "pyproject.toml",
+    "new_path": "runtime/pyproject.toml",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
+  },
+  {
+    "date": "2026-10-04",
+    "old_path": "remote_training",
+    "new_path": "runtime/legacy_remote_training",
+    "action": "moved",
+    "note": "Research/runtime separation; existing local contents retained."
   }
 ]

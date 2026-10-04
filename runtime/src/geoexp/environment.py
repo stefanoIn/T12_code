@@ -42,8 +42,13 @@ def prepare(root: Path, preset: Path) -> None:
     if not (preset / "uv.lock").is_file():
         raise ValueError(f"{preset.name} has no uv.lock. Generate and review one with uv lock --project {preset}.")
     marker = preset / ".venv" / "geoexp-prepared.json"
+    # A moved environment may retain an editable import pointing at the old src/.
+    moved = marker.is_file() and read_json(marker).get("python") != str(python(preset).resolve())
     marker.unlink(missing_ok=True)
-    subprocess.run([uv(), "sync", "--locked", "--project", str(preset)],
+    command = [uv(), "sync", "--locked", "--project", str(preset)]
+    if moved:
+        command += ["--reinstall-package", "geoexp"]
+    subprocess.run(command,
                    env=isolated_env(preset), check=True)
     atomic_json(marker, {**fingerprint(root, preset), "prepared_at": utc_now(),
                          "python": str(python(preset).resolve())})

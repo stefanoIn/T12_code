@@ -8,10 +8,11 @@ from .api import ExperimentSpec, component, contained
 
 
 def repository(start: Path | None = None) -> Path:
+    """Find the runnable project from anywhere inside the thesis checkout."""
     start = (start or Path.cwd()).resolve()
     for path in (start, *start.parents):
-        if (path / "README.md").is_file() and (path / "scripts/check_references.py").is_file():
-            return path
+        if (path / "README.md").is_file() and (path / "runtime/scripts/check_references.py").is_file():
+            return path / "runtime"
     raise ValueError("Start geoexp from the repository root or a directory inside it.")
 
 

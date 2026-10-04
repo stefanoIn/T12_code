@@ -16,13 +16,13 @@ Examples:
 USAGE
 -----
 Watch Downloads continuously:
-    python scripts/paper_renamer.py
+    python runtime/scripts/paper_renamer.py
 
 Batch-preview a folder:
-    python scripts/paper_renamer.py --folder "literature/datasets" --dry-run
+    python runtime/scripts/paper_renamer.py --folder "research/literature/datasets" --dry-run
 
 Apply batch rename:
-    python scripts/paper_renamer.py --folder "literature/datasets"
+    python runtime/scripts/paper_renamer.py --folder "research/literature/datasets"
 
 Dataset mode is automatically enabled for a folder named "Datasets".
 You can force it elsewhere with --dataset-mode.
@@ -74,7 +74,7 @@ from watchdog.observers import Observer
 # =============================================================================
 
 DEFAULT_DOWNLOADS = Path.home() / "Downloads"
-DEFAULT_DESTINATION = Path(__file__).resolve().parents[1] / "literature" / "papers"
+DEFAULT_DESTINATION = Path(__file__).resolve().parents[2] / "research" / "literature" / "papers"
 
 MAX_TITLE_WORDS = 9
 MAX_FILENAME_LENGTH = 180

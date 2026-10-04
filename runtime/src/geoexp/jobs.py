@@ -41,8 +41,9 @@ def reconcile(state: Path) -> Path | None:
 
 
 def git_info(root: Path) -> dict:
+    checkout = root.parent if root.name == "runtime" else root
     def call(*args):
-        result = subprocess.run(["git", "-c", f"safe.directory={root.as_posix()}", "-C", str(root), *args],
+        result = subprocess.run(["git", "-c", f"safe.directory={checkout.as_posix()}", "-C", str(root), *args],
                                 capture_output=True, text=True, check=True)
         return result.stdout.strip()
     try:
@@ -61,7 +62,7 @@ def submit(root: Path, state: Path, name: str, action: str, overrides: list[str]
     source = None
     if file is not None:
         if Path(file).is_absolute():
-            raise ValueError("submit-file requires a repository-relative path")
+            raise ValueError("submit-file requires a path relative to runtime/")
         source = contained(root, file)
         if not source.is_file() or source.suffix not in {".py", ".ipynb"}:
             raise ValueError("submit-file requires an existing .py or .ipynb file")

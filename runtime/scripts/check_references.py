@@ -13,7 +13,7 @@ import re
 from pathlib import Path
 from urllib.parse import unquote
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TEX_LINK = re.compile(
     r"\\(?:includegraphics\*?(?:\s*\[[^\]]*\])?|input|include|addbibresource|bibliography)"
     r"\s*\{([^{}]+)\}", re.DOTALL
@@ -42,7 +42,8 @@ def source_files(folder: str, suffixes: set[str]):
     """Walk maintained sources, excluding generated run copies and caches."""
     for directory, subdirs, filenames in os.walk(ROOT / folder):
         subdirs[:] = [name for name in subdirs if name not in
-                      {'runs', '.git', '.venv', '__pycache__', '.ipynb_checkpoints'}]
+                      {'runs', 'datasets', '.git', '.venv', '__pycache__', '.ipynb_checkpoints',
+                       '.geoexp-validation', 'legacy_remote_training'}]
         for name in filenames:
             path = Path(directory) / name
             if path.suffix in suffixes:
@@ -53,7 +54,7 @@ def missing_references() -> tuple[set[tuple[str, str]], int]:
     missing = set()
     checked = 0
     documents = [ROOT / 'README.md']
-    for folder in ('reports', 'notes', 'docs', 'experiments', 'notebooks'):
+    for folder in ('research', 'docs', 'runtime'):
         documents.extend(source_files(folder, {'.tex', '.md', '.ipynb'}))
     for path in documents:
         if not path.exists():
@@ -113,7 +114,7 @@ def main() -> int:
     missing, checked = missing_references()
     errors = []
     count = 0
-    python_files = [p for folder in ('scripts', 'src', 'tests', 'experiments')
+    python_files = [p for folder in ('runtime/scripts', 'runtime/src', 'runtime/tests', 'runtime/experiments')
                     for p in source_files(folder, {'.py'})]
     for path in sorted(python_files):
         try:
@@ -121,7 +122,7 @@ def main() -> int:
         except SyntaxError as exc:
             errors.append(str(exc))
         count += 1
-    notebooks = [p for folder in ('notebooks', 'experiments')
+    notebooks = [p for folder in ('research/notebooks', 'runtime/experiments')
                  for p in source_files(folder, {'.ipynb'})]
     for path in sorted(notebooks):
         try:

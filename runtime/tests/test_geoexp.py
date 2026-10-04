@@ -31,6 +31,9 @@ class ContractTests(unittest.TestCase):
         (ROOT / ".geoexp-validation").mkdir(exist_ok=True)
 
     def test_discovery_and_typed_overrides(self):
+        self.assertEqual(repository(ROOT.parent), ROOT)
+        self.assertEqual(repository(ROOT.parent / "research/notebooks/literature"), ROOT)
+        self.assertEqual(repository(ROOT), ROOT)
         self.assertEqual(repository(ROOT / "experiments/runner-smoke"), ROOT)
         self.assertEqual(repository(ROOT / "datasets/Sen1Floods11/v1.1"), ROOT)
         self.assertRaises(ValueError, repository, Path(Path(__file__).resolve().anchor))
@@ -54,6 +57,22 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(select_device(("cpu",), ["cpu"]), "cpu")
         self.assertRaises(ValueError, select_device, ("cuda",), ["cpu"])
         self.assertRaises(ValueError, select_device, ("cuda", "cpu"), ["cuda", "cpu"], "tpu")
+
+    def test_notebook_paths_after_layout_move(self):
+        notebook = json.loads((ROOT / "experiments/sen1floods11/Sen1Floods11_FCNN_Baselines.ipynb").read_text(encoding="utf-8"))
+        setup = "".join(notebook["cells"][4]["source"]).split("for p in (CHECKPOINT_ROOT,")[0]
+        original = Path.cwd()
+        try:
+            for directory in (ROOT.parent, ROOT, ROOT / "experiments/sen1floods11", ROOT.parent / "research/notes"):
+                os.chdir(directory)
+                namespace = {"Path": Path, "os": os}
+                exec(setup, namespace)
+                self.assertEqual(Path.cwd(), directory)
+                self.assertFalse(namespace["PROJECT_PATH"].is_absolute())
+                self.assertEqual(namespace["DATASET_ROOT"].resolve(), ROOT / "datasets/Sen1Floods11/v1.1")
+                self.assertEqual(namespace["OUTPUT_ROOT"].resolve(), ROOT / "experiments/sen1floods11/runs")
+        finally:
+            os.chdir(original)
 
     def test_checkpoint_compatibility_without_loading_weights(self):
         notebook = json.loads((ROOT / "experiments/sen1floods11/Sen1Floods11_FCNN_Baselines.ipynb").read_text(encoding="utf-8"))
@@ -136,6 +155,15 @@ class ContractTests(unittest.TestCase):
                 with patch("geoexp.environment.subprocess.run") as run:
                     environment.prepare(ROOT, preset)
                     self.assertIn("--locked", run.call_args.args[0])
+                environment.ensure_prepared(ROOT, preset)
+                marker = preset / ".venv/geoexp-prepared.json"
+                record = read_json(marker)
+                record["python"] = "old/location/python.exe"
+                atomic_json(marker, record)
+                self.assertRaises(ValueError, environment.ensure_prepared, ROOT, preset)
+                with patch("geoexp.environment.subprocess.run") as run:
+                    environment.prepare(ROOT, preset)
+                    self.assertIn("--reinstall-package", run.call_args.args[0])
                 environment.ensure_prepared(ROOT, preset)
                 (preset / "pyproject.toml").write_text("changed", encoding="utf-8")
                 self.assertRaises(ValueError, environment.ensure_prepared, ROOT, preset)

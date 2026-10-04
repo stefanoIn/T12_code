@@ -1,76 +1,76 @@
 [
   {
-    "source": "reports/preliminary/sources/AI4EO_full_corrected.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_full_corrected.tex",
     "target": "../figures/reflectance_plot.jpg",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_full_float_corrected.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_full_float_corrected.tex",
     "target": "../figures/reflectance_plot.jpg",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_professional_UNIGE_font.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_professional_UNIGE_font.tex",
     "target": "../figures/lst_downscaling.png",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_professional_UNIGE_font.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_professional_UNIGE_font.tex",
     "target": "../figures/reconstruction_enhancement.png",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_professional_UNIGE_font.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_professional_UNIGE_font.tex",
     "target": "../figures/reflectance_plot.jpg",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_professional_academic_template.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_professional_academic_template.tex",
     "target": "../figures/lst_downscaling.png",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_professional_academic_template.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_professional_academic_template.tex",
     "target": "../figures/reconstruction_enhancement.png",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_professional_academic_template.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_professional_academic_template.tex",
     "target": "../figures/reflectance_plot.jpg",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_restructured_scoping_report.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_restructured_scoping_report.tex",
     "target": "../figures/reflectance_plot.jpg",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_revised_full_code.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_revised_full_code.tex",
     "target": "../figures/biomass_regression.png",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_revised_full_code.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_revised_full_code.tex",
     "target": "../figures/lst_downscaling.png",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_revised_full_code.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_revised_full_code.tex",
     "target": "../figures/reflectance_plot.jpg",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_revised_full_code.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_revised_full_code.tex",
     "target": "../figures/sentinel1_sar_london.jpg",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_same_content_professional_UNIGE_style.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_same_content_professional_UNIGE_style.tex",
     "target": "../figures/reflectance_plot.jpg",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   },
   {
-    "source": "reports/preliminary/sources/AI4EO_tasks_math_restored.tex",
+    "source": "research/reports/preliminary/sources/AI4EO_tasks_math_restored.tex",
     "target": "../figures/reflectance_plot.jpg",
     "reason": "Already absent before repository reorganization; no verified matching local figure."
   }
