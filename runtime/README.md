@@ -8,7 +8,7 @@ This folder contains the runnable project. The `geoexp` command submits experime
 | `datasets/<dataset>/<version>/` | Local downloaded data, ignored by Git |
 | [src/geoexp](src/geoexp) | The `geoexp` command and Windows worker |
 | [tests](tests) | Runner checks; live notebook and process-stop tests are opt-in |
-| [scripts](scripts) | Repository reference checker and paper renamer |
+| [scripts](scripts) | Repository reference checker |
 
 See [SSH installation and usage](../docs/geoexp.md) and [baseline setup](experiments/sen1floods11/README.md).
 

@@ -10,4 +10,6 @@ Papers, thesis writing and literature analysis live here, separately from the [r
 
 Compile reports from their `sources/` directory so relative figure and table paths resolve. The literature notebook locates the checkout from its working directory and saves figures to `research/reports/preliminary/figures/`.
 
-The paper renamer remains a utility under `runtime/scripts/`; its default destination is `research/literature/papers/`.
+Download papers into `literature/papers/` or `literature/datasets/` and name them manually. There is no automatic naming step in the thesis workflow.
+
+The existing [PDF audit](literature/audit/pdf_upload_audit.md) and its inventories are archived alongside the literature.

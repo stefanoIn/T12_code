@@ -1,4 +1,7 @@
 # Python virtual environments
+# Standalone paper-renamer project, retained locally for its own repository.
+/autoname/
+
 .venv/
 venv/
 env/

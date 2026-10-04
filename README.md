@@ -17,7 +17,7 @@ runtime/                  Experiment code and execution tools
   scripts/
   tests/
   pyproject.toml
-docs/                     Setup instructions, migration records and audits
+docs/                     Setup instructions and repository maintenance records
 .venv/                    Existing local CUDA environment (untracked)
 ```
 
@@ -39,9 +39,10 @@ From the checkout root:
 
 ```powershell
 python runtime/scripts/check_references.py
-python runtime/scripts/paper_renamer.py --folder research/literature/datasets --dry-run
 ```
 
-Use an environment with the dependencies needed by the utility. The reference checker validates local document links and Python/notebook syntax without running experiments. Add `--strict` to fail on documented missing figures too. The paper renamer requires PyMuPDF, requests and watchdog; without `--folder` it watches Downloads and moves processed PDFs to `research/literature/papers/`.
+The reference checker validates local document links and Python/notebook syntax without running experiments. Add `--strict` to fail on documented missing figures too.
 
-Report versions and historical notebooks are preserved. Five missing figures are recorded in [missing assets](docs/missing_assets.json); the PDF audit also retains a pre-existing missing Corley PDF link. See the [migration record](docs/reorganization.md) for previous layouts.
+Download papers into `research/literature/papers/` or `research/literature/datasets/` and give them titles manually. Paper renaming is independent of the thesis code.
+
+Report versions and historical notebooks are preserved. Five missing figures are recorded in [missing assets](docs/missing_assets.json); the [archived PDF audit](research/literature/audit/pdf_upload_audit.md) also retains a pre-existing missing Corley PDF link. See the [migration record](docs/reorganization.md) for previous layouts.

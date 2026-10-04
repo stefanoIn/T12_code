@@ -96,3 +96,12 @@ The existing CUDA `.venv/` remains at the checkout root. No package was installe
 Updated notebook discovery, literature figure output, paper-renamer destination, documentation links, the reference checker and Git exclusions. Eight curated baseline JSONs remain eligible for publication; data, weights, generated runs and environments stay ignored. Old local remote-control files were preserved under ignored `runtime/legacy_remote_training/`.
 
 Validation: 12 runner tests passed and three opt-in live tests were skipped. Both preset locks passed offline checks. Baseline discovery was checked from the checkout root, runtime root, experiment directory and research directory without executing training. Static checks introduced no new missing references: the existing Corley PDF-audit link and 15 documented references to five missing figures remain. No training, model downloads, dependency installation, OS-service changes, commits or history rewrites were performed.
+
+
+## AutoName extraction — 2026-10-04
+
+Moved `runtime/scripts/paper_renamer.py` into a standalone local `autoname/` folder with its own README, dependency list and ignore rules. The folder is ignored by the thesis repository and can be copied into its own Git repository. Metadata resolution and PDF-processing logic are preserved; the default destination now belongs to AutoName itself. No PDFs were renamed or moved by the tool.
+
+Removed AutoName usage from the active thesis instructions. Literature notebook discovery now uses the repository reference checker rather than the renamer. Papers are downloaded and named manually. Historical mentions above describe the earlier integration.
+
+Moved the three thesis PDF-audit files from `docs/` to `research/literature/audit/`, updated Markdown links, and retained the inventories' historical contents. These are records about the thesis collection, independent of AutoName. Experiment code, datasets, checkpoints, environments and registered tasks were not changed.
