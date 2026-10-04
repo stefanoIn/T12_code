@@ -1,6 +1,18 @@
 # Sen1Floods11 FCN baseline
 
-[Sen1Floods11_FCNN_Baselines.ipynb](Sen1Floods11_FCNN_Baselines.ipynb) trains FCN-ResNet50 with two Sentinel-1 channels. It is one baseline experiment within the thesis on geographic generalisation of GeoFMs.
+[fcnn_training_v2.ipynb](fcnn_training_v2.ipynb) trains FCN-ResNet50 with two Sentinel-1 channels. It is one baseline experiment within the thesis on geographic generalisation of GeoFMs.
+
+## Notebooks
+
+| Notebook | Purpose |
+| --- | --- |
+| [data_exploration.ipynb](data_exploration.ipynb) | View sampled radar, optical and label images, with the sampling procedure explained. |
+| [label_quality_audit.ipynb](label_quality_audit.ipynb) | Verify fully ignored labels and their effect on validation metrics. |
+| [fcnn_training_v1.ipynb](fcnn_training_v1.ipynb) | Historical training version; retains its original local paths. |
+| [fcnn_training_v2.ipynb](fcnn_training_v2.ipynb) | Current portable FCN-ResNet50 training notebook, used by the existing training preset. |
+| [fcnn_evaluation.ipynb](fcnn_evaluation.ipynb) | Empty placeholder for future evaluation work. |
+
+Open exploration and label auditing directly in Jupyter. The setup and training instructions below refer to **V2**. Version numbers preserve the distinction between the existing training notebooks; renaming them does not change their computation or saved outputs.
 
 ## Data and environment
 
@@ -44,7 +56,7 @@ In remote-connected VS Code, select the kernel on the remote host. Paths refer t
 For asynchronous execution over SSH on Windows, follow the [geoexp runner setup](../../../docs/geoexp.md). The `sen1floods11-fcnn` preset supports CUDA and exposes the four existing variants as validated overrides. For direct headless execution from `runtime/`, use a kernel installed on the execution host:
 
 ```text
-jupyter nbconvert --to notebook --execute experiments/sen1floods11/Sen1Floods11_FCNN_Baselines.ipynb --output Sen1Floods11_executed --output-dir experiments/sen1floods11/runs/headless/executed --ExecutePreprocessor.kernel_name=thesis-d-cuda --ExecutePreprocessor.timeout=-1
+jupyter nbconvert --to notebook --execute experiments/sen1floods11/fcnn_training_v2.ipynb --output Sen1Floods11_executed --output-dir experiments/sen1floods11/runs/headless/executed --ExecutePreprocessor.kernel_name=thesis-d-cuda --ExecutePreprocessor.timeout=-1
 ```
 
 Create the output directory first. Replace `thesis-d-cuda` with the local kernel name when needed. These commands execute training; the repository's static checks do not.

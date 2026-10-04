@@ -49,7 +49,7 @@ def train(context: ExperimentContext, config: Config):
                          for p in sorted((dataset / "splits").rglob("*.csv"))},
     }
     atomic_json(context.run / "provenance.json", record)
-    context.notebook("experiments/sen1floods11/Sen1Floods11_FCNN_Baselines.ipynb", {
+    context.notebook("experiments/sen1floods11/fcnn_training_v2.ipynb", {
         "EXPERIMENT": config.variant, "RESUME_IF_AVAILABLE": config.resume,
         "PREFLIGHT_VALIDATE_LABELS": config.preflight,
     })
@@ -70,5 +70,5 @@ EXPERIMENT = ExperimentSpec(
               "held_out_geography": "Bolivia evaluation in preserved notebook; not a new geographic protocol",
               "preprocessing": "Preserved notebook normalization, augmentation and ignore-label behavior",
               "checkpoint_selection": "Preserved notebook best-validation and last-epoch resume logic"},
-    sources=("experiments/sen1floods11/Sen1Floods11_FCNN_Baselines.ipynb",),
+    sources=("experiments/sen1floods11/fcnn_training_v2.ipynb",),
 )

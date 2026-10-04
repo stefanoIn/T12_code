@@ -59,8 +59,10 @@ class ContractTests(unittest.TestCase):
         self.assertRaises(ValueError, select_device, ("cuda", "cpu"), ["cuda", "cpu"], "tpu")
 
     def test_notebook_paths_after_layout_move(self):
-        notebook = json.loads((ROOT / "experiments/sen1floods11/Sen1Floods11_FCNN_Baselines.ipynb").read_text(encoding="utf-8"))
-        setup = "".join(notebook["cells"][4]["source"]).split("for p in (CHECKPOINT_ROOT,")[0]
+        notebook = json.loads((ROOT / "experiments/sen1floods11/fcnn_training_v2.ipynb").read_text(encoding="utf-8"))
+        setup = next("".join(cell["source"]) for cell in notebook["cells"]
+                     if cell["cell_type"] == "code" and "REPO_ROOT = next(" in "".join(cell["source"]))
+        setup = setup.split("for p in (CHECKPOINT_ROOT,")[0]
         original = Path.cwd()
         try:
             for directory in (ROOT.parent, ROOT, ROOT / "experiments/sen1floods11", ROOT.parent / "research/notes"):
@@ -75,7 +77,7 @@ class ContractTests(unittest.TestCase):
             os.chdir(original)
 
     def test_checkpoint_compatibility_without_loading_weights(self):
-        notebook = json.loads((ROOT / "experiments/sen1floods11/Sen1Floods11_FCNN_Baselines.ipynb").read_text(encoding="utf-8"))
+        notebook = json.loads((ROOT / "experiments/sen1floods11/fcnn_training_v2.ipynb").read_text(encoding="utf-8"))
         source = "\n".join("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "code")
         self.assertIn("PureWindowsPath(saved_best).name", source)
         self.assertIn('best_checkpoint.name if best_checkpoint is not None', source)

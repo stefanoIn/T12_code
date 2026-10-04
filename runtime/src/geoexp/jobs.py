@@ -5,6 +5,7 @@ import subprocess
 import time
 from pathlib import Path
 
+import os
 import psutil
 
 from . import environment, hosts
