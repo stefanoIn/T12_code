@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "run_id": "20261005T172635_723067Z_fd3d90ea",
+  "checkpoint_origin": "authors",
+  "model_variant": "s2_weak",
+  "checkpoint": "datasets/Sen1Floods11/v1.1/checkpoints/5e4_flood_0_89_0.5418742895126343.cp",
+  "checkpoint_sha256": "eb07d0c64d9cc78ec17315d56eb2266e213bbcb437837b98f5e80382bacf987b",
+  "dataset": "Sen1Floods11",
+  "dataset_version": "v1.1",
+  "started_at_utc": "2026-10-05T17:22:19.836304+00:00",
+  "completed_at_utc": "2026-10-05T17:26:35.723067+00:00",
+  "device": "cpu",
+  "torch_version": "2.14.0+cpu",
+  "protocol": "Historical Test_Models evaluation; one chip per batch; mean chip IoU and total IoU; original ignored-label handling retained",
+  "splits": {
+    "flood_test_data.csv": {
+      "path": "datasets/Sen1Floods11/v1.1/splits/flood_handlabeled/flood_test_data.csv",
+      "sha256": "8b598c9438042f3ed8aed4484268387fae1aa5b660882e1c5b4c1218eba63d67"
+    },
+    "flood_bolivia_data.csv": {
+      "path": "datasets/Sen1Floods11/v1.1/splits/flood_handlabeled/flood_bolivia_data.csv",
+      "sha256": "4775d100fae1f1ca66a842b8af6d2a97b8bfc5847f29d88ff0affff2c1e22768"
+    }
+  },
+  "results": {
+    "test_all_water": {
+      "metrics": {
+        "mean_iou": 0.41680607199668884,
+        "total_iou": 0.5429390072822571,
+        "omission": 0.33995261788368225,
+        "commission": 0.03961436450481415,
+        "mean_accuracy": 0.9132826924324036
+      },
+      "nonfinite_metrics": [],
+      "evaluated_batches": 90,
+      "confusion_counts": {
+        "tp": 2176136,
+        "fp": 711128,
+        "tn": 17240138,
+        "fn": 1120803
+      }
+    },
+    "test_flood_water": {
+      "metrics": {
+        "mean_iou": 0.3448907732963562,
+        "total_iou": 0.41577407717704773,
+        "omission": 0.4609043300151825,
+        "commission": 0.03961436450481415,
+        "mean_accuracy": 0.9027334451675415
+      },
+      "nonfinite_metrics": [],
+      "evaluated_batches": 90,
+      "confusion_counts": {
+        "tp": 1292504,
+        "fp": 711128,
+        "tn": 17240138,
+        "fn": 1105037
+      }
+    },
+    "test_permanent_water": {
+      "metrics": {
+        "mean_iou": 0.3879753649234772,
+        "total_iou": 0.43087270855903625,
+        "omission": 0.44445711374282837,
+        "commission": 0.044857464730739594,
+        "mean_accuracy": 0.8966395854949951
+      },
+      "nonfinite_metrics": [],
+      "evaluated_batches": 54,
+      "confusion_counts": {
+        "tp": 905666,
+        "fp": 471698,
+        "tn": 10043787,
+        "fn": 724570
+      }
+    },
+    "bolivia_all_water": {
+      "metrics": {
+        "mean_iou": 0.3554655611515045,
+        "total_iou": 0.569539487361908,
+        "omission": 0.27990564703941345,
+        "commission": 0.049831513315439224,
+        "mean_accuracy": 0.9091070294380188
+      },
+      "nonfinite_metrics": [],
+      "evaluated_batches": 15,
+      "confusion_counts": {
+        "tp": 327545,
+        "fp": 120241,
+        "tn": 2292710,
+        "fn": 127319
+      }
+    },
+    "bolivia_flood_water": {
+      "metrics": {
+        "mean_iou": 0.31402507424354553,
+        "total_iou": 0.5473792552947998,
+        "omission": 0.29772448539733887,
+        "commission": 0.049831513315439224,
+        "mean_accuracy": 0.9080156683921814
+      },
+      "nonfinite_metrics": [],
+      "evaluated_batches": 15,
+      "confusion_counts": {
+        "tp": 298406,
+        "fp": 120241,
+        "tn": 2292710,
+        "fn": 126507
+      }
+    },
+    "bolivia_permanent_water": {
+      "metrics": {
+        "mean_iou": 0.24257273972034454,
+        "total_iou": 0.2544468641281128,
+        "omission": 0.02711094729602337,
+        "commission": 0.0881175547838211,
+        "mean_accuracy": 0.9046568870544434
+      },
+      "nonfinite_metrics": [],
+      "evaluated_batches": 7,
+      "confusion_counts": {
+        "tp": 29139,
+        "fp": 84568,
+        "tn": 875150,
+        "fn": 812
+      }
+    }
+  }
+}

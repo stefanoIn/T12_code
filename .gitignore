@@ -75,6 +75,26 @@ desktop.ini
 # Publish only the baseline's curated metric/history JSONs.
 !/runtime/experiments/sen1floods11/runs/
 /runtime/experiments/sen1floods11/runs/*
+# Keep completed evaluation JSONs publishable while ignoring any other generated files.
+!/runtime/experiments/sen1floods11/runs/results/
+/runtime/experiments/sen1floods11/runs/results/*
+!/runtime/experiments/sen1floods11/runs/results/evaluations/
+/runtime/experiments/sen1floods11/runs/results/evaluations/*
+!/runtime/experiments/sen1floods11/runs/results/evaluations/authors/
+!/runtime/experiments/sen1floods11/runs/results/evaluations/ours/
+!/runtime/experiments/sen1floods11/runs/results/evaluations/mine/
+/runtime/experiments/sen1floods11/runs/results/evaluations/authors/*
+/runtime/experiments/sen1floods11/runs/results/evaluations/ours/*
+/runtime/experiments/sen1floods11/runs/results/evaluations/mine/*
+!/runtime/experiments/sen1floods11/runs/results/evaluations/authors/*/
+!/runtime/experiments/sen1floods11/runs/results/evaluations/ours/*/
+!/runtime/experiments/sen1floods11/runs/results/evaluations/mine/*/
+/runtime/experiments/sen1floods11/runs/results/evaluations/authors/*/*
+/runtime/experiments/sen1floods11/runs/results/evaluations/ours/*/*
+/runtime/experiments/sen1floods11/runs/results/evaluations/mine/*/*
+!/runtime/experiments/sen1floods11/runs/results/evaluations/mine/*/*.json
+!/runtime/experiments/sen1floods11/runs/results/evaluations/authors/*/*.json
+!/runtime/experiments/sen1floods11/runs/results/evaluations/ours/*/*.json
 
 /runtime/datasets/Main_Training_Stuff.ipynb
 /runtime/datasets/Test_Models.ipynb
