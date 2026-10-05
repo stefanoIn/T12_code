@@ -75,12 +75,6 @@ desktop.ini
 # Publish only the baseline's curated metric/history JSONs.
 !/runtime/experiments/sen1floods11/runs/
 /runtime/experiments/sen1floods11/runs/*
-!/runtime/experiments/sen1floods11/runs/results/
-/runtime/experiments/sen1floods11/runs/results/*
-!/runtime/experiments/sen1floods11/runs/results/*/
-/runtime/experiments/sen1floods11/runs/results/*/*
-!/runtime/experiments/sen1floods11/runs/results/*/common_test_results.json
-!/runtime/experiments/sen1floods11/runs/results/*/training_history.json
 
 /runtime/datasets/Main_Training_Stuff.ipynb
 /runtime/datasets/Test_Models.ipynb
